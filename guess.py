@@ -10,6 +10,5 @@ while (guess != number):
         guess = int(input("The number is smaller. Guess a number: ")) 
     elif (guess < number):
         guess = int(input("The number is bigger. Guess a number: ")) 
-    elif (guess == number):
-        print("The number is ",guess," Congratulations!")
+print("The number is "+ str(guess) + " Congratulations!")
         
