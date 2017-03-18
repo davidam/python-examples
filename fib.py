@@ -1,10 +1,19 @@
 #!/usr/bin/python
 
-def fib(n):    # write Fibonacci series up to n
-    """Print a Fibonacci series up to n."""
-    a, b = 0, 1
-    while a < n:
-        print a,
-        a, b = b, a+b
+def fibo(n):
+    if n == 1:
+        return[1]
+    if n == 2:
+        return [1, 1]
+    a = 1
+    b = 1
+    series = [a, b]
+    for i in range(n):
+        c = a + b
+        series.append(c)
+        a = b
+        b = c
 
-print fib(3)
+    return series
+
+print fibo(3)
