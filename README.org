@@ -1,0 +1,20 @@
+
+* Control Structures
+
++ [[file:~/git/python-examples/if.py]]
++ [[file:~/git/python-examples/even.py]]
++ [[file:~/git/python-examples/clasico.py]]
++ [[file:~/git/python-examples/comebebes.py]]
++ file:~/git/python-examples/cuentatras.py
++ file:~/git/python-examples/for.py
++ file:~/git/python-examples/piedrapapeltijeras.py
++ file:~/git/python-examples/guess.py
+
+* Calculus & Recursivity
+
++ [[file:~/git/python-examples/multiplicar.py]]
++ [[file:~/git/python-examples/factorial.py]]
++ [[file:~/git/python-examples/factors.py]]
+
+
+
