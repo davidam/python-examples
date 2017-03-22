@@ -24,6 +24,8 @@
 + [[file:lists.py]]
 + [[file:diccionarios.py]]
 + [[file:validar-cadenas.py]]
++ file:pruebaconjuntos.py
++ file:pruebatemplate.py
 
 * Testing
 
