@@ -9,17 +9,23 @@
 + file:for.py
 + file:piedrapapeltijeras.py
 + file:guess.py
++ file:range.py
 
 * Calculus & Recursivity
 
 + [[file:multiplicar.py]]
 + [[file:factorial.py]]
 + [[file:factors.py]]
++ file:mean.py
+
 
 * Data structure
 
-+ [[file:multiplicar.py]]
-+ [[file:factorial.py]]
-+ [[file:factors.py]]
++ [[file:lists.py]]
++ [[file:diccionarios.py]]
++ [[file:validar-cadenas.py]]
 
+* Testing
+
++ file:test_unittesting.py
 
