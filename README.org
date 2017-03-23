@@ -27,6 +27,20 @@
 + file:pruebaconjuntos.py
 + file:pruebatemplate.py
 
+
+* GUI
+
++ file:libreriatkinter.py
++ file:libreriatkinter2.py
++ file:botonestkinter.py
++ file:gtk.py
++ file:botonesgtk.py
++ file:boxgtk.py
++ file:frames.py
++ file:grid.py
++ file:pruebabox.py
++ file:pruepygi.py
+
 * Testing
 
 + file:test_unittesting.py
