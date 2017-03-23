@@ -1,0 +1,21 @@
+from gi.repository import Gtk
+
+ventana = Gtk.Window(title="Grid")
+ventana.connect("delete-event", Gtk.main_quit)
+rejilla = Gtk.Grid()
+ventana.add(rejilla)
+boton1 = Gtk.Button(label="Boton 1")
+boton2 = Gtk.Button(label="Boton 2")
+boton3 = Gtk.Button(label="Boton 3")
+boton4 = Gtk.Button(label="Boton 4")
+boton5 = Gtk.Button(label="Boton 5")
+boton6 = Gtk.Button(label="Boton 6")
+
+rejilla.add(boton1)
+rejilla.attach(boton2, 1, 0, 2, 1)
+rejilla.attach_next_to(boton3, boton1, Gtk.PositionType.BOTTOM, 1, 2)
+rejilla.attach_next_to(boton4, boton3, Gtk.PositionType.BOTTOM, 2, 1)
+rejilla.attach(boton5, 1, 2, 1, 1)
+rejilla.attach_next_to(boton6, boton5, Gtk.PositionType.RIGHT, 1, 1)
+ventana.show_all()
+Gtk.main()
