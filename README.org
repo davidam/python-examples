@@ -5,43 +5,46 @@
 + [[file:even.py]]
 + [[file:clasico.py]]
 + [[file:comebebes.py]]
-+ file:cuentatras.py
-+ file:for.py
-+ file:piedrapapeltijeras.py
-+ file:guess.py
-+ file:range.py
++ [[file:cuentatras.py]]
++ [[file:for.py]]
++ [[file:piedrapapeltijeras.py]]
++ [[file:guess.py]]
++ [[file:range.py]]
 
 * Calculus & Recursivity
 
 + [[file:multiplicar.py]]
 + [[file:factorial.py]]
 + [[file:factors.py]]
-+ file:mean.py
-
++ [[file:mean.py]]
 
 * Data structure
 
 + [[file:lists.py]]
 + [[file:diccionarios.py]]
 + [[file:validar-cadenas.py]]
-+ file:pruebaconjuntos.py
-+ file:pruebatemplate.py
-
++ [[file:pruebaconjuntos.py]]
++ [[file:pruebatemplate.py]]
 
 * GUI
 
-+ file:libreriatkinter.py
-+ file:libreriatkinter2.py
-+ file:botonestkinter.py
-+ file:gtk.py
-+ file:botonesgtk.py
-+ file:boxgtk.py
-+ file:frames.py
-+ file:grid.py
-+ file:pruebabox.py
-+ file:pruepygi.py
++ [[file:libreriatkinter.py]]
++ [[file:libreriatkinter2.py]]
++ [[file:botonestkinter.py]]
++ [[file:gtk.py]]
++ [[file:botonesgtk.py]]
++ [[file:boxgtk.py]]
++ [[file:frames.py]]
++ [[file:grid.py]]
++ [[file:pruebabox.py]]
++ [[file:pruepygi.py]]
+
+* POO
+
++ [[file:polimorfismo.py]]
++ [[file:herencia.py]]
 
 * Testing
 
-+ file:test_unittesting.py
++ [[file:test_unittesting.py]]
 
