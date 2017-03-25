@@ -10,6 +10,7 @@
 + [[file:piedrapapeltijeras.py]]
 + [[file:guess.py]]
 + [[file:range.py]]
++ [[file:verpython.py]]
 
 * Calculus & Recursivity
 
@@ -44,6 +45,10 @@
 + [[file:polimorfismo.py]]
 + [[file:herencia.py]]
 
+* Files
++ [[file:write.py]]
++ [[file:remove.py]]
++ [[file:rename.py]]
 * Testing
 
 + [[file:test_unittesting.py]]
