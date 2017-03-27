@@ -1,0 +1,4 @@
+
+To run tests:
+
+$ nosetest test
