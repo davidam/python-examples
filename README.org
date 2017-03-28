@@ -49,6 +49,14 @@
 + [[file:write.py]]
 + [[file:remove.py]]
 + [[file:rename.py]]
+* Regular expressions
++ [[file:re.py]]
++ [[file:re1.py]]
++ [[file:re2.py]]
++ [[file:re3.py]]
++ [[file:re4.py]]
+* XML
++ [[file:items.py]]
 * Testing
 
 + [[file:test_unittesting.py]]
