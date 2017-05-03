@@ -68,10 +68,13 @@
 
 * Testing
 
-+ [[file:test_unittesting.py]]
 + [[file:poo/calculator]]
-+ [[file:poo/shape]]
 + [[file:poo/factorial]]
++ [[file:poo/fib]]
++ [[file:poo/hanoi]]
++ [[file:poo/persona]]
++ [[file:poo/shape]]
++ [[file:poo/wallet]]
 
 * Django
 
