@@ -79,3 +79,15 @@
 * Django
 
 + [[file:django]]
+
+* Network
+
++ [[file:server.py]]
++ [[file:client.py]]
+
+$ python server.py &
+$ python client.py
+
+* Multithreading
+
++ [[file:multithreading.py]]
