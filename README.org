@@ -91,3 +91,8 @@ $ python client.py
 * Multithreading
 
 + [[file:multithreading.py]]
+* Itertool
++ [[file:combinations.py]]
++ [[file:product.py]]
++ [[file:permutations.py]]
+
