@@ -7,6 +7,8 @@
 + [[file:comebebes.py]]
 + [[file:cuentatras.py]]
 + [[file:for.py]]
++ [[file:zip.py]]
++ [[file:enumerate.py]]
 + [[file:piedrapapeltijeras.py]]
 + [[file:guess.py]]
 + [[file:range.py]]
@@ -26,6 +28,7 @@
 + [[file:validar-cadenas.py]]
 + [[file:pruebaconjuntos.py]]
 + [[file:pruebatemplate.py]]
++ [[file:counter.py]]
 
 * GUI
 
@@ -91,6 +94,8 @@ $ python client.py
 * Multithreading
 
 + [[file:multithreading.py]]
+* Functional Programming
++ [[file:reduce.py]]
 * Itertool
 + [[file:combinations.py]]
 + [[file:product.py]]
