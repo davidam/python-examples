@@ -13,6 +13,7 @@
 + [[file:guess.py]]
 + [[file:range.py]]
 + [[file:verpython.py]]
++ [[file:cracklepop.py]]
 
 * Calculus & Recursivity
 
@@ -91,6 +92,8 @@
 $ python server.py &
 $ python client.py
 
++ [[file:socket.py]]
+
 * Multithreading
 
 + [[file:multithreading.py]]
@@ -101,3 +104,9 @@ $ python client.py
 + [[file:product.py]]
 + [[file:permutations.py]]
 
+* Numpy
++ [[file:numpy-example.py]]
+
+* Artificial Intelligence
++ [[file:ai/linear_algebra.py]]
++ [[file:ai/recommender_systems.py]]
