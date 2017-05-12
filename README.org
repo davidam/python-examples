@@ -14,6 +14,8 @@
 + [[file:range.py]]
 + [[file:verpython.py]]
 + [[file:cracklepop.py]]
++ [[file:base10.py]]
++ [[file:excepciones.py]]
 
 * Calculus & Recursivity
 
@@ -53,6 +55,7 @@
 + [[file:write.py]]
 + [[file:remove.py]]
 + [[file:rename.py]]
++ [[file:csv-example.py]]
 * Regular expressions
 + [[file:re.py]]
 + [[file:re1.py]]
@@ -93,6 +96,7 @@ $ python server.py &
 $ python client.py
 
 + [[file:socket.py]]
++ [[file:smtp.py]]
 
 * Multithreading
 
@@ -104,7 +108,8 @@ $ python client.py
 + [[file:product.py]]
 + [[file:permutations.py]]
 
-* Numpy
+* Numpy / Statistics
++ [[file:statistics-example.py]]
 + [[file:numpy-example.py]]
 
 * Artificial Intelligence
