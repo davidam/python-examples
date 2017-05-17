@@ -1,4 +1,3 @@
-
 * Control Structures
 
 + [[file:if.py]]
@@ -7,10 +6,15 @@
 + [[file:comebebes.py]]
 + [[file:cuentatras.py]]
 + [[file:for.py]]
++ [[file:zip.py]]
++ [[file:enumerate.py]]
 + [[file:piedrapapeltijeras.py]]
 + [[file:guess.py]]
 + [[file:range.py]]
 + [[file:verpython.py]]
++ [[file:cracklepop.py]]
++ [[file:base10.py]]
++ [[file:excepciones.py]]
 
 * Calculus & Recursivity
 
@@ -26,6 +30,7 @@
 + [[file:validar-cadenas.py]]
 + [[file:pruebaconjuntos.py]]
 + [[file:pruebatemplate.py]]
++ [[file:counter.py]]
 
 * GUI
 
@@ -49,6 +54,9 @@
 + [[file:write.py]]
 + [[file:remove.py]]
 + [[file:rename.py]]
++ [[file:csv-example.py]]
++ [[file:file-example.py]]
++ [[file:ficherolineas.py]]
 * Regular expressions
 + [[file:re.py]]
 + [[file:re1.py]]
@@ -79,3 +87,53 @@
 * Django
 
 + [[file:django]]
+
+* Network
+
++ [[file:server.py]]
++ [[file:client.py]]
+
+$ python server.py &
+$ python client.py
+
++ [[file:socket.py]]
++ [[file:smtp.py]]
+
+* Multithreading
+
++ [[file:multithreading.py]]
+* Functional Programming
++ [[file:reduce.py]]
+* Itertool
++ [[file:combinations.py]]
++ [[file:product.py]]
++ [[file:permutations.py]]
+
+* Numpy / Statistics
++ [[file:statistics-example.py]]
++ [[file:numpy-example.py]]
++ file:numpy-datatypes.py
++ file:numpy-bool.py
++ file:numpy-broadcasting.py
++ file:numpy-broadcasting2.py
++ file:numpy-broadcasting3.py
++ file:numpy-broadcasting4.py
++ file:numpy-arrays.py
++ file:numpy-arrays2.py
++ file:numpy-arraymath.py
++ file:numpy-arraymath2.py
++ file:numpy-arrays-indexing.py
++ file:numpy-arrays-indexing2.py
++ file:numpy-arrays-indexing3.py
++ file:numpy-sum.py
++ [[file:matplotlib-example.py]]
+* Scipy
++ file:scipy-example.py
++ file:scipy-bessel.py
++ file:scipy-raices.py
++ file:scipy-integrales.py
++ file:scipy-interpolacion.py
++ [[More][http://scipy-cookbook.readthedocs.io/index.html]]
+* Artificial Intelligence
++ [[file:ai/linear_algebra.py]]
++ [[file:ai/recommender_systems.py]]
