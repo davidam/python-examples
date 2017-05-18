@@ -3,7 +3,7 @@
 from random import randint
 
 number = randint(0,100)
-guess = int(input("Guess a number: "))
+guess = int(input("Guess a number from 0 to 100: "))
 
 while (guess != number):
     if (guess > number):
