@@ -134,6 +134,12 @@ $ python client.py
 + file:scipy-integrales.py
 + file:scipy-interpolacion.py
 + [[More][http://scipy-cookbook.readthedocs.io/index.html]]
+* Netcdf
++ [[file:netcdf/netcdf-example.py]]
++ [[file:netcdf/netcdf-example2.py]]
++ [[file:netcdf/netcdf-example3.py]]
++ [[file:netcdf/netcdf-example4.py]]
+
 * Artificial Intelligence
 + [[file:ai/linear_algebra.py]]
 + [[file:ai/recommender_systems.py]]
