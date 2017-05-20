@@ -143,3 +143,14 @@ $ python client.py
 * Artificial Intelligence
 + [[file:ai/linear_algebra.py]]
 + [[file:ai/recommender_systems.py]]
++ file:ai/knearest.py
++ file:ai/rsquared.py
++ file:ai/clustering.py
++ file:scikit/scikit-example.py
++ file:scikit/scikit-model.py
++ file:scikit/scikit-typecasting.py
++ file:scikit/scikit-typecasting2.py
++ file:scikit/scikit-refitting.py
++ file:scikit/scikit-multilabel.py
++ file:scikit/scikit-multiclass.py
++ file:scikit/plot_digits_classification.py
