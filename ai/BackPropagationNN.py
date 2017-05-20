@@ -1,3 +1,5 @@
+# https://databoys.github.io/Feedforward/
+
 import math
 import random
 import numpy as np
