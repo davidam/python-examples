@@ -126,7 +126,9 @@ $ python client.py
 + file:numpy-arrays-indexing2.py
 + file:numpy-arrays-indexing3.py
 + file:numpy-sum.py
++ file:numpy-mandelbrot.py
 + [[file:matplotlib-example.py]]
++ file:changereligion.py
 * Scipy
 + file:scipy-example.py
 + file:scipy-bessel.py
@@ -154,3 +156,7 @@ $ python client.py
 + file:scikit/scikit-multilabel.py
 + file:scikit/scikit-multiclass.py
 + file:scikit/plot_digits_classification.py
+* Flask
++ file:flask
+* Pytables
++ file:pytables
