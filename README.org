@@ -57,12 +57,15 @@
 + [[file:csv-example.py]]
 + [[file:file-example.py]]
 + [[file:ficherolineas.py]]
++ file:rotatingimage.py
 * Regular expressions
 + [[file:re.py]]
 + [[file:re1.py]]
 + [[file:re2.py]]
 + [[file:re3.py]]
 + [[file:re4.py]]
++ file:webscraping.py
++ file:webscraping-davidam.py
 * XML
 + [[file:items.py]]
 * Shell
@@ -160,3 +163,20 @@ $ python client.py
 + file:flask
 * Pytables
 + file:pytables
+* HDF5
+** Installing
+pip install h5py
+** Create a dataset
+file:hdf5/h5_crtdat.py
+** Read and write to a dataset
+file:hdf5/h5_rdwt.py
+** Create an attribute
+file:hdf5/h5_crtatt.py
+** Create a group 
+file:hdf5/h5_crtgrp.py
+** Create groups in a file using absolute and relative paths
+file:hdf5/h5_crtgrpar.py
+** Create datasets in a group
+file:hdf5/h5_crtgrpd.py
+** Create a chunked and compressed dataset
+file:hdf5/h5_cmprss.py
