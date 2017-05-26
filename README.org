@@ -22,6 +22,8 @@
 + [[file:factorial.py]]
 + [[file:factors.py]]
 + [[file:mean.py]]
++ file:elimDobles.py
++ file:binaria.py
 
 * Data structure
 
@@ -180,3 +182,6 @@ file:hdf5/h5_crtgrpar.py
 file:hdf5/h5_crtgrpd.py
 ** Create a chunked and compressed dataset
 file:hdf5/h5_cmprss.py
+* Spark
+sudo apt-get install spark
+sudo pip install 
