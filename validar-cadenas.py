@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# -*- coding: utf-8 -*-
 
 cadena = input("Escriba un texto: ")
 if cadena.isalnum():
