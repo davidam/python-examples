@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 dicc = {"precio1": 2300, "precio2": 3450, "precio3": 2760}
 print("Diccionario original:")
 print(dicc)
