@@ -1,4 +1,6 @@
-cadena = input("Escriba un texto: ")
+# -*- coding: utf-8 -*-
+
+cadena = raw_input("Escriba un texto: ")
 if cadena.isalnum():
     print("Consta de letras y/o números, sin espacios")
 if cadena.isalpha():
