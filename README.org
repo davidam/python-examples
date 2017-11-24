@@ -35,9 +35,9 @@
 + [[file:counter.py]]
 
 * GUI
+# $ sudo apt-get install python-tk
 
 + [[file:libreriatkinter.py]]
-+ [[file:libreriatkinter2.py]]
 + [[file:botonestkinter.py]]
 + [[file:gtk.py]]
 + [[file:botonesgtk.py]]
@@ -185,3 +185,6 @@ file:hdf5/h5_cmprss.py
 * Spark
 sudo apt-get install spark
 sudo pip install 
+
+* Perceval
++ file:perceval/perceval_git_counter.py
