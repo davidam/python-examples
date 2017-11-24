@@ -161,6 +161,12 @@ $ python client.py
 + file:scikit/scikit-multilabel.py
 + file:scikit/scikit-multiclass.py
 + file:scikit/plot_digits_classification.py
++ file:clips/helloduck.py
++ file:clips/externalfunctions.py
++ file:clips/constructs.py
++ file:clips/facttemplate.py
++ file:clips/iosubsystem.py
++ file:clips/rule.py
 * Flask
 + file:flask
 * Pytables
