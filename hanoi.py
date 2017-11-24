@@ -1,4 +1,4 @@
-def hanoi(discos):
+def hanoi():
     discos = input("Dime tus discos y te digo los pasos: ")
     print(hanoiAux(int(discos)))
 
@@ -8,3 +8,4 @@ def hanoiAux(discos):
     else:
         return 1 + (2 * (hanoiAux(discos - 1)))
 
+hanoi()
