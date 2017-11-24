@@ -2,6 +2,8 @@
 # Count commits
 # You can execute this script following this tutorial:
 # https://grimoirelab.gitbooks.io/training/perceval/first_steps.html
+# source ~/venvs/perceval/bin/activate 
+# $ python3 ~/git/python-examples/perceval/perceval_git_counter.py https://github.com/grimoirelab/perceval.git /tmp/clonedir
 
 import argparse
 
