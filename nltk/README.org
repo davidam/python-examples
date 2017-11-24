@@ -16,4 +16,8 @@
 + file:tokenizeandtag.py
 + file:udhr.py
 + file:dict.py
++ file:bigrams.py
++ file:code_unusual.py
++ file:stopwords.py
 
+* Chapter 3: Processing Raw Text
