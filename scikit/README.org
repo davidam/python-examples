@@ -1,0 +1,51 @@
+
+* Tutorial / Howto
+http://scikit-learn.org/stable/tutorial/index.html
+
+* Naive Bayes Classification
++ To mark an email as spam or not spam
++ Classify a news article about technology, politics, or sports
++ Check a piece of text expressing positive emotions, or negative emotions?
++ Used for face recognition software.
+
+* Logistic Regression
+In general, regressions can be used in real-world applications such as:
+
++ Credit Scoring
++ Measuring the success rates of marketing campaigns
++ Predicting the revenues of a certain product
++ Is there going to be an earthquake on a particular day?
+
+* Support Vector Machine
+
++ Display advertising
++ Human splice site recognition
++ Image-based gender detection
++ Large-scale image classification
+
+* Clustering Algorithms
+
+Clustering is the task of grouping a set of objects such that objects
+in the same group (cluster) are more similar to each other than to
+those in other groups.
+
+* Principal Component Analysis
+
++ Compression
++ Simplifying data for easier learning
++ Visualization
+
+* Singular Value Descomposition
+
+In computer vision, the 1st face recognition algorithms used PCA and
+SVD in order to represent faces as a linear combination of
+“eigenfaces”, do dimensionality reduction, and then match faces to
+identities via simple methods; although modern methods are much more
+sophisticated, many still depend on similar techniques.
+
+* Independent Component Analysis
+
++ Digital images
++ Document databases
++ Economic indicators 
++ Psychometric measurements
