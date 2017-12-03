@@ -68,6 +68,7 @@
 + [[file:re4.py]]
 + file:webscraping.py
 + file:webscraping-davidam.py
++ file:webscraping-mechanicalsoup.py
 * XML
 + [[file:items.py]]
 * Shell
