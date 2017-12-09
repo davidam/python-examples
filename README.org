@@ -142,6 +142,29 @@ $ python client.py
 + file:scipy-integrales.py
 + file:scipy-interpolacion.py
 + [[More][http://scipy-cookbook.readthedocs.io/index.html]]
+* Scikit
++ file:scikit/plot_digits_classification.py
++ file:scikit/scikit-example.py
++ file:scikit/scikit-knn.py
++ file:scikit/scikit-model.py
++ file:scikit/scikit-multiclass.py
++ file:scikit/scikit-multilabel.py
++ file:scikit/scikit-naivebayes.py
++ file:scikit/scikit-plot-cv-diabetes.py
++ file:scikit/scikit-plot-cv-digits.py
++ file:scikit/scikit-plot-face-recognition.py
++ file:scikit/scikit-plot-feature-selection-pipeline.py
++ file:scikit/scikit-plot-f-test-vs-mi.py
++ file:scikit/scikit-plot-iris-exercise.py
++ file:scikit/scikit-plot-pca-3d.py
++ file:scikit/scikit-plot-permutation-test-for-classification.py
++ file:scikit/scikit-plot-rfe-digits.py
++ file:scikit/scikit-plot-rfe-with-cross-validation.py
++ file:scikit/scikit-plot-select-from-model-boston.py
++ file:scikit/scikit-plot-unveil-tree-sctructure.py
++ file:scikit/scikit-refitting.py
++ file:scikit/scikit-typecasting2.py
++ file:scikit/scikit-typecasting.py
 * Netcdf
 + [[file:netcdf/netcdf-example.py]]
 + [[file:netcdf/netcdf-example2.py]]
@@ -195,3 +218,6 @@ sudo pip install
 
 * Perceval
 + file:perceval/perceval_git_counter.py
+* Semantic Web
++ file:rdflib/sparql_query_example.py
++ file:rdflib/rdflib-example.py
