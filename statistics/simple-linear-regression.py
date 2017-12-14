@@ -1,5 +1,7 @@
 import numpy as np
 import pandas
+# http://www.scipy-lectures.org/packages/statistics/index.html#formulas-to-specify-statistical-models-in-python
+
 x = np.linspace(-5, 5, 20)
 np.random.seed(1)
 # normal distributed noise
