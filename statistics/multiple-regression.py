@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+# http://www.scipy-lectures.org/packages/statistics/index.html#multiple-regression-including-multiple-factors
+
 import pandas
 from statsmodels.formula.api import ols
 
