@@ -75,11 +75,12 @@
 + [[file:shell.py]]
 + [[file:popen.py]]
 + [[file:argv.py]]
++ file:sys.py
++ file:printcolumn1.py
 * Databases
 + [[file:sqlite.py]]
 + [[file:sqlite2.py]]
 + [[file:poo/sqlite-class.py]]
-
 * Testing
 
 + [[file:poo/calculator]]
@@ -115,8 +116,7 @@ $ python client.py
 + [[file:product.py]]
 + [[file:permutations.py]]
 
-* Numpy / Statistics
-+ [[file:statistics-example.py]]
+* Numpy
 + [[file:numpy-example.py]]
 + file:numpy-datatypes.py
 + file:numpy-bool.py
@@ -135,6 +135,18 @@ $ python client.py
 + file:numpy-mandelbrot.py
 + [[file:matplotlib-example.py]]
 + file:changereligion.py
+* Statistics
+** Basics
++ [[file:statistics-example.py]]
++ file:scipy/scipy-descriptives.py
++ file:statistics/manipulating-data.py
++ file:statistics/plot_pandas.py
++ file:statistics/plot_iris_analysis.py
+** Linear Regression
++ file:simple-linear-regression.py
+** Statistical tests
++ file:scipy/scipy-special-tests.py
++ file:scipy/scipy-comparing-means.py
 * Scipy
 + file:scipy-example.py
 + file:scipy-bessel.py
@@ -221,3 +233,5 @@ sudo pip install
 * Semantic Web
 + file:rdflib/sparql_query_example.py
 + file:rdflib/rdflib-example.py
+* Ldap
++ file:ldap/auth.py
