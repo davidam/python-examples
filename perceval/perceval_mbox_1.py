@@ -1,4 +1,10 @@
 #! /usr/bin/env python3
+# Print messages
+# You can execute this script following this tutorial:
+# https://grimoirelab.gitbooks.io/tutorial/content/before-you-start/installing-grimoirelab.html
+# https://grimoirelab.gitbooks.io/tutorial/content/perceval/mail.html
+# source ~/venvs/mordred/bin/activate
+
 
 from perceval.backends.core.mbox import MBox
 
