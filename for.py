@@ -15,3 +15,11 @@ print("######################## Third for: #####################")
     
 for i in range(1,10):
     print i
+    
+print("######################## Fourth for: #####################")
+    
+print(','.join('{}'.format(i) for i in range(1, 100, 4)))
+    
+print("######################## Fifth for: #####################")
+
+print(','.join('{},{}'.format(i, i + 1) for i in range(1, 100, 4)))
