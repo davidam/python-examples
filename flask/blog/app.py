@@ -26,6 +26,12 @@ APP_DIR = os.path.dirname(os.path.realpath(__file__))
 
 # The playhouse.flask_utils.FlaskDB object accepts database URL configuration.
 DATABASE = 'sqliteext:///%s' % os.path.join(APP_DIR, 'blog.db')
+# DATABASE = 'mysql://flaskblog:lala@localhost:3306/flaskblog'
+# app.config['MYSQL_DATABASE_USER'] = 'flask'
+# app.config['MYSQL_DATABASE_PASSWORD'] = 'lala'
+# app.config['MYSQL_DATABASE_DB'] = 'flask'
+# app.config['MYSQL_DATABASE_HOST'] = 'localhost'
+
 DEBUG = False
 
 # The secret key is used internally by Flask to encrypt session data stored
