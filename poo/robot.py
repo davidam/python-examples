@@ -52,3 +52,6 @@ droid2.die()
 
 Robot.how_many()
 
+print("Robot Methods:")
+for name in dir(droid2):
+    print(name)
