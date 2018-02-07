@@ -178,12 +178,6 @@ $ python client.py
 * Multithreading
 
 + [[file:multithreading.py]]
-* Netcdf
-+ [[file:netcdf/netcdf-example.py]]
-+ [[file:netcdf/netcdf-example2.py]]
-+ [[file:netcdf/netcdf-example3.py]]
-+ [[file:netcdf/netcdf-example4.py]]
-
 * Artificial Intelligence
 ** Basics
 + [[file:ai/linear_algebra.py]]
@@ -223,25 +217,32 @@ $ python client.py
 + file:clips/facttemplate.py
 + file:clips/iosubsystem.py
 + file:clips/rule.py
-* Pytables
+* Data Formats
+** Pytables
 + file:pytables
-* HDF5
-** Installing
+** HDF5
+*** Installing
 pip install h5py
-** Create a dataset
+*** Create a dataset
 file:hdf5/h5_crtdat.py
-** Read and write to a dataset
+*** Read and write to a dataset
 file:hdf5/h5_rdwt.py
-** Create an attribute
+*** Create an attribute
 file:hdf5/h5_crtatt.py
-** Create a group 
+*** Create a group 
 file:hdf5/h5_crtgrp.py
-** Create groups in a file using absolute and relative paths
+*** Create groups in a file using absolute and relative paths
 file:hdf5/h5_crtgrpar.py
-** Create datasets in a group
+*** Create datasets in a group
 file:hdf5/h5_crtgrpd.py
-** Create a chunked and compressed dataset
+*** Create a chunked and compressed dataset
 file:hdf5/h5_cmprss.py
+** Netcdf
++ [[file:netcdf/netcdf-example.py]]
++ [[file:netcdf/netcdf-example2.py]]
++ [[file:netcdf/netcdf-example3.py]]
++ [[file:netcdf/netcdf-example4.py]]
+
 * Spark
 sudo apt-get install spark
 sudo pip install 
