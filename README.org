@@ -217,6 +217,9 @@ $ python client.py
 + file:clips/facttemplate.py
 + file:clips/iosubsystem.py
 + file:clips/rule.py
+** Natural Language Processing
++ file:nlp/nltk
+
 * Data Formats
 ** Pytables
 + file:pytables
