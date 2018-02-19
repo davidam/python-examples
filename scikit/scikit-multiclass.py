@@ -10,5 +10,5 @@ classif.fit(X, y).predict(X)
 
 y = LabelBinarizer().fit_transform(y)
 
-print classif.fit(X, y).predict(X)
+print(classif.fit(X, y).predict(X))
 
