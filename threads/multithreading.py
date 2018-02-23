@@ -12,11 +12,11 @@ class AsyncZip(threading.Thread):
         f = zipfile.ZipFile(self.outfile, 'w', zipfile.ZIP_DEFLATED)
         f.write(self.infile)
         f.close()
-        print 'Finished background zip of: ', self.infile
+        print('Finished background zip of: ' + self.infile)
 
 background = AsyncZip('mydata.txt', 'myarchive.zip')
 background.start()
-print 'The main program continues to run in foreground.'
+print('The main program continues to run in foreground.')
 
 background.join()    # Wait for the background task to finish
-print 'Main program waited until background was done.'
+print('Main program waited until background was done.')
