@@ -7,7 +7,9 @@ print(200 % 3)
 
 print("sobre" + "impreso")
 print("por favor" * 3)
-
+arg1 = 1
+arg2 = 2
+print("%s %s " % (arg1, arg2))
 print("tu" and "yo")
 print("yo" and "tu")
 print("yo" and None and "el")
