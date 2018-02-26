@@ -9,5 +9,5 @@ buyers = tree.xpath('//div[@title="buyer-name"]/text()')
 #This will create a list of prices
 prices = tree.xpath('//span[@class="item-price"]/text()')
 
-print 'Buyers: ', buyers
-print 'Prices: ', prices
+print('Buyers: '+ buyers)
+print('Prices: '+ prices)
