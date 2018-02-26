@@ -7,9 +7,11 @@ tree = html.fromstring(page.content)
 
 #This will create a list of prices
 titles = tree.xpath('//div[@class="box-title"]/text()')
-
 pprint(titles)
 
 hrefs = tree.xpath('//a//@href')
-
 pprint(hrefs)
+
+footer = tree.xpath('//div[@class="action-list"]//p/text()')
+pprint(footer)
+
