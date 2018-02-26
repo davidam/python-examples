@@ -26,9 +26,11 @@ article.keywords
 
 print(article.summary)
 
-# import newspaper
+import newspaper
 
-# elpais_paper = newspaper.build('http://wwwelpais.com')
+elpais = newspaper.build('http://www.elpais.com')
+print("number of articles in elpais")
+print(len(elpais.articles))
 
 # for article in cnn_paper.articles:
 #     print(article.url)

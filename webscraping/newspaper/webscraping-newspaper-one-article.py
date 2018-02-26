@@ -15,13 +15,14 @@ print(cnn_paper.brand)
 print(cnn_paper.description)
 
 first_article = cnn_paper.articles[0]
+print(len(cnn_paper.articles))
 
-from newspaper import Article
-first_article = Article(url="http://www.lemonde.fr/...", language='fr')
+# from newspaper import Article
+# first_article = Article(url="http://www.lemonde.fr/...", language='fr')
 
-first_article = cnn_paper.articles[0]
+# first_article = cnn_paper.articles[0]
 
-first_article.download()
+# first_article.download()
 
-print(first_article.html)
+# print(first_article.html)
 #print(cnn_paper.articles[7].html)
