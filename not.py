@@ -1,6 +1,10 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 
-if not True:
+bool = False
+
+if (bool):
     print("not is true")
 
-if not False:
+if not(bool):
     print("not is false")    
