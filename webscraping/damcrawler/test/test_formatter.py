@@ -23,10 +23,10 @@ class TddFormatter(unittest.TestCase):
         res = f.drop_whitespaces()
         self.assertEqual("En-un-lugar-de-la-Mancha", res)
 
-    # def test_formatter_drop_accents_whitespaces_method_returns_correct_result(self):
-    #     f = Formatter("vivía un ingenioso hidalgo")
-    #     res = f.drop_accents_whitespaces()
-    #     self.assertEqual("vivia-un-ingenioso-hidalgo", res)
+    def test_formatter_drop_accents_whitespaces_method_returns_correct_result(self):
+        f = Formatter("Balón lala")
+        res = f.drop_accents_whitespaces()
+        self.assertEqual("Balon-lala", res)
         
         
 if __name__ == '__main__':

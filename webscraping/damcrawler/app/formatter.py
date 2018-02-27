@@ -26,21 +26,23 @@ class Formatter(object):
         return result
 
     def drop_accents_whitespaces(self):
-        aux = ""
+        result = ""
         thestr = self.string
+        # drop accents
         for c in unicodedata.normalize('NFD', thestr):
             if (unicodedata.category(c) != 'Mn'):
-                aux = aux + c
-        if re.search(r' ', self.string):
-            aux = re.sub(r' ', '-', self.string)
-        return aux
+                result = result + c
+        # drop whitespaces
+        if re.search(r' ', result):
+            result = re.sub(r' ', '-', result)
+        return result
 
-# acentuado = "Balón"    
-#f = Formatter("Balón")
-# aux = ""
-# for c in unicodedata.normalize('NFD', f.string):
-#     if (unicodedata.category(c) != 'Mn'):
-#         aux = aux + c
-# print(aux)
-#print(f.drop_accents())
-# #result = f.drop_accents()
+# # acentuado = "Balón"    
+# f = Formatter("Balón lala")
+# # aux = ""
+# # for c in unicodedata.normalize('NFD', f.string):
+# #     if (unicodedata.category(c) != 'Mn'):
+# #         aux = aux + c
+# # print(aux)
+# print(f.drop_accents_whitespaces())
+# # #result = f.drop_accents()
