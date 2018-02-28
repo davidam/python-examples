@@ -14,6 +14,11 @@ class TddCrawler(unittest.TestCase):
         c = Crawler("http://www.urjc.es")
         c.downloadOneUrl("urjc.html")
         self.assertEqual(os.path.exists("urjc.html"), True)
+
+    def test_crawler_urlsLevel1Host_method_returns_correct_result(self):
+        c = Crawler("http://www.gnu.org")
+        c.urlsLevelHost(1,"gnu")
+        self.assertNotEqual(0, len(c.urls))
             
         
 if __name__ == '__main__':
