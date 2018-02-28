@@ -11,7 +11,7 @@ class Crawler(object):
         self.url = s
         response = requests.get(self.url)
         tree = html.fromstring(response.text)
-        self.title = tree.xpath('//title')[0]
+        self.title = tree.xpath('//title')[0].text_content()
         self.content = response.text
         
     def downloadOneUrl(self, name):
@@ -35,7 +35,3 @@ class Crawler(object):
                 c = Crawler(h)
                 c.downloadOneUrl("elpais")
 
-c = Crawler("http://www.elpais.es")
-#c.downloadOneUrl("tmp1")
-c.downloadUrls("/tmp/", "elpais")
-#c.downloadUrls("/tmp/", "elpais")
