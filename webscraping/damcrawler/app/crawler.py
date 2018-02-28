@@ -1,9 +1,11 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-import requests, os, re
+import requests, os, re, hashlib, time
 from lxml import html
+from formatter import Formatter
 
+#import pdb
 
 class Crawler(object):
 
@@ -19,6 +21,8 @@ class Crawler(object):
         file.write(self.content)
         
     def downloadUrls(self, directory, newspaper):
+ #       pdb.set_trace()
+        
         if (os.path.exists(directory)):
             os.chdir(directory)
         else:
@@ -26,12 +30,17 @@ class Crawler(object):
         page = requests.get(self.url)
         tree = html.fromstring(page.content)
         hrefs = tree.xpath('//a//@href')
-#        pprint(hrefs)
-        for h in hrefs:
-            match = re.search(r'http[s]?://(www\.)?([a-z]*\.)?'+newspaper+'\b', h)
-            print(match)
+        regaux = 'http[s]?://(www\.)?([a-z]*\.)?'+newspaper
+        for h in hrefs[0:15]:
+            match = re.search(regaux, h)
             if match:
                 print(h)
-                c = Crawler(h)
-                c.downloadOneUrl("elpais")
+                f = Formatter(self.title)
+                t = f.drop_accents_whitespaces().lower() + str(time.time())
+                print(t)
+                cc = Crawler(h)
+                cc.downloadOneUrl(t +".html")
 
+# c = Crawler("http://www.elpais.es")
+# c.downloadOneUrl("elpais.html")
+# c.downloadUrls("/tmp/","elpais")
