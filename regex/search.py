@@ -1,8 +1,10 @@
 import re
 str = 'an example word:cat!!'
-match = re.search(r'word:\w\w\w', str)
+reg = 'word:\w\w\w'
+match = re.search(reg, str)
 # If-statement after search() tests if it succeeded
 if match:                      
-    print 'found', match.group() ## 'found word:cat'
+    print('found %s' % match.group()) ## 'found word:cat'
 else:
-    print 'did not find'
+    print('did not find')
+
