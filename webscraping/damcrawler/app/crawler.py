@@ -1,24 +1,41 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-import requests
+import requests, os, re
+from lxml import html
+
 
 class Crawler(object):
 
     def __init__(self, s):
         self.url = s
-  
+        response = requests.get(self.url)
+        tree = html.fromstring(response.text)
+        self.title = tree.xpath('//title')[0]
+        self.content = response.text
+        
     def downloadOneUrl(self, name):
-        res = requests.get(self.url)
         file = open(name, "w")
-        file.write(res.text)
+        file.write(self.content)
+        
+    def downloadUrls(self, directory, newspaper):
+        if (os.path.exists(directory)):
+            os.chdir(directory)
+        else:
+            os.makedirs(directory)
+        page = requests.get(self.url)
+        tree = html.fromstring(page.content)
+        hrefs = tree.xpath('//a//@href')
+#        pprint(hrefs)
+        for h in hrefs:
+            match = re.search(r'http[s]?://(www\.)?([a-z]*\.)?'+newspaper+'\b', h)
+            print(match)
+            if match:
+                print(h)
+                c = Crawler(h)
+                c.downloadOneUrl("elpais")
 
-#     def downloadOneUrl(url):
-#         res = requests.get(url)
-#         tree = html.fromstring(res.text)
-# #        pprint(tree)
-#         title_elem = tree.xpath('//title')[0]
-# #        print(title_elem.text_content().lower())
-
-c = Crawler("http://www.urjc.es")
-c.downloadOneUrl("urjc")
+c = Crawler("http://www.elpais.es")
+#c.downloadOneUrl("tmp1")
+c.downloadUrls("/tmp/", "elpais")
+#c.downloadUrls("/tmp/", "elpais")
