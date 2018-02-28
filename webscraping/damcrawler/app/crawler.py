@@ -3,9 +3,7 @@
 
 import requests, os, re, hashlib, time
 from lxml import html
-from formatter import Formatter
-
-#import pdb
+from formatter import *
 
 class Crawler(object):
 
@@ -21,8 +19,6 @@ class Crawler(object):
         file.write(self.content)
         
     def downloadUrls(self, directory, newspaper):
- #       pdb.set_trace()
-        
         if (os.path.exists(directory)):
             os.chdir(directory)
         else:
