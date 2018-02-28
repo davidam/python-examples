@@ -27,7 +27,7 @@ class TddFormatter(unittest.TestCase):
         f = Formatter("Balón lala")
         res = f.drop_accents_whitespaces()
         self.assertEqual("Balon-lala", res)
-        
-        
+        self.assertEqual("balon-lala", res.lower())
+                
 if __name__ == '__main__':
     unittest.main()
