@@ -24,6 +24,10 @@ class TddInPythonExample(unittest.TestCase):
         result = calc.div(2,2)
         self.assertEqual(1, result)
 
+    def test_calculator_prodUsingAdd_method_returns_correct_result(self):
+        calc = Calculator()
+        result = calc.prodUsingAdd(5,4)
+        self.assertEqual(20, result)
         
 if __name__ == '__main__':
     unittest.main()
