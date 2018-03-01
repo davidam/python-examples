@@ -37,6 +37,13 @@ class Formatter(object):
             result = re.sub(r' ', '-', result)
         return result
 
+    def hostFromUrl(self):
+        url = self.string
+        regex = 'http[s]?://(www\.)?([a-z]*)?\.([a-z]*)?'
+        host = re.sub(regex, r'\2', url)
+        return host
+
+    
 # # acentuado = "Balón"    
 # f = Formatter("Balón lala")
 # # aux = ""
