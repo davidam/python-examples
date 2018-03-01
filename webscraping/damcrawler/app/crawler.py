@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-import requests, os, re, hashlib, time
+import requests, os, re, hashlib, time, threading
 from lxml import html
 from formatter import *
 
@@ -17,6 +17,10 @@ class Crawler(object):
     def downloadOneUrl(self, name):
         file = open(name, "w")
         file.write(self.content)
+
+    def downloadOneUrlThread(self, name):
+        t = threading.Thread(target = self.downloadOneUrl(name))
+        t.start()        
         
     def downloadUrls(self, directory, newspaper):
         if (os.path.exists(directory)):
