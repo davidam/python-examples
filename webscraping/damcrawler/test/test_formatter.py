@@ -28,6 +28,12 @@ class TddFormatter(unittest.TestCase):
         res = f.drop_accents_whitespaces()
         self.assertEqual("Balon-lala", res)
         self.assertEqual("balon-lala", res.lower())
-                
+
+    def test_formatter_hostFromUrl_method_returns_correct_result(self):
+        f = Formatter("http://www.elpais.es")
+        res = f.hostFromUrl()
+        self.assertEqual("elpais", res)
+
+        
 if __name__ == '__main__':
     unittest.main()
