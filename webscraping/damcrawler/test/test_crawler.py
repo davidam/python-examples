@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-import unittest, os
+import unittest, os, threading
 from app.crawler import Crawler
  
 class TddCrawler(unittest.TestCase):
@@ -15,10 +15,10 @@ class TddCrawler(unittest.TestCase):
         c.downloadOneUrl("urjc.html")
         self.assertEqual(os.path.exists("urjc.html"), True)
 
-    def test_crawler_urlsLevel1Host_method_returns_correct_result(self):
-        c = Crawler("http://www.gnu.org")
-        c.urlsLevelHost(1,"gnu")
-        self.assertNotEqual(0, len(c.urls))
+    def test_crawler_downloadOneUrlThread_method_returns_correct_result(self):
+        c = Crawler("http://www.elpais.es")
+        c.downloadOneUrlThread("elpais.html")
+        self.assertEqual(os.path.exists("elpais.html"), True)
             
         
 if __name__ == '__main__':
