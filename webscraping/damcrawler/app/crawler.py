@@ -13,6 +13,7 @@ class Crawler(object):
         tree = html.fromstring(response.text)
         self.title = tree.xpath('//title')[0].text_content()
         self.content = response.text
+        self.urls = []
         
     def downloadOneUrl(self, name):
         file = open(name, "w")
@@ -20,27 +21,48 @@ class Crawler(object):
 
     def downloadOneUrlThread(self, name):
         t = threading.Thread(target = self.downloadOneUrl(name))
-        t.start()        
+        t.start()
+
+    # def urlsLevel1Host(self, host, url):
+    #     page = requests.get(self.url)
+    #     tree = html.fromstring(page.content)
+    #     hrefs = tree.xpath('//a//@href')
+    #     regex = 'http[s]?://(www\.)?([a-z]*\.)?'+host
+    #     for h in hrefs:
+    #         if h not in self.urls:
+    #             match = re.search(regex, h)
+    #             if match:
+    #                 print(h)
+    #                 self.urls.append(h)
+                    
+    # def urlsLevelHost(self, level, host):
+    #     for u in self.urls:
+    #         self.urlsLevel1Host(host) 
+    #     if (level > 1):
+    #         self.urlsLevelHost(level - 1, host)
+
         
-    def downloadUrls(self, directory, newspaper):
-        if (os.path.exists(directory)):
-            os.chdir(directory)
-        else:
-            os.makedirs(directory)
-        page = requests.get(self.url)
-        tree = html.fromstring(page.content)
-        hrefs = tree.xpath('//a//@href')
-        regaux = 'http[s]?://(www\.)?([a-z]*\.)?'+newspaper
-        for h in hrefs[0:15]:
-            match = re.search(regaux, h)
-            if match:
-                print(h)
-                f = Formatter(self.title)
-                t = f.drop_accents_whitespaces().lower() + str(time.time())
-                print(t)
-                cc = Crawler(h)
-                cc.downloadOneUrl(t +".html")
+    # def downloadUrls(self, directory, newspaper):
+    #     if (os.path.exists(directory)):
+    #         os.chdir(directory)
+    #     else:
+    #         os.makedirs(directory)
+    #     page = requests.get(self.url)
+    #     tree = html.fromstring(page.content)
+    #     hrefs = tree.xpath('//a//@href')
+    #     regaux = 'http[s]?://(www\.)?([a-z]*\.)?'+newspaper
+    #     for h in hrefs[0:15]:
+    #         match = re.search(regaux, h)
+    #         if match:
+    #             print(h)
+    #             f = Formatter(self.title)
+    #             t = f.drop_accents_whitespaces().lower() + str(time.time())
+    #             print(t)
+    #             cc = Crawler(h)
+    #             cc.downloadOneUrl(t +".html")
 
 # c = Crawler("http://www.elpais.es")
 # c.downloadOneUrl("elpais.html")
 # c.downloadUrls("/tmp/","elpais")
+
+#print(re.sub(r'([\w\.-]+)@([\w\.-]+)', r'\1@yo-yo-dyne.com', str))
