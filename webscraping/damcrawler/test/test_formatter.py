@@ -32,7 +32,10 @@ class TddFormatter(unittest.TestCase):
     def test_formatter_hostFromUrl_method_returns_correct_result(self):
         f = Formatter("http://www.elpais.es")
         res = f.hostFromUrl()
+        f2 = Formatter("http://madrid.elpais.es")
+        res2 = f.hostFromUrl()        
         self.assertEqual("elpais", res)
+        self.assertEqual("elpais", res2)        
 
         
 if __name__ == '__main__':

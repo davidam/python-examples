@@ -39,17 +39,7 @@ class Formatter(object):
 
     def hostFromUrl(self):
         url = self.string
-        regex = 'http[s]?://(www\.)?([a-z]*)?\.([a-z]*)?'
-        host = re.sub(regex, r'\2', url)
-        return host
+        regex = 'http[s]?://(www\.)?([a-z]*\.)*(?P<host>[a-z]*)\.(?P<ext>[a-z]*)?'
+        h = re.search(regex,'http://madrid.elpais.es')
+        return h.group('host')
 
-    
-# # acentuado = "Balón"    
-# f = Formatter("Balón lala")
-# # aux = ""
-# # for c in unicodedata.normalize('NFD', f.string):
-# #     if (unicodedata.category(c) != 'Mn'):
-# #         aux = aux + c
-# # print(aux)
-# print(f.drop_accents_whitespaces())
-# # #result = f.drop_accents()
