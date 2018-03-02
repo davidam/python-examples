@@ -4,6 +4,7 @@
 import requests, os, re, hashlib, time, threading
 from lxml import html
 from formatter import *
+from newspaper import Article
 
 class Crawler(object):
 
@@ -18,11 +19,23 @@ class Crawler(object):
     def downloadOneUrl(self, name):
         file = open(name, "w")
         file.write(self.content)
-
+        
     def downloadOneUrlThread(self, name):
         t = threading.Thread(target = self.downloadOneUrl(name))
         t.start()
 
+    def downloadOneUrlNewspaper(self, name):
+        article = Article(self.url)
+        article.parse()
+        article.download()
+        file = open(name, "w")
+        file.write(article.clean_dom)
+
+    def downloadOneUrlNewspaperThread(self, name):
+        t = threading.Thread(target = self.downloadOneUrlNewspaper(name))
+        t.start()
+
+        
     # def urlsLevel1Host(self, host, url):
     #     page = requests.get(self.url)
     #     tree = html.fromstring(page.content)
