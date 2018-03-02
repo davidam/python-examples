@@ -3,7 +3,7 @@
 
 import requests, os, re, hashlib, time, threading
 from lxml import html
-from formatter import *
+from app.formatter import Formatter
 from newspaper import Article
 
 class Crawler(object):
@@ -35,7 +35,18 @@ class Crawler(object):
         t = threading.Thread(target = self.downloadOneUrlNewspaper(name))
         t.start()
 
-        
+    def urlsLevel1Host(self):
+        f = Formatter(self.url)
+        page = requests.get(self.url)
+        tree = html.fromstring(page.content)
+        hrefs = tree.xpath('//a//@href')
+        regex = 'http[s]?://(www\.)?([a-z]*\.)?'+f.hostFromUrl()
+        for h in hrefs:
+            if h not in self.urls:
+                match = re.search(regex, h)
+                if match:
+                    self.urls.append(h)
+                
     # def urlsLevel1Host(self, host, url):
     #     page = requests.get(self.url)
     #     tree = html.fromstring(page.content)
