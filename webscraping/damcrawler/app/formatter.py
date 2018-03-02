@@ -40,6 +40,19 @@ class Formatter(object):
     def hostFromUrl(self):
         url = self.string
         regex = 'http[s]?://(www\.)?([a-z]*\.)*(?P<host>[a-z]*)\.(?P<ext>[a-z]*)?'
-        h = re.search(regex,'http://madrid.elpais.es')
-        return h.group('host')
+        h = re.search(regex,url)
+        if hasattr(h, 'group'):
+            return h.group('host')
+        else:
+            return ""
+
+    def isUrl(self):
+        url = self.string
+        regex = 'http[s]?://(www\.)?([a-z]*\.)*(?P<host>[a-z]*)\.(?P<ext>[a-z]*)?'
+        h = ""
+        h = re.search(regex,url)
+        if hasattr(h, 'group'):
+            return True
+        else:
+            return False
 
