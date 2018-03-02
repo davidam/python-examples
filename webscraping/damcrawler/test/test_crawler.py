@@ -30,6 +30,10 @@ class TddCrawler(unittest.TestCase):
         c.downloadOneUrlThread("alienigenaviolanenes.html")
         self.assertEqual(os.path.exists("alienigenaviolanenes.html"), True)
 
+    def test_crawler_urlsLevel1Host_method_returns_correct_result(self):   
+        c = Crawler("http://www.elpais.es")
+        c.urlsLevel1Host()
+        self.assertEqual(len(c.urls)>1, True)
         
 if __name__ == '__main__':
     unittest.main()
