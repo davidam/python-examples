@@ -14,12 +14,22 @@ class TddCrawler(unittest.TestCase):
         c = Crawler("http://www.urjc.es")
         c.downloadOneUrl("urjc.html")
         self.assertEqual(os.path.exists("urjc.html"), True)
-
+        
     def test_crawler_downloadOneUrlThread_method_returns_correct_result(self):
         c = Crawler("http://www.elpais.es")
         c.downloadOneUrlThread("elpais.html")
         self.assertEqual(os.path.exists("elpais.html"), True)
-            
+
+    def test_crawler_downloadOneUrlNewspaper_method_returns_correct_result(self):
+        c = Crawler("https://politica.elpais.com/politica/2017/08/29/actualidad/1504006030_167758.html")
+        c.downloadOneUrl("alienigenaviolanenes.html")
+        self.assertEqual(os.path.exists("alienigenaviolanenes.html"), True)
+        
+    def test_crawler_downloadOneUrlNewspaperThread_method_returns_correct_result(self):
+        c = Crawler("https://politica.elpais.com/politica/2017/08/29/actualidad/1504006030_167758.html")
+        c.downloadOneUrlThread("alienigenaviolanenes.html")
+        self.assertEqual(os.path.exists("alienigenaviolanenes.html"), True)
+
         
 if __name__ == '__main__':
     unittest.main()
