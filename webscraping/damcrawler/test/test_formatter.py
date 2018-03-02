@@ -37,6 +37,17 @@ class TddFormatter(unittest.TestCase):
         self.assertEqual("elpais", res)
         self.assertEqual("elpais", res2)        
 
+    def test_formatter_isUrl_method_returns_correct_result(self):
+        f = Formatter("http://www.elpais.es")
+        res = f.isUrl()
+        f2 = Formatter("http://madrid.elpais.es")
+        res2 = f2.isUrl()
+        f3 = Formatter("/noticias.html")
+        res3 = f3.isUrl()                
+        self.assertEqual(True, res)
+        self.assertEqual(True, res2)
+        self.assertEqual(False, res3)
+        
         
 if __name__ == '__main__':
     unittest.main()
