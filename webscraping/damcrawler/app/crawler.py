@@ -14,7 +14,7 @@ class Crawler(object):
         tree = html.fromstring(response.text)
         self.title = tree.xpath('//title')[0].text_content()
         self.content = response.text
-        self.urls = []
+        self.urls = [self.url]
         
     def downloadOneUrl(self, name):
         file = open(name, "w")
@@ -46,7 +46,12 @@ class Crawler(object):
                 match = re.search(regex, h)
                 if match:
                     self.urls.append(h)
-                
+
+    # def urlsLevelHost(self, level):
+    #     for u in self.urls:
+    #         print(u)
+#            self.urlsLevel1Host() 
+                    
     # def urlsLevel1Host(self, host, url):
     #     page = requests.get(self.url)
     #     tree = html.fromstring(page.content)
@@ -86,6 +91,8 @@ class Crawler(object):
     #             cc.downloadOneUrl(t +".html")
 
 # c = Crawler("http://www.elpais.es")
+# c.urlsLevelHost(1)
+# print(c.urls)
 # c.downloadOneUrl("elpais.html")
 # c.downloadUrls("/tmp/","elpais")
 
