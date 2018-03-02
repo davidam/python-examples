@@ -48,6 +48,11 @@ class TddFormatter(unittest.TestCase):
         self.assertEqual(True, res2)
         self.assertEqual(False, res3)
         
+    def test_formatter_isPath_method_returns_correct_result(self):
+        f = Formatter("/noticias.html")
+        res = f.isPath()                
+        self.assertEqual(True, res)
+
         
 if __name__ == '__main__':
     unittest.main()
