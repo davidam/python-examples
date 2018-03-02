@@ -56,3 +56,13 @@ class Formatter(object):
         else:
             return False
 
+    def isPath(self):
+        url = self.string
+        regex = '\/.*'
+        h = ""
+        h = re.search(regex,url)
+        if hasattr(h, 'group'):
+            return True
+        else:
+            return False
+
