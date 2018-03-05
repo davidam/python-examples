@@ -24,12 +24,14 @@ class TddCrawler(unittest.TestCase):
         c = Crawler("https://politica.elpais.com/politica/2017/08/29/actualidad/1504006030_167758.html")
         c.downloadOneUrl("alienigenaviolanenes.html")
         self.assertEqual(os.path.exists("alienigenaviolanenes.html"), True)
+        self.assertEqual(len(c.files), 1)
         
     def test_crawler_downloadOneUrlNewspaperThread_method_returns_correct_result(self):
         c = Crawler("https://politica.elpais.com/politica/2017/08/29/actualidad/1504006030_167758.html")
         c.downloadOneUrlThread("alienigenaviolanenes.html")
         self.assertEqual(os.path.exists("alienigenaviolanenes.html"), True)
-
+        self.assertEqual(len(c.files), 1)
+        
     def test_crawler_urlsLevel1Host_method_returns_correct_result(self):   
         c = Crawler("http://www.elpais.es")
         c.urlsLevel1Host()
