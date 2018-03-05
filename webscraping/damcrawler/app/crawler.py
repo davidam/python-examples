@@ -21,6 +21,7 @@ class Crawler(object):
     def downloadOneUrl(self, name):
         file = open(name, "w")
         file.write(self.content)
+        file.close()
         self.files.append(name)
         
     def downloadOneUrlThread(self, name):
@@ -33,6 +34,7 @@ class Crawler(object):
         article.download()
         file = open(name, "w")
         file.write(article.clean_dom)
+        file.close()
         self.files.append(name) 
 
     def downloadOneUrlNewspaperThread(self, name):
@@ -55,12 +57,4 @@ class Crawler(object):
                 if match:
                     self.urls.append(h)
 
-#     def urlsLevelHost(self, level):
-#         for u in self.urls:
-#             print(u)
-#             self.urlsLevel1Host(url=u)
 
-# c = Crawler("http://www.elpais.es")
-# #c.urlsLevel1Host(url=c.url)
-# c.urlsLevelHost(1)
-# #print(c.urls)
