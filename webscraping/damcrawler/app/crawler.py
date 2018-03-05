@@ -16,10 +16,12 @@ class Crawler(object):
         self.title = tree.xpath('//title')[0].text_content()
         self.content = response.text
         self.urls = [self.url]
+        self.files = []
         
     def downloadOneUrl(self, name):
         file = open(name, "w")
         file.write(self.content)
+        self.files.append(name)
         
     def downloadOneUrlThread(self, name):
         t = threading.Thread(target = self.downloadOneUrl(name))
@@ -31,6 +33,7 @@ class Crawler(object):
         article.download()
         file = open(name, "w")
         file.write(article.clean_dom)
+        self.files.append(name) 
 
     def downloadOneUrlNewspaperThread(self, name):
         t = threading.Thread(target = self.downloadOneUrlNewspaper(name))
@@ -45,11 +48,19 @@ class Crawler(object):
         page = requests.get(url)
         tree = html.fromstring(page.content)
         hrefs = tree.xpath('//a//@href')
-        regex = 'http[s]?://(www\.)?([a-z]*\.)?'+f.hostFromUrl()
+        regex = '^http[s]?://(www\.)?([a-z]*\.)?'+f.hostFromUrl()
         for h in hrefs:
             if h not in self.urls:
                 match = re.search(regex, h)
                 if match:
                     self.urls.append(h)
 
+#     def urlsLevelHost(self, level):
+#         for u in self.urls:
+#             print(u)
+#             self.urlsLevel1Host(url=u)
 
+# c = Crawler("http://www.elpais.es")
+# #c.urlsLevel1Host(url=c.url)
+# c.urlsLevelHost(1)
+# #print(c.urls)
