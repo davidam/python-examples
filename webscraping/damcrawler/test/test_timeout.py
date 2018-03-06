@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-import unittest, os, threading
+import unittest
 from app.timeout import Timeout
 from time import sleep
 
