@@ -16,5 +16,12 @@ Node('/Udo/Dan/Joe')
 for pre, fill, node in RenderTree(udo):
     print("%s%s" % (pre, node.name))
 
+print("Dan children")    
 print(dan.children)
 (Node('/Udo/Dan/Jet'), Node('/Udo/Dan/Jan'), Node('/Udo/Dan/Joe'))
+
+print("Jan depth")
+print(jan.depth)
+
+print("Jan siblings")
+print(jan.siblings)
