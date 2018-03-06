@@ -4,6 +4,7 @@
 import requests, os, re, hashlib, time, threading
 from lxml import html
 from app.formatter import Formatter
+from app.urlthread import UrlThread
 #from formatter import Formatter
 from newspaper import Article
 
@@ -11,10 +12,11 @@ class Crawler(object):
 
     def __init__(self, s):
         self.url = s
-        response = requests.get(self.url)
-        tree = html.fromstring(response.text)
-        self.title = tree.xpath('//title')[0].text_content()
-        self.content = response.text
+        f = UrlThread(self.url)
+        f.start()
+        f.join()
+        self.title = f.title
+        self.content = f.content
         self.urls = [self.url]
         self.files = []
         
