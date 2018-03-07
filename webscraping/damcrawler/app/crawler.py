@@ -59,6 +59,9 @@ class Crawler(object):
                 if match:
                     self.urls.append(h)
 
-
-
+    def urlsLevelHost(self, level):
+        for u in self.urls:
+            self.urlsLevel1Host() 
+        if (level > 1):
+            self.urlsLevelHost(level - 1)
                     
