@@ -14,7 +14,7 @@ class Crawler(object):
         self.url = s
         f = UrlThread(self.url)
         f.start()
-        f.join()
+        f.join(timeout=10)
         self.title = f.title
         self.content = f.content
         self.urls = [self.url]
@@ -60,3 +60,5 @@ class Crawler(object):
                     self.urls.append(h)
 
 
+
+                    
