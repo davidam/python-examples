@@ -41,7 +41,9 @@ class TddCrawler(unittest.TestCase):
         c = Crawler("http://www.elpais.es")
         c.urlsLevelHost(1)
         uno = len(c.urls)
-        self.assertEqual(uno>1, True)
+        c.urlsLevelHost(2)
+        dos = len(c.urls)
+        self.assertEqual(dos>1, True)
         
 if __name__ == '__main__':
     unittest.main()
