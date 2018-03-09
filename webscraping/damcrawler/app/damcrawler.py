@@ -6,8 +6,10 @@ from formatter import Formatter
 from crawler import Crawler
 from newspaper import Article
 import os
-import pdb
+#import pdb
 from pprint import pprint
+import time
+
 
 if __name__ == "__main__":
     year = 2017
@@ -15,7 +17,7 @@ if __name__ == "__main__":
     day = 32
 
     m = []
-    pdb.set_trace()
+#    pdb.set_trace()
     for i in range(1, month):
         if (i < 10):    
             m.append(["0"+str(i)])
@@ -40,14 +42,14 @@ if __name__ == "__main__":
                 print("Path is created")
             else:
                 os.makedirs(path)
-                
+            os.chdir(path)
+            
             c = Crawler(url)
             c.urlsLevelHost(2)
-            pprint(c.urls)
-            # for u in c.urls:
-            #     caux = Crawler(u)
-            #     faux = Formatter(u)
-            #     name = faux.hostFromUrl() + str(time.time())
-            #     caux.downloadOneUrlThread(name)
+            for u in c.urls:
+                caux = Crawler(u)
+                faux = Formatter(u)
+                name = faux.hostFromUrl() + str(time.time())
+                caux.downloadOneUrlThread(name)
             os.chdir(curpath)
 
