@@ -9,8 +9,14 @@ days = 32
 
 print('Give me days in a month')
 for i in range(1, days):
-    print(i)
+    if (i < 10):
+        print("0"+str(i))
+    else:
+        print(i)
 
 print('Give me months in a year')    
 for i in range(1, month):
-    print(i)
+    if (i < 10):    
+        print("0"+str(i))
+    else:
+        print(i)
