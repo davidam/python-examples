@@ -7,6 +7,7 @@ from app.formatter import Formatter
 from app.urlthread import UrlThread
 #from formatter import Formatter
 from newspaper import Article
+#from pprint import pprint
 
 class Crawler(object):
 
@@ -65,3 +66,11 @@ class Crawler(object):
         if (level > 1):
             self.urlsLevelHost(level - 1)
                     
+    # def downloadNews(self, level):
+    #     self.urlsLevelHost(level)
+    #     for u in c.urls:
+    #         caux = Crawler(u)
+    #         faux = Formatter(u)
+    #         name = faux.hostFromUrl() + str(time.time()) + ".html"
+    #         caux.downloadOneUrlThread(name)
+
