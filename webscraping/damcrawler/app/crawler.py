@@ -1,12 +1,13 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-import requests, os, re, hashlib, time, threading
+import requests, os, re, hashlib, time, threading, pdb, datetime, newspaper
 from lxml import html
+import xml.etree.cElementTree as ET
 from app.formatter import Formatter
 from app.urlthread import UrlThread
-#from formatter import Formatter
 from newspaper import Article
+#from formatter import Formatter
 #from pprint import pprint
 
 class Crawler(object):
@@ -33,13 +34,28 @@ class Crawler(object):
 
     def downloadOneUrlNewspaper(self, name):
         article = Article(self.url)
-        article.parse()
         article.download()
+        article.parse()        
         file = open(name, "w")
-        file.write(article.clean_dom)
+        file.write(article.article_html)
         file.close()
         self.files.append(name) 
 
+    def downloadOneUrlNewspaperXML(self, name):
+        article = Article(self.url)
+        article.download()
+        article.parse()
+        publishDate=article.publish_date.strftime('%Y%m%d') if hasattr(article.publish_date,'strftime') else datetime.datetime.now().strftime('%Y%m%d')
+        ID=datetime.datetime.now().strftime('LOG_%Y%m%d-%Hh%Mm')        
+        doc = ET.Element("DOC",AUTHOR=article.authors,DATE=publishDate,DOCNO=' ',ID=ID,LNG='ES',SOURCE=article.source_url,URL=article.url)
+        ET.SubElement(doc,"TITLE").text = article.title
+        ET.SubElement(doc,"SUMMARY").text = article.meta_description #a.summary
+        ET.SubElement(doc,"BODY").text = article.text
+        ET.SubElement(doc,"IMAGE").text = article.meta_img
+        tree = ET.ElementTree(doc)
+        tree.write(name,encoding="UTF-8",xml_declaration=True)#,standalone="no",pretty_print=True)
+        self.files.append(name)         
+        
     def downloadOneUrlNewspaperThread(self, name):
         t = threading.Thread(target = self.downloadOneUrlNewspaper(name))
         t.start()
