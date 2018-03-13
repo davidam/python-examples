@@ -3,6 +3,7 @@
 
 import unittest, os, threading
 from app.crawler import Crawler
+from time import gmtime, strftime, time
  
 class TddCrawler(unittest.TestCase):
     def test_crawler_downloadInit_method_returns_correct_result(self):
@@ -22,9 +23,15 @@ class TddCrawler(unittest.TestCase):
 
     def test_crawler_downloadOneUrlNewspaper_method_returns_correct_result(self):
         c = Crawler("https://politica.elpais.com/politica/2017/08/29/actualidad/1504006030_167758.html")
-        c.downloadOneUrl("alienigenaviolanenes.html")
+        c.downloadOneUrlNewspaper("alienigenaviolanenes.html")
         self.assertEqual(os.path.exists("alienigenaviolanenes.html"), True)
         self.assertEqual(len(c.files), 1)
+
+    def test_crawler_downloadOneUrlNewspaperXML_method_returns_correct_result(self):
+        c = Crawler("https://politica.elpais.com/politica/2017/08/29/actualidad/1504006030_167758.html")
+        c.downloadOneUrlNewspaperXML("alienigenaviolanenes.html")
+        self.assertEqual(os.path.exists("alienigenaviolanenes.html"), True)
+        self.assertEqual(len(c.files), 1)        
         
     def test_crawler_downloadOneUrlNewspaperThread_method_returns_correct_result(self):
         c = Crawler("https://politica.elpais.com/politica/2017/08/29/actualidad/1504006030_167758.html")
