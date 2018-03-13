@@ -9,7 +9,9 @@ class UrlThread(threading.Thread):
     def __init__(self, s):
         self.url = s
         threading.Thread.__init__(self)        
+        self.hrefs = []
         self.title = ""
+        self.content = ""
         
     def run(self):
         response = requests.get(self.url)
