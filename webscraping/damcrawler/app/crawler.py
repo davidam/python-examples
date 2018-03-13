@@ -37,7 +37,7 @@ class Crawler(object):
         article.download()
         article.parse()        
         file = open(name, "w")
-        file.write(article.article_html)
+        file.write(article.html)
         file.close()
         self.files.append(name) 
 
