@@ -29,8 +29,8 @@ class TddCrawler(unittest.TestCase):
 
     def test_crawler_downloadOneUrlNewspaperXML_method_returns_correct_result(self):
         c = Crawler("https://politica.elpais.com/politica/2017/08/29/actualidad/1504006030_167758.html")
-        c.downloadOneUrlNewspaperXML("alienigenaviolanenes.html")
-        self.assertEqual(os.path.exists("alienigenaviolanenes.html"), True)
+        c.downloadOneUrlNewspaperXML("alienigenaviolanenes.xml")
+        self.assertEqual(os.path.exists("alienigenaviolanenes.xml"), True)
         self.assertEqual(len(c.files), 1)        
         
     def test_crawler_downloadOneUrlNewspaperThread_method_returns_correct_result(self):
