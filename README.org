@@ -1,253 +1,37 @@
-* Basics in Python
-** Control Structures
-
-+ [[file:if.py]]
-+ [[file:even.py]]
-+ [[file:clasico.py]]
-+ [[file:comebebes.py]]
-+ [[file:cuentatras.py]]
-+ [[file:for.py]]
-+ [[file:zip.py]]
-+ [[file:enumerate.py]]
-+ [[file:piedrapapeltijeras.py]]
-+ [[file:guess.py]]
-+ [[file:range.py]]
-+ [[file:verpython.py]]
-+ [[file:cracklepop.py]]
-+ [[file:base10.py]]
-+ [[file:excepciones.py]]
-
-** Calculus & Recursivity
-
-+ [[file:multiplicar.py]]
-+ [[file:factorial.py]]
-+ [[file:factors.py]]
-+ [[file:mean.py]]
-+ file:elimDobles.py
-+ file:binaria.py
-+ [[file:reduce.py]]
-
-** Data structure
-
-+ [[file:lists.py]]
-+ [[file:diccionarios.py]]
-+ [[file:validar-cadenas.py]]
-+ [[file:pruebaconjuntos.py]]
-+ [[file:pruebatemplate.py]]
-+ [[file:counter.py]]
-
-** POO and Testing
-
-+ file:poo/agent/
-+ [[file:poo/polimorfismo/]]
-+ [[file:poo/herencia]]
-+ [[file:poo/calculator]]
-+ [[file:poo/factorial]]
-+ [[file:poo/fib]]
-+ [[file:poo/hanoi]]
-+ [[file:poo/persona]]
-+ [[file:poo/shape]]
-+ [[file:poo/wallet]]
-
-** Files
-+ [[file:write.py]]
-+ [[file:remove.py]]
-+ [[file:rename.py]]
-+ [[file:csv-example.py]]
-+ [[file:file-example.py]]
-+ [[file:ficherolineas.py]]
-+ file:rotatingimage.py
-
-** Regular expressions
-+ [[file:re.py]]
-+ [[file:re1.py]]
-+ [[file:re2.py]]
-+ [[file:re3.py]]
-+ [[file:re4.py]]
-
-* GUI
-# $ sudo apt-get install python-tk
-** Tkinter
-+ [[file:libreriatkinter.py]]
-+ [[file:botonestkinter.py]]
-** GTK
-+ [[file:gtk.py]]
-+ [[file:botonesgtk.py]]
-+ [[file:boxgtk.py]]
-+ [[file:frames.py]]
-+ [[file:grid.py]]
-+ [[file:pruebabox.py]]
-+ [[file:pruepygi.py]]
-** QT
-+ file:qt
-* Webscraping
-+ file:webscraping.py
-+ file:webscraping-davidam.py
-+ file:webscraping-mechanicalsoup.py
-+ file:newspaper
-* Shell
-+ [[file:shell.py]]
-+ [[file:popen.py]]
-+ [[file:argv.py]]
-+ file:sys.py
-+ file:printcolumn1.py
-* Databases
-** Sqlite
-+ [[file:sqlite.py]]
-+ [[file:sqlite2.py]]
-+ [[file:poo/sqlite-class.py]]
-** Mongo
-+ file:mongo/mongo-tutorial.py
-** Redis
-+ file:redis/redis-example.py
-* Web
-** Flask
-+ file:flask
-
-** Django
-
++ [[file:ai]]
++ [[file:clips]]
 + [[file:django]]
-
-** XML
-+ [[file:items.py]]
-
-** Semantic Web
-+ file:rdflib/sparql_query_example.py
-+ file:rdflib/rdflib-example.py
-
-* Maths
-** Itertool
-+ [[file:combinations.py]]
-+ [[file:product.py]]
-+ [[file:permutations.py]]
-
-** Statistics
-*** Basics
-+ [[file:statistics-example.py]]
-+ file:scipy/scipy-descriptives.py
-+ file:statistics/manipulating-data.py
-+ file:statistics/plot_pandas.py
-+ file:statistics/plot_iris_analysis.py
-*** Linear Regression
-+ file:simple-linear-regression.py
-*** Statistical tests
-+ file:scipy/scipy-special-tests.py
-+ file:scipy/scipy-comparing-means.py
-
-** Numpy
-+ [[file:numpy-example.py]]
-+ file:numpy-datatypes.py
-+ file:numpy-bool.py
-+ file:numpy-broadcasting.py
-+ file:numpy-broadcasting2.py
-+ file:numpy-broadcasting3.py
-+ file:numpy-broadcasting4.py
-+ file:numpy-arrays.py
-+ file:numpy-arrays2.py
-+ file:numpy-arraymath.py
-+ file:numpy-arraymath2.py
-+ file:numpy-arrays-indexing.py
-+ file:numpy-arrays-indexing2.py
-+ file:numpy-arrays-indexing3.py
-+ file:numpy-sum.py
-+ file:numpy-mandelbrot.py
-+ [[file:matplotlib-example.py]]
-+ file:changereligion.py
-
-** Scipy
-+ file:scipy-example.py
-+ file:scipy-bessel.py
-+ file:scipy-raices.py
-+ file:scipy-integrales.py
-+ file:scipy-interpolacion.py
-+ [[More][http://scipy-cookbook.readthedocs.io/index.html]]
-
-** Pandas
-+ file:pandas
-* Network
-
-+ [[file:server.py]]
-+ [[file:client.py]]
-
-$ python server.py &
-$ python client.py
-
-+ [[file:socket.py]]
-+ [[file:smtp.py]]
-
-* Multithreading
-
-+ [[file:multithreading.py]]
-* Artificial Intelligence
-** Basics
-+ [[file:ai/linear_algebra.py]]
-+ [[file:ai/recommender_systems.py]]
-+ file:ai/knearest.py
-+ file:ai/rsquared.py
-+ file:ai/clustering.py
-** Scikit
-
-+ file:scikit/plot_digits_classification.py
-+ file:scikit/scikit-example.py
-+ file:scikit/scikit-knn.py
-+ file:scikit/scikit-model.py
-+ file:scikit/scikit-multiclass.py
-+ file:scikit/scikit-multilabel.py
-+ file:scikit/scikit-naivebayes.py
-+ file:scikit/scikit-plot-cv-diabetes.py
-+ file:scikit/scikit-plot-cv-digits.py
-+ file:scikit/scikit-plot-face-recognition.py
-+ file:scikit/scikit-plot-feature-selection-pipeline.py
-+ file:scikit/scikit-plot-f-test-vs-mi.py
-+ file:scikit/scikit-plot-iris-exercise.py
-+ file:scikit/scikit-plot-pca-3d.py
-+ file:scikit/scikit-plot-permutation-test-for-classification.py
-+ file:scikit/scikit-plot-rfe-digits.py
-+ file:scikit/scikit-plot-rfe-with-cross-validation.py
-+ file:scikit/scikit-plot-select-from-model-boston.py
-+ file:scikit/scikit-plot-unveil-tree-sctructure.py
-+ file:scikit/scikit-refitting.py
-+ file:scikit/scikit-typecasting2.py
-+ file:scikit/scikit-typecasting.py
-
-** Clips
-+ file:clips/helloduck.py
-+ file:clips/externalfunctions.py
-+ file:clips/constructs.py
-+ file:clips/facttemplate.py
-+ file:clips/iosubsystem.py
-+ file:clips/rule.py
-** Natural Language Processing
-+ file:nlp/nltk
-
-* Data Formats
-** Pytables
-+ file:pytables
-** HDF5
-*** Installing
-pip install h5py
-*** Create a dataset
-file:hdf5/h5_crtdat.py
-*** Read and write to a dataset
-file:hdf5/h5_rdwt.py
-*** Create an attribute
-file:hdf5/h5_crtatt.py
-*** Create a group 
-file:hdf5/h5_crtgrp.py
-*** Create groups in a file using absolute and relative paths
-file:hdf5/h5_crtgrpar.py
-*** Create datasets in a group
-file:hdf5/h5_crtgrpd.py
-*** Create a chunked and compressed dataset
-file:hdf5/h5_cmprss.py
-** Netcdf
-+ [[file:netcdf/netcdf-example.py]]
-+ [[file:netcdf/netcdf-example2.py]]
-+ [[file:netcdf/netcdf-example3.py]]
-+ [[file:netcdf/netcdf-example4.py]]
-
-* Spark
-sudo apt-get install spark
-sudo pip install 
-* Perceval
-+ file:perceval/perceval_git_counter.py
++ [[file:flask]]
++ [[file:functional]]
++ [[file:gtk]]
++ [[file:h2o]]
++ [[file:hdf5]]
++ [[file:mongo]]
++ [[file:netcdf]]
++ [[file:network]]
++ [[file:nlp]]
++ [[file:numpy]]
++ [[file:pandas]]
++ [[file:perceval]]
++ [[file:pil]]
++ [[file:poo]]
++ [[file:presentations]]
++ [[file:pygame]]
++ [[file:pypdf]]
++ [[file:pytables]]
++ [[file:qiskit]]
++ [[file:qt]]
++ [[file:quotesbot]]
++ [[file:rdflib]]
++ [[file:redis]]
++ [[file:regex]]
++ [[file:scikit]]
++ [[file:scipy]]
++ [[file:security]]
++ [[file:shell]]
++ [[file:signals]]
++ [[file:statistics]]
++ [[file:tensorflow]]
++ [[file:theano]]
++ [[file:threads]]
++ [[file:webscraping]]
