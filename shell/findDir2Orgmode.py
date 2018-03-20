@@ -22,6 +22,7 @@
 # Boston, MA 02110-1301 USA,
 
 import os
+os.chdir('..')
 f = os.popen('find . | ls -l | grep "^d"')
 try:
     fo = open("README.org", 'r+')
