@@ -23,7 +23,11 @@
 
 import os
 f = os.popen('find . | ls -l | grep "^d"')
-fo = open("README.org", "r+")
+try:
+    fo = open("README.org", 'r+')
+except FileNotFoundError:
+    fo = open("README.org", 'w')
+
 for line in f:
     fields = line.strip().split()
     if (fields[8] != "__pycache__"):
