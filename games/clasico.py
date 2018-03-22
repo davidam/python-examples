@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 print("resultado del clásico".upper())
-cadena = raw_input("Indique el resultado en formato Barcelona Goles Madrid Goles: ")
+cadena = input("Indique el resultado en formato Barcelona Goles Madrid Goles: ")
 espacios = cadena.count(" ")
 if espacios != 3:
     print("El formato escrito erróneo!")
