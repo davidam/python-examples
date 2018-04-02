@@ -9,7 +9,7 @@ if __name__ == "__main__":
             num1 = long(sys.argv[1])
             num2 = long(sys.argv[2])
     else:
-            print "This command takes two arguments and adds them"
-            print "Less than two arguments given."
+            print("This command takes two arguments and adds them")
+            print("Less than two arguments given.")
             sys.exit(1)
-    print "%s" % str(num1 + num2)
+    print("%s" % str(num1 + num2))
