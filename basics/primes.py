@@ -27,6 +27,6 @@ def primos(x):
     return laux
 
 
-x = int(raw_input("Give me a number: "))
-print "generaLista(1, 5) %s: " % generaLista(1, 5)
-print "The primes list until %s is: %s" % (x, primos(x))
+x = int(input("Give me a number: "))
+print("generaLista(1, 5) %s: " % generaLista(1, 5))
+print("The primes list until %s is: %s" % (x, primos(x)))
