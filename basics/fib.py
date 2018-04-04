@@ -16,4 +16,4 @@ def fibo(n):
 
     return series
 
-print fibo(3)
+print(fibo(3))
