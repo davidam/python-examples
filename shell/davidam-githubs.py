@@ -34,4 +34,4 @@ print(r.text)
 json = r.text
 for key, value in json.iteritems():
     if (key == "name"):
-        print value
+        print(value)

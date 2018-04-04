@@ -3,7 +3,7 @@
 
 import argparse
 parser = argparse.ArgumentParser()
-parser.add_argument("square", type=int,
+parser.add_argument("--square", type=int,
                     help="display a square of a given number")
 parser.add_argument("-v", "--verbose", action="store_true",
                     help="increase output verbosity")
