@@ -1,6 +1,6 @@
 import os, re
 
-num = raw_input("Write a number: ")
+num = input("Write a number: ")
 
 print("Is it your number from 1 to 12? ")
 match = re.search(r'^(1[0-2]|[1-9])$', num)
