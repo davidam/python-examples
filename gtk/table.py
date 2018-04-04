@@ -1,86 +1,23 @@
-#!/usr/bin/env python
+from gi.repository import Gtk
 
-# example table.py
+ventana = Gtk.Window(title="Table")
+ventana.connect("delete-event", Gtk.main_quit)
 
-import pygtk
-pygtk.require('2.0')
-import gtk
+tabla = Gtk.Table(3, 3)
+ventana.add(tabla)
+boton1 = Gtk.Button(label="Boton 1")
+boton2 = Gtk.Button(label="Boton 2")
+boton3 = Gtk.Button(label="Boton 3")
+boton4 = Gtk.Button(label="Boton 4")
+boton5 = Gtk.Button(label="Boton 5")
+boton6 = Gtk.Button(label="Boton 6")
 
-class Table:
-    # Our callback.
-    # The data passed to this method is printed to stdout
-    def callback(self, widget, data=None):
-        print "Hello again - %s was pressed" % data
+tabla.attach(boton1, 0, 1, 0, 1)
+tabla.attach(boton2, 1, 3, 0, 1)
+tabla.attach(boton3, 0, 1, 1, 3)
+tabla.attach(boton4, 1, 3, 1, 2)
+tabla.attach(boton5, 1, 2, 2, 3)
+tabla.attach(boton6, 2, 3, 2, 3)
 
-    # This callback quits the program
-    def delete_event(self, widget, event, data=None):
-        gtk.main_quit()
-        return False
-
-    def __init__(self):
-        # Create a new window
-        self.window = gtk.Window(gtk.WINDOW_TOPLEVEL)
-
-        # Set the window title
-        self.window.set_title("Table")
-
-        # Set a handler for delete_event that immediately
-        # exits GTK.
-        self.window.connect("delete_event", self.delete_event)
-
-        # Sets the border width of the window.
-        self.window.set_border_width(20)
-
-        # Create a 2x2 table
-        table = gtk.Table(2, 2, True)
-
-        # Put the table in the main window
-        self.window.add(table)
-
-        # Create first button
-        button = gtk.Button("button 1")
-
-        # When the button is clicked, we call the "callback" method
-        # with a pointer to "button 1" as its argument
-        button.connect("clicked", self.callback, "button 1")
-
-
-        # Insert button 1 into the upper left quadrant of the table
-        table.attach(button, 0, 1, 0, 1)
-
-        button.show()
-
-        # Create second button
-
-        button = gtk.Button("button 2")
-
-        # When the button is clicked, we call the "callback" method
-        # with a pointer to "button 2" as its argument
-        button.connect("clicked", self.callback, "button 2")
-        # Insert button 2 into the upper right quadrant of the table
-        table.attach(button, 1, 2, 0, 1)
-
-        button.show()
-
-        # Create "Quit" button
-        button = gtk.Button("Quit")
-
-        # When the button is clicked, we call the main_quit function
-        # and the program exits
-        button.connect("clicked", lambda w: gtk.main_quit())
-
-        # Insert the quit button into the both lower quadrants of the table
-        table.attach(button, 0, 2, 1, 2)
-
-        button.show()
-
-        table.show()
-        self.window.show()
-
-def main():
-    gtk.main()
-    return 0       
-
-if __name__ == "__main__":
-    Table()
-    main()
+ventana.show_all()
+Gtk.main()
