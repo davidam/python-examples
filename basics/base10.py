@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- 
 # Obtenemos datos.
-nbinario = raw_input('Número binario: ')
+nbinario = input('Número binario: ')
 
 # Obtenemos los dígitos.
 nbinario = nbinario.split(',')

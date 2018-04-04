@@ -8,4 +8,4 @@ def calculate_mean(numbers):
 
     return mean
 
-print calculate_mean(numbers)
+print(calculate_mean(numbers))

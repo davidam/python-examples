@@ -7,7 +7,7 @@ class Listener:
          subject.register(self)
 
      def notify(self, event):
-         print self.name, "received event", event
+         print(self.name + " received event " + event)
 
 
 class Subject:
