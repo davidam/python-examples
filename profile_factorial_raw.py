@@ -7,6 +7,6 @@ def factorial(n):
     elif (n > 1):
         return n * factorial(n - 1)
 
-print "RAW"
+print("RAW")
 profile.run('factorial(4)')
     
