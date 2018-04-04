@@ -12,9 +12,9 @@ def creacion():
                    "stock INTEGER DEFAULT 0)")
 
 def insertar():
-    nomb = raw_input("Nombre del producto: ")
-    prov = raw_input("Proveedor: ")
-    prec = raw_input("Precio: ")
+    nomb = input("Nombre del producto: ")
+    prov = input("Proveedor: ")
+    prec = input("Precio: ")
     cursor.execute("INSERT INTO listado (nombre, proveedor, precio) " +
                    "VALUES (?, ?, ?)", (nomb, prov, prec))
     conex.commit()
