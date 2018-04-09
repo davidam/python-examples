@@ -1,9 +1,8 @@
 #!/usr/bin/python
 
-def calculate_median(numbers)
+def calculate_median(numbers):
    N = len(numbers)
    numbers.sort()
-
    if N % 2 == 0:
        m1 = N/2
        m2 = (N/2) + 1
@@ -14,14 +13,11 @@ def calculate_median(numbers)
        m = (N + 1)/2
        m = int(m) -1
        median = numbers[m]
-
    return median
 
-   if __name__ == '__main__':
-       donations = [100, 60, 70, 900, 100, 200, 500, 500, 503, 600, 1000, 1200]
-       median = calculate_median(donations)
-       N = len(donations)
-       print('Median donation over the last {0} days is {1}'.format(N, median))
-       
+if __name__ == '__main__':
+    donations = [100, 60, 70, 900, 100, 200, 500, 500, 503, 600, 1000, 1200]
+    median = calculate_median(donations)
+    N = len(donations)
+    print('Median donation over the last {0} days is {1}'.format(N, median))
 
-print(calculate_median(10, 5, 6, 9))
