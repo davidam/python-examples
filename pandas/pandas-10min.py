@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 # Series
 s = pd.Series([1,3,5,np.nan,6,8])
@@ -301,17 +301,17 @@ print ts.head()
 
 # PLOTTING
 
-ts = pd.Series(np.random.randn(1000), index=pd.date_range('1/1/2000', periods=1000))
+# ts = pd.Series(np.random.randn(1000), index=pd.date_range('1/1/2000', periods=1000))
 
-ts = ts.cumsum()
+# ts = ts.cumsum()
 
-ts.plot()
+# ts.plot()
 
-df = pd.DataFrame(np.random.randn(1000, 4), index=ts.index, columns=['A', 'B', 'C', 'D'])
+# df = pd.DataFrame(np.random.randn(1000, 4), index=ts.index, columns=['A', 'B', 'C', 'D'])
 
-df = df.cumsum()
+# df = df.cumsum()
 
-plt.figure(); df.plot(); plt.legend(loc='best')
+# plt.figure(); df.plot(); plt.legend(loc='best')
 
 # Getting Data In/Out
 
@@ -323,13 +323,13 @@ print pd.read_csv('foo.csv')
 
 # hdf5
 
-df.to_hdf('foo.h5','df')
+# df.to_hdf('foo.h5','df')
 
-pd.read_hdf('foo.h5','df')
+# pd.read_hdf('foo.h5','df')
 
 # excel
 
-df.to_excel('foo.xlsx', sheet_name='Sheet1')
+# df.to_excel('foo.xlsx', sheet_name='Sheet1')
 
-pd.read_excel('foo.xlsx', 'Sheet1', index_col=None, na_values=['NA'])
+# pd.read_excel('foo.xlsx', 'Sheet1', index_col=None, na_values=['NA'])
 
