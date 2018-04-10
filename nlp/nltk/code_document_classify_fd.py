@@ -25,3 +25,4 @@ classifier = nltk.NaiveBayesClassifier.train(train_set)
 print(nltk.classify.accuracy(classifier, test_set))
 
 print(classifier.show_most_informative_features(5))
+#print(classifier.classify(document_features(nombre2)))
