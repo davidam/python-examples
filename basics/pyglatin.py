@@ -10,6 +10,6 @@ if len(original) > 0 and original.isalpha():
         print(new_word)
     else:
         new_word = word[1:] + first + pyg
-        print new_word
+        print(new_word)
 else:
-    print 'empty'
+    print('empty')
