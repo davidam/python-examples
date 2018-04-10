@@ -1,13 +1,13 @@
 #!/usr/bin/python
 
-x = int(raw_input("Please enter an integer: "))
+x = int(input("Please enter an integer: "))
 
 if x < 0:
     x = 0
-    print 'Negative changed to zero'
+    print('Negative changed to zero')
 elif x == 0:
-    print 'Zero'
+    print('Zero')
 elif x == 1:
-    print 'Single'
+    print('Single')
 else:
-    print 'More'
+    print('More')
