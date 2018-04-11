@@ -7,4 +7,4 @@ class Hanoi(object):
         return 1 + (2 * (self.hanoi(discos - 1)))
 
 h = Hanoi()
-print h.hanoi(4)
+print(h.hanoi(4))
