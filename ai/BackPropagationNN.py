@@ -211,7 +211,7 @@ def demo():
         data /= data.max() # scale
         
         out = []
-        print data.shape
+        print(data.shape)
 
         # populate the tuple list with the data
         for i in range(data.shape[0]):
@@ -222,7 +222,7 @@ def demo():
 
     X = load_data()
 
-    print X[9] # make sure the data looks right
+    print(X[9]) # make sure the data looks right
 
     NN = MLP_NeuralNetwork(64, 100, 10, iterations = 50, learning_rate = 0.5, momentum = 0.5, rate_decay = 0.01)
 
