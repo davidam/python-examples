@@ -9,5 +9,5 @@ ps = 'p\w+'
 
 
 # Find all words in sentence that match the regex and print them
-print re.findall(ps, sentence)
+print(re.findall(ps, sentence))
 
