@@ -33,6 +33,8 @@ import argparse
 from pprint import pprint
 from perceval.backends.core.git import Git
 import nltk
+import re
+
 
 def gender_features(name):
     features = {}
@@ -74,12 +76,17 @@ for commit in repo.fetch():
 males = 0
 females = 0
 for user in repo.fetch():
-    # print("PPRINT USER['DATA']")
-    # pprint(classifier.classify(gender_features(user['data']['Author'])))
-    if (classifier.classify(gender_features(user['data']['Author'])) == 'male'):
+    str1 = user['data']['Author']
+    m = re.match("(\w+)", str1)
+    user_name = m.group(0) 
+#    print(user_name)
+    if (classifier.classify(gender_features(user_name)) == 'male'):
         males += 1
-    elif (classifier.classify(gender_features(user['data']['Author'])) == 'female'):    
+        print(user_name + ": male") 
+    elif (classifier.classify(gender_features(user_name)) == 'female'):    
         females += 1
+        print(user_name + ": female")
+        
     # pprint(user['data']['Author']))
     # pprint(user['data']['message'])
     countuser += 1
