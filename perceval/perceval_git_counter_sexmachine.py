@@ -68,8 +68,6 @@ pprint(repo)
 
 for commit in repo.fetch():
     if args.print:
- #       print("PPRINT COMMIT['DATA']")
- #       pprint(commit['data'])
         print(commit['data']['commit'])
     countcommit += 1
 
@@ -79,19 +77,13 @@ for user in repo.fetch():
     str1 = user['data']['Author']
     m = re.match("(\w+)", str1)
     user_name = m.group(0) 
-#    print(user_name)
     if (classifier.classify(gender_features(user_name)) == 'male'):
         males += 1
-        print(user_name + ": male") 
     elif (classifier.classify(gender_features(user_name)) == 'female'):    
         females += 1
-        print(user_name + ": female")
-        
-    # pprint(user['data']['Author']))
-    # pprint(user['data']['message'])
     countuser += 1
 
 print("Number of commits sended by males: %d." % (males))
 print("Number of commits sended by females: %d." % (females))    
 print("Number of commmits: %d." % (countcommit))
-#print("Number of user: %d." % (countuser))
+
