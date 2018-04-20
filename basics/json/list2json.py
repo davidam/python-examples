@@ -1,4 +1,6 @@
 import json
-list1 = [5, 12, 13, 14];
-print(list1);
-print(json.dumps(list1));
+
+list = [1, 2, (3, 4)] # Note that the 3rd element is a tuple (3, 4)
+#json.dumps(list) #
+print(list)
+print(json.dumps(list));
