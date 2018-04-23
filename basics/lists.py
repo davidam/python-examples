@@ -22,3 +22,7 @@ lista += ['two']
 # prints out 1,2,3
 for x in li:
     print(x)
+
+milista = ['This', 'used', 'to', 'be', 'a', 'Whopping', 'Great', 'sentence']
+print(sorted(milista, key=str.lower))
+
