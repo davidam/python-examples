@@ -14,9 +14,11 @@ w = QWidget()
 result = QMessageBox.question(w, 'Message', "Do you like Python?", QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
  
 if result == QMessageBox.Yes:
-    print 'Yes.'
+    print('Yes.')
+    w.setWindowTitle("That's a good feeling! Python is the most popular scripting language")
 else:
-    print 'No.'        
+    print('No.')
+    w.setWindowTitle("Perhaps you prefer Perl, Ruby or TCL")
  
  
 # Show window
