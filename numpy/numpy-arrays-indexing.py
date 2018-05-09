@@ -16,6 +16,6 @@ b = a[:2, 1:3]
 
 # A slice of an array is a view into the same data, so modifying it
 # will modify the original array.
-print a[0, 1]   # Prints "2"
+print(a[0, 1])   # Prints "2"
 b[0, 0] = 77    # b[0, 0] is the same piece of data as a[0, 1]
-print a[0, 1]   # Prints "77"
+print(a[0, 1])   # Prints "77"

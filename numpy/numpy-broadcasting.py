@@ -17,4 +17,4 @@ for i in range(4):
 #  [ 5  5  7]
 #  [ 8  8 10]
 #  [11 11 13]]
-print y
+print(y)

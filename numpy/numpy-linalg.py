@@ -7,15 +7,15 @@ a.transpose()
 np.linalg.inv(a)
 
 u = np.eye(2) # unit 2x2 matrix; "eye" represents "I"
-print u
+print(u)
 
 j = np.array([[0.0, -1.0], [1.0, 0.0]])
 
-np.dot (j, j) # matrix product
+print(np.dot(j, j)) # matrix product
 
-np.trace(u)  # trace
+print(np.trace(u))  # trace
 
 y = np.array([[5.], [7.]])
-np.linalg.solve(a, y)
+print(np.linalg.solve(a, y))
 
-np.linalg.eig(j)
+print(np.linalg.eig(j))
