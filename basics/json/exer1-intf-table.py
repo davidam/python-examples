@@ -3,6 +3,7 @@ import json
 jsondata = open('exer1-interface-data.json').read()
 
 json_object = json.loads(jsondata)
+
 print(
     "=======================================================================================" "\n"
     "DN                                                 Description           Speed    MTU" "\n" 
