@@ -24,5 +24,5 @@ KNeighborsClassifier(algorithm='auto', leaf_size=30, metric='minkowski',
            weights='uniform')
 knn.predict(iris_X_test)
 # array([1, 2, 1, 0, 0, 0, 2, 1, 2, 0])
-print iris_y_test
+print(iris_y_test)
 # array([1, 1, 1, 0, 0, 0, 2, 1, 2, 0])
