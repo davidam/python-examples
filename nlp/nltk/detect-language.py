@@ -5,13 +5,8 @@
 # Created: 15/05/13
 
 import sys
-
-try:
-    from nltk import wordpunct_tokenize
-    from nltk.corpus import stopwords
-except ImportError:
-    print '[!] You need to install nltk (http://nltk.org/index.html)'
-
+from nltk import wordpunct_tokenize
+from nltk.corpus import stopwords
 
 
 #----------------------------------------------------------------------
@@ -92,6 +87,14 @@ if __name__=='__main__':
     But I'm tryin', Ringo. I'm tryin' real hard to be the shepherd.
     '''
 
+    textes = '''
+    En un lugar de la Mancha de cuyo nombre no quiero acordarme, vivía un ingenioso hidalgo
+    '''
+    
     language = detect_language(text)
 
-    print language
+    language2 = detect_language(textes)
+
+    print(language)
+
+    print(language2)
