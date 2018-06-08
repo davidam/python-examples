@@ -21,28 +21,25 @@
 # the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, 
 # Boston, MA 02110-1301 USA,
 
-
-from pygithub3 import Github
-from pprint import pprint
+from github import Github
 import subprocess
 import os
 
-os.chdir("/home/davidam/git")
+os.chdir("/home/davidam/gittest")
 
-user='davidam'
-gh = Github(login=user, password='lalaxs')
+user = "davidam"
+# using username and password
+g = Github(user, "lalaxs")
 
-davidam = gh.users.get() # Auth required
+# or using an access token
+#g = Github("access_token")
 
-for name in dir(gh):
-    print(name)
-
-#pprint(gh.repos.list().all())
-for r in gh.repos.list().all():
-#    print r.name
-    strgit = "git clone http://github.com/"+user+"/"+r.name+".git"
+for repo in g.get_user().get_repos():
+    print(repo.name)
+    strgit = "git clone http://github.com/"+user+"/"+repo.name+".git"
     print(strgit)
-    subprocess.call(strgit, shell=True)
+    subprocess.call(strgit, shell=True)    
+
 
 # orgmode repositories
 subprocess.call("git clone https://code.orgmode.org/bzg/org-mode.git", shell=True)
@@ -64,3 +61,4 @@ subprocess.call("git clone --branch 7.x-1.x "+ user +"@git.drupal.org:project/oc
 os.chdir("/home/davidam/git/drupal/8")
 subprocess.call("git clone --branch 8.x-1.x "+ user +"@git.drupal.org:project/orgmode.git", shell=True)
 subprocess.call("git clone --branch 8.x-1.x "+ user +"@git.drupal.org:project/ocrad.git", shell=True)
+    
