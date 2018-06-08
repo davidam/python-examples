@@ -19,6 +19,13 @@ lista = ['a', 'b', 'mpilgrim']
 lista = lista + ['example', 'new']
 lista += ['two']
 
+l = set(li).intersection(lista)
+
+print("li: ", li)
+print("lista: ", lista)
+
+print("Intersection ", l)
+
 # prints out 1,2,3
 for x in li:
     print(x)
