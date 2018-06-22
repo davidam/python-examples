@@ -226,20 +226,20 @@ def h_default(puzzle):
 def main():
     p = EightPuzzle()
     p.shuffle(20)
-    print p
+    print(p)
 
     path, count = p.solve(h_manhattan)
     path.reverse()
     for i in path: 
-        print i
+        print(i)
 
-    print "Solved with Manhattan distance exploring", count, "states"
+    print("Solved with Manhattan distance exploring", count, "states")
     path, count = p.solve(h_manhattan_lsq)
-    print "Solved with Manhattan least squares exploring", count, "states"
+    print("Solved with Manhattan least squares exploring", count, "states")
     path, count = p.solve(h_linear)
-    print "Solved with linear distance exploring", count, "states"
+    print("Solved with linear distance exploring", count, "states")
     path, count = p.solve(h_linear_lsq)
-    print "Solved with linear least squares exploring", count, "states"
+    print("Solved with linear least squares exploring", count, "states")
 #    path, count = p.solve(heur_default)
 #    print "Solved with BFS-equivalent in", count, "moves"
 
