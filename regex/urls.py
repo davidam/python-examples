@@ -27,6 +27,6 @@ urls = []
 with open(filepath) as fp:
     for cnt, line in enumerate(fp):
         urls += re.findall('http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+', line)
-print urls
+print(urls)
 
 
