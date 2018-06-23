@@ -28,10 +28,10 @@ mySocket.listen(5)
 #  (in a loop)
 
 while True:
-    print 'Waiting for connections'
+    print('Waiting for connections')
     (recvSocket, address) = mySocket.accept()
-    print 'HTTP request received:'
-    print recvSocket.recv(1024)
+    print('HTTP request received:')
+    print(recvSocket.recv(1024))
     recvSocket.send("HTTP/1.1 200 OK\r\n\r\n" +
 		    "<html><body><h1>Hello World!</h1></body></html>" +
 		    "\r\n")
