@@ -61,7 +61,7 @@ def most_similar_users_to(user_id):
              if user_id != other_user_id and similarity > 0]  # similarity
 
     return sorted(pairs,                                      # sort them
-                  key=lambda (_, similarity): similarity,     # most similar
+                  key=lambda(_, similarity): similarity,     # most similar
                   reverse=True)                               # first
 
 
@@ -129,31 +129,27 @@ def item_based_suggestions(user_id, include_current_interests=False):
 
 if __name__ == "__main__":
 
-    print "Popular Interests"
-    print popular_interests
-    print
+    print("Popular Interests")
+    print(popular_interests)
 
-    print "Most Popular New Interests"
-    print "already like:", ["NoSQL", "MongoDB", "Cassandra", "HBase", "Postgres"]
-    print most_popular_new_interests(["NoSQL", "MongoDB", "Cassandra", "HBase", "Postgres"])
-    print
-    print "already like:", ["R", "Python", "statistics", "regression", "probability"]
-    print most_popular_new_interests(["R", "Python", "statistics", "regression", "probability"])
-    print    
+    print("Most Popular New Interests")
+    print("already like:", ["NoSQL", "MongoDB", "Cassandra", "HBase", "Postgres"])
+    print(most_popular_new_interests(["NoSQL", "MongoDB", "Cassandra", "HBase", "Postgres"])
 
-    print "User based similarity"
-    print "most similar to 0"
-    print most_similar_users_to(0)
+    print("already like:", ["R", "Python", "statistics", "regression", "probability"])
+    print(most_popular_new_interests(["R", "Python", "statistics", "regression", "probability"]))
 
-    print "Suggestions for 0"
-    print user_based_suggestions(0)
-    print
+    print("User based similarity")
+    print("most similar to 0")
+    print(most_similar_users_to(0))
 
-    print "Item based similarity"
-    print "most similar to 'Big Data'"
-    print most_similar_interests_to(0)
-    print
+    print("Suggestions for 0")
+    print(user_based_suggestions(0))
 
-    print "suggestions for user 0"
-    print item_based_suggestions(0)
+    print("Item based similarity")
+    print("most similar to 'Big Data'")
+    print(most_similar_interests_to(0))
+
+    print("suggestions for user 0")
+    print(item_based_suggestions(0))
 
