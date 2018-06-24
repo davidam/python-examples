@@ -24,12 +24,14 @@
 from github import Github
 import subprocess
 import os
+import getpass
 
 os.chdir("/home/davidam/gittest")
 
 user = "davidam"
 # using username and password
-g = Github(user, "lalaxs")
+passw = getpass.getpass("Give me your password: ") 
+g = Github(user, passw)
 
 # or using an access token
 #g = Github("access_token")
