@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 
 import MySQLdb
- 
+import getpass
+DB_PASS = getpass.getpass("Give me your MySQL password: ")
 DB_HOST = 'localhost' 
 DB_USER = 'root' 
-DB_PASS = 'lala' 
 DB_NAME = 'sqlexamples' 
  
 def run_query(query=''): 
