@@ -23,12 +23,21 @@ print(pd_diabetes.describe())
 plt.hist(pd_diabetes['AGE'])
 plt.show()
 
-import numpy as np
-#representa la variable respueta vs cada una de las variables explicativas
+plt.scatter(x=pd_diabetes['AGE'], y=pd_diabetes['Y'])
+plt.show()
 
-# #Y vs AGE, scatter plot
-# plt.plot(pd_diabetes(kind='scatter',x='AGE',y = 'Y'))
-# #Y vs SEX, scatter plot
+#representar la scatter matrix
+from pandas.tools.plotting import scatter_matrix
+scatter_matrix(pd_diabetes, alpha = 0.2, figsize = (12,12), diagonal = 'kde')
+
+pd_diabetes.corr()
+
+
+# # #Y vs SEX, scatter plot
 # plt.boxplot(by='SEX',column = 'Y')
+
+# fig, axes = plt.subplots(nrows=2, ncols=3, figsize=(6, 6), sharey=True)
+# axes[0, 0].boxplot(pd_diabetes, labels=labels)
+# axes[0, 0].set_title('Default', fontsize=fs)
 
 # plt.show()
