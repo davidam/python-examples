@@ -116,7 +116,7 @@ def repl(prompt='lispy> ', inport=InPort(sys.stdin), out=sys.stdout):
             val = eval(x)
             if val is not None and out: print >> out, to_string(val)
         except Exception as e:
-            print '%s: %s' % (type(e).__name__, e)
+            print('%s: %s' % (type(e).__name__, e))
 
 ################ Environment class
 
