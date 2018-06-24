@@ -26,6 +26,11 @@ print("lista: ", lista)
 
 print("Intersection ", l)
 
+a = [('when', 3), ('why', 4), ('throw', 9), ('send', 15), ('you', 1)]
+b = ['the', 'when', 'send', 'we', 'us']
+filtered = [i for i in a if not i[0] in b]
+print(filtered)
+
 # prints out 1,2,3
 for x in li:
     print(x)
