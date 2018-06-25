@@ -11,8 +11,8 @@ else:
     exit()
     
 fo = open(arg1, "rw+")
-print "Name of the input file: ", fo.name
-print "Name of the output file: ", output
+print("Name of the input file: %s", fo.name)
+print("Name of the output file: %s", output)
         
 lines_seen = set() # holds lines already seen
 outfile = open(output, "w")
