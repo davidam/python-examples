@@ -152,3 +152,31 @@ singulars/plurals, dictionary entries, stopwords
 #+BEGIN_SRC bash
     $ python3 nltk-rake.py
 #+END_SRC
+
+** Disambiguation
+*** Disambiguation                                        :B_block:
+    :PROPERTIES:
+    :BEAMER_COL: 0.98
+    :BEAMER_ENV: block
+    :END:
+#+BEGIN_SRC bash
+$ python test_all_words_wsd.py
+$ python test_wsd.py
+
+# Remember synset
+$ python3 wordnet-example.py
+#+END_SRC
+
+** Sharing data models: pickle 
+*** Sharing data models: pickle                                     :B_block:
+    :PROPERTIES:
+    :BEAMER_COL: 0.98
+    :BEAMER_ENV: block
+    :END:     
+#+BEGIN_SRC bash
+$ python3 nltk-pickle.py
+#+END_SRC
+
+** Support Python and Libremanuals
+El Tutorial de Python
+por Guido Van Rossum
