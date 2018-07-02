@@ -230,3 +230,110 @@ $ python3 plot_mean_shift.py
 file:dimensionality-reduction.png
 
 The general task of pattern analysis is to find and study general types of relations (for example clusters, rankings, principal components, correlations, classifications) in datasets
+
+** Randomized PCA
+
+PCA is mostly used as a tool in exploratory data analysis and for
+making predictive models. It's often used to visualize genetic
+distance and relatedness between populations. PCA can be done by
+eigenvalue decomposition of a data covariance (or correlation) matrix
+or singular value decomposition of a data matrix, usually after mean
+centering
+
+#+BEGIN_SRC bash
+$ python3 pca-example.py
+$ python3 scikit-plot-pca.py
+$ python3 plot_pca_iris.py
+$ python3 incremental-pca.py
+#+END_SRC
+
+** Kernel Approximation
+
+The general task of pattern analysis is to find and study general
+types of relations (for example clusters, rankings, principal
+components, correlations, classifications) in datasets.
+
+For many algorithms that solve these tasks, the data in raw
+representation have to be explicitly transformed into feature vector
+representations via a user-specified feature map: in contrast, kernel
+methods require only a user-specified kernel, i.e., a similarity
+function over pairs of data points in raw representation.
+
+#+BEGIN_SRC bash
+$ python3 kernel-approximation.py
+#+END_SRC
+
+** LLE and Spectral Embedding
+
+#+BEGIN_SRC bash
+$ python3 plot_lle_digits.py
+$ python3 plot_spectral_grid.py
+#+END_SRC
+
+Spectral embedding for non-linear dimensionality reduction.
+
+Forms an affinity matrix given by the specified function and applies
+spectral decomposition to the corresponding graph laplacian. The
+resulting transformation is given by the value of the eigenvectors for
+each data point.
+
+** Isomap
+
+Isomap Embedding
+Non-linear dimensionality reduction through Isometric Mapping
+
+#+BEGIN_SRC bash
+$ python3 plot_compare_methods.py
+#+END_SRC
+
+** Scikit Image
+
+#+BEGIN_SRC bash
+$ python3 plot_marching_cubes.py
+#+END_SRC
+
+** Conceptos Clave
+
+file:key-concepts.png
+
+** Matriz de confusión
+
+Each row of the matrix represents the instances in a predicted class
+while each column represents the instances in an actual class.
+
+#+BEGIN_SRC bash
+$ python3 plot_confusion_matrix.py
+#+END_SRC
+
+** Leave One Out
+
+#+BEGIN_SRC bash
+$ python3 leaveoneout.py
+$ python3 leavepout.py
+#+END_SRC
+
+** Validación Cruzada
+
+#+BEGIN_SRC bash
+$ python3 crossvalidation.py
+$ python3 repeatedkfold.py
+#+END_SRC
+
+** Overfitting
+
+Avoiding troubles with additional data
+
+#+BEGIN_SRC bash
+$ python3 nooverfitting.py
+#+END_SRC
+
+** Outliers
+
+Son valores atípicos que se salen del doble de la desviación típica,
+por ejemplo.
+
+#+BEGIN_SRC bash
+$ python3 numpy/reject-outliers.py
+$ python3 scikit/plot_outlier_detection_housing.py
+#+END_SRC
+
