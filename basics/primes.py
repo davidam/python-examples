@@ -1,8 +1,5 @@
 #!/usr/bin/python
 
-def divisible(x, y):
-    return (0 == (x % y))
-
 def generaLista(x, y):
     if (x == y):
         return [y]
@@ -28,5 +25,6 @@ def primos(x):
 
 
 x = int(input("Give me a number: "))
-print("generaLista(1, 5) %s: " % generaLista(1, 5))
+#print("generaLista(1, 5) %s: " % generaLista(1, 5))
+print("The divisors list until %s is: %s" % (x, divisores(x)))
 print("The primes list until %s is: %s" % (x, primos(x)))
