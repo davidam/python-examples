@@ -24,11 +24,11 @@ $ git clone https://github.com/davidam/python-examples.git
 
 ** Scikit Graph
 
-file:scikit-graph.png
+file:img/scikit-graph.png
 
 ** Classification
 
-file:classification.png
+file:img/classification.png
 
 ** Classification: SGD
 
@@ -49,15 +49,15 @@ $ python3 kernel-approximation.py
 
 ** Classification: Naive Bayes
 
-file:naivebayes.png
+file:img/naivebayes.png
 
 ** Classification: Naive Bayes
 
-file:naivebayes-table.png
+file:img/naivebayes-table.png
 
 ** Classification: Naive Bayes
 
-file:naivebayes-table2.png
+file:img/naivebayes-table2.png
 
 ** Classification: Naive Bayes Examples
 
@@ -73,11 +73,11 @@ $ python3 nltk/sexmachine.py
 We want predict a category and we’ve labeled
 data with <100k samples
 
-file:svc-tables.png
+file:img/svc-tables.png
 
 ** Classification: SVC. What's a kernel?
 
-file:kernel-functions.png
+file:img/kernel-functions.png
 
 ** Classification. SVC
 
@@ -115,7 +115,7 @@ $ python3 plot_ensemble_oob.py
 
 ** Regression
 
-file:regression.png
+file:img/regression.png
 
 ** SGD Regressor
 
@@ -123,7 +123,7 @@ The class SGDClassifier implements a plain stochastic
 gradient descent learning routine which supports different
 loss functions and penalties for classification.
 
-file:sgd-regressor.png
+file:img/sgd-regressor.png
 
 ** SGD Regressor (II)
 
@@ -173,15 +173,15 @@ The free parameters in the model are C and epsilon.
 $ python3 svr-example.py
 #+END_SRC
 
-file:svr.png
+file:img/svr.png
 
 ** Clustering
 
-file:clustering.png
+file:img/clustering.png
 
 ** Kmeans
 
-file:kmeans.png
+file:img/kmeans.png
 
 ** Kmeans
 
@@ -227,7 +227,7 @@ $ python3 plot_mean_shift.py
 
 ** Dimensionality Reduction
 
-file:dimensionality-reduction.png
+file:img/dimensionality-reduction.png
 
 The general task of pattern analysis is to find and study general types of relations (for example clusters, rankings, principal components, correlations, classifications) in datasets
 
@@ -294,7 +294,7 @@ $ python3 plot_marching_cubes.py
 
 ** Conceptos Clave
 
-file:key-concepts.png
+file:img/key-concepts.png
 
 ** Confusion Matrix
 
