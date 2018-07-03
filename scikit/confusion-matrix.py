@@ -48,3 +48,8 @@ print("y_predict: %s. \n\nThe size of the vector is %s.\n" % (y_predict, len(y_p
 print("The accuracy between vectors is %s.\n" % accuracy_score(y_test, y_predict))
 print("The confusion matrix is \n%s" % confusion_matrix(y_test, y_predict))
 print("The diagonal is high because the accuracy is high.")
+print("0 is predicted as 0 many times")
+print("1 is predicted as 1 many times\n")
+
+print("By definition a confusion matrix :math:C is such that :math:C_{i, j} is equal to the number of observations known to be in group :math:i but predicted to be in group :math:j. Thus in binary classification, the count of true negatives is :math:C_{0,0}, false negatives is :math:C_{1,0}, true positives is :math:C_{1,1} and false positives is :math:C_{0,1}.")
+
