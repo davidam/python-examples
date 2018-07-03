@@ -296,13 +296,26 @@ $ python3 plot_marching_cubes.py
 
 file:key-concepts.png
 
-** Matriz de confusión
+** Confusion Matrix
 
 Each row of the matrix represents the instances in a predicted class
 while each column represents the instances in an actual class.
 
 #+BEGIN_SRC bash
 $ python3 plot_confusion_matrix.py
+#+END_SRC
+
+In a confusion matrix you must understand to make an accuracy between
+the predicted class and the real class.
+
+#+BEGIN_SRC bash
+$ python3 accuracy.py
+#+END_SRC
+
+This exercise is useful to understand the details to build a confusion matrix
+
+#+BEGIN_SRC bash
+$ python3 confusion-matrix.py
 #+END_SRC
 
 ** Leave One Out
@@ -359,3 +372,4 @@ $ python3 plot_calibration_curve.py
 
 Otra cuestión son los clasificadores bien calibrados (probabilísticos).
 
+Para aprender y avanzar: http://benalexkeen.com/scoring-classifier-models-using-scikit-learn/
