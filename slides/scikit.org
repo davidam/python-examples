@@ -351,3 +351,9 @@ $ python3 plot_compare_methods.py
 
 En reducción de dimensiones, podemos imaginar una imagen
 tridimensional de bolas aplanarla a una imagen bidimensional.
+
+#+BEGIN_SRC bash
+$ python3 plot_compare_calibration.py
+#+END_SRC
+
+Otra cuestión son los clasificadores bien calibrados (probabilísticos).
