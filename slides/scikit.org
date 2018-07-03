@@ -337,3 +337,17 @@ $ python3 numpy/reject-outliers.py
 $ python3 scikit/plot_outlier_detection_housing.py
 #+END_SRC
 
+** Comparing Classifiers
+
+#+BEGIN_SRC bash
+$ python3 plot_classifier_commparison.py
+#+END_SRC
+
+Dados puntos azules y rojos aprende el espacio donde se sitúan estos.
+
+#+BEGIN_SRC bash
+$ python3 plot_compare_methods.py
+#+END_SRC
+
+En reducción de dimensiones, podemos imaginar una imagen
+tridimensional de bolas aplanarla a una imagen bidimensional.
