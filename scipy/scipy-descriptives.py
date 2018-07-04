@@ -14,9 +14,9 @@ print(x.var())   # equivalent to np.var(x))
 # moda
 a = np.array([1,2,3,1,2,1,1,1,3,2,2,1,7,7,7,7,7,7,7,7,7,7,7,7,7])
 counts = np.bincount(a)
-print counts
-print "Moda: "
-print np.argmax(counts)
+print(counts)
+print("Moda: ")
+print(np.argmax(counts))
 
 
 m, v, s, k = stats.t.stats(10, moments='mvsk')
