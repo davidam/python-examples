@@ -1,0 +1,99 @@
+#+TITLE: Statistics in Python
+#+AUTHOR: David Arroyo Menéndez
+#+OPTIONS: H:2 toc:nil num:t
+#+LATEX_CLASS: beamer
+#+LATEX_CLASS_OPTIONS: [presentation]
+#+BEAMER_THEME: Madrid
+#+COLUMNS: %45ITEM %10BEAMER_ENV(Env) %10BEAMER_ACT(Act) %4BEAMER_COL(Col) %8BEAMER_OPT(Opt)
+
+* Summary
+** Statistics: Summary                                         
++ Descriptives
++ Manipulating Data
++ Matplotlib
++ Statistics Tests
++ Logistic Regression
++ Principal Component Analysis
+
+** Descriptives
+*** Source! 							    :B_block:
+    :PROPERTIES:
+    :BEAMER_COL: 0.98
+    :BEAMER_ENV: block
+    :END:
+#+BEGIN_SRC bash
+    $ python3 scipy-descriptives.py
+#+END_SRC
+
+** Manipulating Data
+Pandas is for dataframes
+#+BEGIN_SRC bash
+    $ python3 pandas/pandas-10min.py
+    $ python3 pandas/creating-dataframe.py
+    $ python3 pandas/creating-dataframa-from-arrays.py
+    $ python3 pandas/manipulating-data.py
+    $ python3 pandas/remove-rows-with-nan.py
+    $ python3 pandas/handle-missing-data.py
+    $ python3 pandas/data-analysis/pd-diabetes.py
+#+END_SRC
+Numpy is algebra is for arrays
+#+BEGIN_SRC bash
+    $ python3 numpy/reject-outliers.py
+#+END_SRC
+
+** Matplotlib
+
+You can display statistics with matplotlib
+
+#+BEGIN_SRC bash
+$ python3 barchart_demo.py
+$ python3 boxplot-example2.py
+$ python3 boxplot-example.py
+$ python3 colorbar_basics.py
+$ python3 image_demo.py
+$ python3 pie_features.py
+$ python3 plot_3D.py
+$ gimp surface3d_frontpage.png &
+$ python3 pyplot_text.py
+$ python3 scatter-example.py
+$ python3 stackplot_demo.py
+$ python3 subplot.py
+$ python3 unicode_minus.py
+#+END_SRC
+
+** Statistics Tests
+To see a result from a hipothesis you can use tests:
+#+BEGIN_SRC bash
+$ python scipy-special-tests.py
+$ python discrete-choice-models.py
+#+END_SRC
+
+** Discrete Choice Models
+
+#+BEGIN_SRC bash
+$ python3 statistics/discrete-choice-models.py 
+#+END_SRC
+
+
+** Logistic Regression
+*** Scikit is your friend 					    :B_block:
+    :PROPERTIES:
+    :BEAMER_COL: 0.98
+    :BEAMER_ENV: block
+    :END:
+#+BEGIN_SRC bash
+    $ python3 scikit/logistic-regression/logistic-function.py
+    $ python3 scikit/logistic-regression/data-using-pandas.py
+#+END_SRC
+
+** Principal Component Analysis
+*** Scikit is your friend 					    :B_block:
+    :PROPERTIES:
+    :BEAMER_COL: 0.98
+    :BEAMER_ENV: block
+    :END:
+#+BEGIN_SRC bash
+    $ python3 scikit/logistic-regression/logistic-function.py
+    $ python3 scikit/logistic-regression/data-using-pandas.py
+#+END_SRC
+
