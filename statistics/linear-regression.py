@@ -43,5 +43,5 @@ axes = plt.gca()
 x_vals = np.array(axes.get_xlim()) 
 y_vals = g[0][0] + g[0][1]* x_vals #the line equation
 plt.plot(x_vals, y_vals, '--')
-
+plt.show()
 #X @ g.T
