@@ -61,19 +61,47 @@ $ python3 subplot.py
 $ python3 unicode_minus.py
 #+END_SRC
 
-** Statistics Tests
+** Distibutions in Statistics
+
+An histogram trends to be a continuos line in a table, we can draw a
+distribution with this trend.
+
+#+BEGIN_SRC bash
+$ python3 bernoulli.py
+$ python3 plot_normal.py
+$ python3 poisson.py
+$ python3 binomial.py
+$ python3 exponential-distribution.py
+#+END_SRC
+
+** Bernoulli Distribution
+
+file:img/bernoulli-distribution.png
+
+** Normal Distribution
+
+file:img/normal-distribution.png
+
+** Poisson Distribution
+
+file:img/poisson.png
+
+** Binomial Distribution
+
+file:img/binomial.png
+
+** Exponential Distribution
+
+file:img/exponential-distribution.png
+
+** Statistics Tests / Choice Models
 To see a result from a hipothesis you can use tests:
 #+BEGIN_SRC bash
 $ python scipy-special-tests.py
 $ python discrete-choice-models.py
+$ python pearson.py # for testing non-correlation
+$ python fisher.py
 #+END_SRC
-
-** Discrete Choice Models
-
-#+BEGIN_SRC bash
-$ python3 statistics/discrete-choice-models.py 
-#+END_SRC
-
 
 ** Logistic Regression
 *** Scikit is your friend 					    :B_block:
