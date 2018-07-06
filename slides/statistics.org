@@ -60,6 +60,9 @@ $ python3 stackplot_demo.py
 $ python3 subplot.py
 $ python3 unicode_minus.py
 #+END_SRC
+** Matplotlib. What would you like to show?
+
+file:img/charts.png
 
 ** Distibutions in Statistics
 
@@ -93,6 +96,10 @@ file:img/binomial.png
 ** Exponential Distribution
 
 file:img/exponential-distribution.png
+
+** Moments in a Distribution
+
+file:img/moments.png
 
 ** Statistics Tests / Choice Models
 To see a result from a hipothesis you can use tests:
