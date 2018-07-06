@@ -6,7 +6,7 @@ data.columns  # It has columns
 print(data['Gender'])  # Columns can be addressed by name   
 
 # Simpler selector
-print data[data['Gender'] == 'Female']['VIQ'].mean()
+print(data[data['Gender'] == 'Female']['VIQ'].mean())
 
 groupby_gender = data.groupby('Gender')
 for gender, value in groupby_gender['VIQ']:
