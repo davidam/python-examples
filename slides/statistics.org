@@ -132,3 +132,14 @@ $ python fisher.py
     $ python3 scikit/logistic-regression/data-using-pandas.py
 #+END_SRC
 
+
+** Montecarlo Statistics Methods
+
+It's a statistic game where the players is betting.
+
+#+BEGIN_SRC bash
+$ python3 statistics/montecarlo/bettor.py
+$ python3 statistics/montecarlo/doublebettor.py
+$ python3 statistics/montecarlo/bettor-statistics.py
+$ python3 statistics/montecarlo/dalambert.py
+#+END_SRC
