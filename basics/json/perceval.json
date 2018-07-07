@@ -1,5 +1,4 @@
-{
-    "perceval": [
+
     {
     "backend_name": "Git",
     "backend_version": "0.10.2",
@@ -64,7 +63,7 @@
     "timestamp": 1525342078.055838,
     "updated_on": 1439914107.0,
     "uuid": "29ddd736146e278feb5d84e9dcc1fd310ff50007"
-    },
+    }
 
     {
     "backend_name": "Git",
@@ -118,7 +117,7 @@
     "timestamp": 1525342078.057061,
     "updated_on": 1439914300.0,
     "uuid": "ea70266506018422ccc250c7e3a011723bf93070"
-    },
+    }
     {
     "backend_name": "Git",
     "backend_version": "0.10.2",
@@ -157,7 +156,7 @@
     "timestamp": 1525342078.057755,
     "updated_on": 1439916885.0,
     "uuid": "a3bba1de63d524ec1ffaae3ba8fdd208855fc462"
-    },
+    }
     {
     "backend_name": "Git",
     "backend_version": "0.10.2",
@@ -197,5 +196,4 @@
     "updated_on": 1440090065.0,
     "uuid": "1b49d6e6b0ac2a0cbeaaf3bf2892db4c4888b9a4"
     }
-    ]
-}
+
