@@ -24,3 +24,8 @@ data = [
 
 df = pd.DataFrame.from_dict(json_normalize(data), orient='columns')
 print(df)
+print(json_normalize(data))
+
+jsondata = open('perceval.json').read()
+json_object = json.loads(jsondata)
+print(json_object)
