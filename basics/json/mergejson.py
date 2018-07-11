@@ -72,4 +72,9 @@ with open('data3.json') as json_data:
         diccionario['value'] = z['val']
         merge.append(diccionario)
 
-print(merge)
+#print(merge)
+file = open("merge.json", "w")
+for m in merge:
+    file.write(str(m) + "\n")
+
+file.close()
