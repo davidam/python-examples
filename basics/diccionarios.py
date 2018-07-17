@@ -10,6 +10,7 @@ print("Eliminamos un elemento:")
 del dicc["precio1"]
 print(dicc)
 print("Las claves son:")
-print(dicc.keys())
+print(list(dicc.keys()))
 print("Los valores son:")
-print(dicc.values())
+print(list(dicc.values()))
+
