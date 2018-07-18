@@ -1,0 +1,13 @@
+
+* Number of commits
+$ python3 ~/git/python-examples/perceval/perceval_git_counter.py https://github.com/grimoirelab/perceval.git /tmp/clonedir
+* Number of users
+$ python3 ~/git/python-examples/perceval/perceval_git_counter_users.py https://github.com/grimoirelab/perceval.git /tmp/clonedir
+* Number of merges and commits
+$ python3 ~/git/python-examples/perceval/perceval_git_counter_actions.py https://github.com/grimoirelab/perceval.git /tmp/clonedir
+* Number of commits sended by gender
+$ python3 ~/git/python-examples/perceval/perceval_git_counter_sexmachine.py https://github.com/grimoirelab/perceval.git /tmp/clonedir
+* Commits previous and current
+$ python3 ~/git/python-examples/perceval/perceval_git_json2.py https://github.com/grimoirelab/perceval.git /tmp/clonedir
+* Give all messages
+$ python3 ~/git/python-examples/perceval/perceval_messages.py https://github.com/grimoirelab/perceval.git /tmp/clonedir
