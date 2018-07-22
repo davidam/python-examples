@@ -21,5 +21,10 @@
 # the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 # Boston, MA 02110-1301 USA,
 
-print("I am your scientific leader. I want go to hotel with you")
+print("I am your scientific leader. I want go to hotel with you.")
 print("I need the location, date and time")
+sextras = input("It's sextras hours. Do you accept? (Y | N) ")
+if (sextras == 'Y'):
+    print("Congratulations. You have reached sex.")
+else:
+    print("Congratulations. You don't have reached sex.")
