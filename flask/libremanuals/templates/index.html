@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% block extra_title_nav %}Home{% endblock %}
+{% block extra_index %}active{% endblock %}
+{% block content %}
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Page Heading -->
+      <h1 class="my-4">Libremanuals</h1>
+      <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="elisp-es.html"><img class="card-img-top" src={{ url_for('static', filename='img/elisp-es.png') }} alt="Una Introducción a la programación en emacs LISP"></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="elisp-es.html">Una Introducción a la programación en Emacs LISP</a>
+              </h4>
+              <p class="card-text">
+		<ul>
+		  <li>ISBN: 978-84-608-5935-2</li>
+		  <li>Número de páginas: 265</li>
+		  <li>Precio: 15€</li>
+		</ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 portfolio-item">
+          <div class="card h-100">
+	    <a href="org-mode.html"><img class="card-img-top" src={{ url_for('static', filename='img/orgmode-front.png') }} alt="Guía Compacta de Org-Mode"></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="org-mode.html">Guía Compacta de Org-Mode</a>
+              </h4>
+	      <ul>
+		<li>ISBN: 978-84-608-8894-9</li>
+		<li>Número de páginas: 50</li>
+		<li>Precio: 8€</li>
+	      </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="gcc.html"><img class="card-img-top" src={{ url_for('static', filename='img/portada-front-gcc.png') }} alt="Una introducción a GCC"></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="gcc.html">Una Introducción a GCC</a>
+              </h4>
+	      <ul>
+		<li>ISBN: 978-84-608-7274-0.</li>
+		<li>Número de Páginas: 157.</li>
+		<li>Precio: 15€</li>
+	      </ul>
+            </div>
+          </div>
+        </div>
+	<div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-6 portfolio-item">
+            <div class="card h-100">
+	      <a href="r.html"><img class="card-img-top" src={{ url_for('static', filename='img/R-front.png') }} alt="Una introducción a R"></a>
+              <div class="card-body">
+		<h4 class="card-title">
+                  <a href="r.html">Una Introducción a R</a>
+		</h4>
+		<ul>
+		  <li>ISBN: 978-84-697-7122-8</li>
+		  <li>Número de páginas: 100</li>
+		  <li>Precio: 15€</li>
+		</ul>
+              </div>
+            </div>
+	  </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 portfolio-item">
+            <div class="card h-100">
+	      <a href="python.html"><img class="card-img-top" src={{ url_for('static', filename='img/python-front.png') }} alt="El Tutorial de Python"></a>
+              <div class="card-body">
+	  	<h4 class="card-title">
+                  <a href="python.html">El Tutorial de Python</a>
+	  	</h4>
+	  	<ul>
+	  	  <li>ISBN: 978-84-09-01157-5</li>
+	  	  <li>Número de páginas: 102</li>
+	  	  <li>Precio: 15€</li>
+	  	</ul>
+              </div>
+            </div>
+          </div>
+	  <div class="col-lg-3 col-md-3 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="bash.html"><img class="card-img-top" src={{ url_for('static', filename='img/bash-front.png') }} alt="Manual de Referencia Bash"></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="bash.html">Manual de Referencia Bash</a>
+              </h4>
+	      <ul>
+	  	  <li>ISBN: 978-84-09-02741-5</li>
+	  	  <li>Número de páginas: 203</li>
+	  	  <li>Precio: 15€</li>
+	      </ul>
+            </div>
+          </div>
+	  </div>
+        </div>
+    </div>
+    <!-- /.container -->
+{% endblock %}

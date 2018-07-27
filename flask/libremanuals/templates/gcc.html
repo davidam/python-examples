@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block extra_title_nav %}
+GCC
+{% endblock %}
+{% block extra_gcc %}active{% endblock %}
+{% block content %}
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Page Heading -->
+      <h1 class="my-4">Una Introducción a GCC</h1>
+      <div class="row" vocab="http://schema.org/" typeof="Product">
+        <div class="col-sm-4 portfolio-item">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src={{ url_for('static', filename='img/gcc.png') }} alt="Una Introducción a GCC" property="image" ></a>
+          </div>
+        </div>
+        <div class="col-sm-8 portfolio-item" property="description">
+          <div class="card h-100">
+	    <p class="card-text">
+	      Este manual ofrece una introducción tutorial completa a los
+compiladores GNU C y C++, gcc y g++. Los compiladores permiten pasar
+de código fuente a código objeto (por decirlo con una metáfora de
+recetas de cocina a comida real).
+	    </p>
+	    <p class="card-text">
+Muchos libros enseñan lenguajes C y C++, este libro enseña cómo usar
+el compilador en sí. Todos los problemas comunes y mensajes de error
+encontrados por nuevos usuarios de GCC son cuidadosamente explicados
+con numerosos ejemplos "Hola mundo" fáciles de seguir.
+	    </p>
+
+	    <p class="card-text">
+	    Se pueden solicitar mejoras al libro a través de <a href="http://savannah.nongnu.org/projects/gccintro-es">Savannah</a>. Y compras en <a href="https://www.libros.so/libro/una-introduccion-a-gcc_944478">UAM</a> y <a href="https://www.traficantes.net/libros/una-introduccion-gcc">Traficantes de Sueños</a>.</p>
+
+	    <ul>
+	      <li>ISBN: 978-84-608-7274-0.</li>
+	      <li>Número de Páginas: 157.</li>
+	      <li>Precio: 15€</li>
+	    </ul>
+
+	    <p class="card-text">Ya puedes comprarlo en
+	      <ul>
+		<li><a href="https://www.libros.so/libro/una-introduccion-a-gcc_944478">UAM</a></li>
+		<li><a href="https://www.libros.so/libro/una-introduccion-a-gcc_944478">URJC</a></li>
+		<li><a href="https://www.traficantes.net/libros/una-introduccion-gcc">Trafıcantes de Sueños</a></li>
+		<li><a href="http://fal.cnt.es/tienda/node/703">FAL</a></li>
+		<li><a href="http://larosanegraediciones.com/ciencia-y-tecnologia/884-una-introduccion-a-gcc.html">La Rosa Negra</a></li>		          </ul>
+	    </p>
+
+	    <p class="card-text">Puedes discutir dudas o detalles del libro desde la <a href="https://lists.riseup.net/www/info/gccintro">lista de distribución gccintro</a>.</p>
+
+          </div>
+        </div>
+
+      </div>
+    <!-- /.container -->
+
+{% endblock %}

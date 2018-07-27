@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% block extra_title_nav %}
+Acerca
+{% endblock %}
+{% block extra_acerca %}active{% endblock %}
+{% block content %}
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Page Heading -->
+      <h1 class="my-4">Acerca</h1>
+      <div class="row">
+        <div class="col-sm-12 portfolio-item">
+          <div class="card h-100">
+	    <p class="card-text">
+Libremanuals es un colectivo editorial que surge para la difusión de
+libros libres impresos acerca de Software Libre en la lengua española.
+	    </p>
+	    <p class="card-text">
+Así, se comparte la visión general del proyecto GNU y, en particular,
+los siguientes textos:
+	    </p>
+
+	    <ul>
+	      <li><a href="https://www.gnu.org/philosophy/free-doc.es.html">Por qué el software libre necesita documentación libre</a></li>
+	      <li><a href="https://www.gnu.org/philosophy/right-to-read.es.html">El derecho a leer</a></li>
+	      <li><a href="https://www.gnu.org/philosophy/the-danger-of-ebooks.es.html">El peligro de los libros electrónicos</a></li>
+	    </ul>
+
+	    <p class="card-text">
+	      Para decirlo en pocas palabras, para que el derecho a leer no esté en peligro, necesitamos leer documentos libres. Este colectivo editorial trata de fomentar este derecho.
+	    </p>
+
+	    <p class="card-text">
+La manera que tiene Libremanuals de fomentar este derecho es vender y
+traducir libros libres.
+	    </p>
+
+	    <p class="card-text">
+	      También podemos encontrar inspiración positiva a un mundo de
+	      documentación libre en:
+	    </p>
+
+	    <ul>
+	      <li><a href="https://www.wikipedia.org/">Wikipedia</a></li>
+	      <li><a href="http://www.davidam.com/docu/imagina-bibliografia-libre.html">Imagina que la Bibliografía Básica de la UNED fuera libre</a></li>
+	      <li><a href="http://www.libremanuals.net/libros.html">Cómo reconocer si un libro es adecuado a tus necesidades académicas</a></li>
+	      <li><a href="perspectiva-libertaria.html">La perspectiva libertaria de Libremanuals</a></li>
+	      <li><a href="http://www.onemagazine.es/david-arroyo-menendez-software-libre-hackmeeting-libros-gnu-richard-stallman">Por ética todo el software debería ser libre</a></li>
+	      <li><a href="http://www.libremanuals.net/faq-freedoc.html">Preguntas Frecuentes de Documentación Libre</a></li>
+	    </ul>
+
+	    <p class="card-text">
+Puedes estar al tanto de nuestras novedades suscribiéndote a nuestra <a href="https://lists.riseup.net/www/info/libremanuals">lista de distribución</a>.
+	    </p>
+
+	    <p class="card-text">Los puntos físicos de distribución de los libros son:</p>
+	    <ul>
+	      <li><a href="http://www.ommcampuslibros.com/librerias/">Universidad Autónoma de Madrid</a>, C/ Einstein, 7 Edificio Plaza Mayor, Campus de Cantoblanco, 28049 Madrid</li>
+	      <li><a href="http://www.ommcampuslibros.com/librerias/">Universidad Rey Juan Carlos</a>, Camino del Molino, s/n, 28943 Fuenlabrada, Madrid</li>
+	      <li><a href="https://www.nodo50.org/lafuga/">La Fuga</a>: C/ Conde de Torrejón, 4. Sevilla</li>
+	      <li><a href="http://fal.cnt.es/">FAL</a>: C/ de las Peñuelas, 41. Madrid</li>
+	      <li><a href="http://www.lamalatesta.net/">Librería Malatesta</a>: C/ Jesús y María, 24. Madrid</li>
+	      <li><a href="https://www.traficantes.net/">Traficantes de Sueños</a>: C/ del Duque de Alba, 13. Madrid</li>
+	      <li><a href="http://larosanegraediciones.com/">La Rosa Negra</a>: C/ Santa Julia, 6. Madrid</li>
+	    </ul>
+
+	    <p class="card-text">Algunos lugares dónde hemos estado o estaremos presentes son:</p>
+	    <ul>
+	      <li><a href="https://www.medialab-prado.es/actividades/ilovefs18">I Love Free Software 2018</a></li>
+	      <li><a href="http://ubucon.org/en/events/ubucon-europe/schedule/">Ubucon 2018</a></li>
+	      <li><a href="https://openexpoeurope.com/es/speaker/david-arroyo/">OpenExpoEurope 2018</a></li>
+	      <li><a href="https://www.youtube.com/watch?v=dpXy78Wzo7M&feature=youtu.be">Compilando Podacsts (minuto 1:56)</a></li>
+	    </ul>
+
+	    <p class="card-text"><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src={{ url_for('static', filename='img/80x15.png') }} /></a><br />Esta web está bajo una licencia <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+          </div>
+        </div>
+
+      </div>
+    <!-- /.container -->
+
+{% endblock %}
