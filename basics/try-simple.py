@@ -63,3 +63,9 @@ except(ZeroDivisionError, NameError):
     os.kill(os.getpid(), signal.SIGUSR1)
 
 print("The programa has not troubles with the zero division")
+
+try:
+    raise NameError("Hi there")  # Raise Error
+except NameError:
+    print("We force a raise exception")
+    raise  # To determine whether the exception was raised or not
