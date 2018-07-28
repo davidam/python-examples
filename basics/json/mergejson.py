@@ -35,7 +35,7 @@ with open('data11.json') as json_data:
         dateformat = date.fromordinal(datesec)
         diccionario = {}
         diccionario['date'] = dateformat.strftime("%Y-%m-%d")
-        diccionario['cat'] = i['cat']
+        diccionario['cat'] = i['cat'].upper()
         diccionario['value'] = i['value']
 #        print(diccionario)
         merge.append(diccionario)
@@ -51,7 +51,7 @@ with open('data2.json') as json_data:
     diccionario = {}
     for j in d:
         diccionario['date'] = j['myDate']
-        diccionario['cat'] = j['categ']
+        diccionario['cat'] = j['categ'].upper()
         diccionario['value'] = j['val']
         merge.append(diccionario)
 
@@ -66,15 +66,33 @@ with open('data3.json') as json_data:
         else:
             print("did not find")
         if catreg:
-            diccionario['cat'] = catreg.group('cat')
+            diccionario['cat'] = catreg.group('cat').upper()
         else:
             print("did not find")
         diccionario['value'] = z['val']
         merge.append(diccionario)
 
-#print(merge)
+print("##############  JSON  ################")
+print(merge)
+
 file = open("merge.json", "w")
 for m in merge:
     file.write(str(m) + "\n")
 
 file.close()
+
+ncat1 = 0
+ncat2 = 0
+ncat3 = 0
+
+for m in merge:
+    if (m['cat'] == 'CAT 1'):
+        ncat1 = ncat1 + m['value']
+    elif (m['cat'] == 'CAT 2'):
+        ncat2 = ncat2 + m['value']
+    elif (m['cat'] == 'CAT 3'):
+        ncat3 = ncat3 + m['value']
+
+print("CAT 1: " + str(round(ncat1)))
+print("CAT 2: " + str(round(ncat2)))
+print("CAT 3: " + str(round(ncat3)))
