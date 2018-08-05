@@ -10,7 +10,7 @@ from polyglot.detect import Detector
 
 if __name__=='__main__':
 
-    jsondata = open('perceval.json').read()
+    jsondata = open('perceval-long.json').read()
     json_object = json.loads(jsondata)
     #json = json_object.dumps()
     perceval = json_object["perceval"]
