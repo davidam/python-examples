@@ -18,7 +18,7 @@
 
 # You should have received a copy of the GNU General Public License
 # along with GNU Emacs; see the file COPYING.  If not, write to
-# the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, 
+# the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 # Boston, MA 02110-1301 USA,
 
 import nltk
@@ -31,20 +31,22 @@ import random
 print(random.shuffle(documents))
 
 all_words = nltk.FreqDist(w.lower() for w in movie_reviews.words())
+
 word_features = list(all_words)[:2000]
 
-def document_features(document): 
-    document_words = set(document) 
+def document_features(document):
+    document_words = set(document)
     features = {}
     for word in word_features:
         features['contains({})'.format(word)] = (word in document_words)
     return features
 
-print(document_features(movie_reviews.words('pos/cv957_8737.txt'))) 
+print(movie_reviews.words('pos/cv957_8737.txt'))
 
 featuresets = [(document_features(d), c) for (d,c) in documents]
 train_set, test_set = featuresets[100:], featuresets[:100]
 classifier = nltk.NaiveBayesClassifier.train(train_set)
- 	
-print(nltk.classify.accuracy(classifier, test_set)) 
+
+print(nltk.classify.accuracy(classifier, test_set))
 print(classifier.show_most_informative_features(5))
+print("Is it a movie review? ", classifier.classify(document_features(movie_reviews.words('pos/cv957_8737.txt'))))
