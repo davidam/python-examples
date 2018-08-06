@@ -1,6 +1,6 @@
 import os, re
 
-num = raw_input("Write a hexadecimal number: ")
+num = input("Write a hexadecimal number: ")
 
 
 print("Do you find any hexadecimal number in a larger body of text?: ")
