@@ -1,3 +1,7 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+#from bokeh import *
+from bokeh.models.renderers import GlyphRenderer
 from bokeh.plotting import figure, output_file, show
 
 # prepare some data
