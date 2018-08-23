@@ -30,7 +30,7 @@ if (i == 'S'):
     print("Solo se puede transmitir sentimiento algo sincero vasco, a través del sexo.")
     s = input("¿Te interesa? ( S | N ): ")
     if (s == 'S'):
-        print("Tendrás que aparecer en artículos, apoyar la estrategia de Euskal Herria para toda la vida, ...")
+        print("Tendrás que aparecer en artículos, apoyar la estrategia de Euskal Herria para toda la vida, tu jefa directa será una ex-anarquista y ex-heroinómana ...")
         eu = input("¿Te interesa? ( S | N ): ")
         if (eu == 'S'):
             for i in range(1, 9):
