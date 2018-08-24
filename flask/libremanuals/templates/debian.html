@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block extra_title_nav %}
+Debian
+{% endblock %}
+{% block extra_bash %}active{% endblock %}
+{% block content %}
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Page Heading -->
+      <h1 class="my-4">Guía de Referencia de Debian</h1>
+      <div class="row" vocab="http://schema.org/" typeof="Product">
+        <div class="col-sm-4 portfolio-item">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src={{ url_for('static', filename='img/debian-front.png') }} alt="Guía de Referencia de Debian" property="image" ></a>
+          </div>
+        </div>
+        <div class="col-sm-8 portfolio-item" property="description">
+          <div class="card h-100">
+	    <p class="card-text">
+Debian o Proyecto Debian (en inglés: Debian Project) es una
+comunidad conformada por desarrolladores y usuarios, que mantiene
+un sistema operativo GNU basado en software libre. El sistema se
+encuentra precompilado, empaquetado y en formato deb para
+múltiples arquitecturas de computador y para varios núcleos.
+	    </p>
+	    <p class="card-text">
+El proyecto Debian fue anunciado inicialmente 1993 por Ian
+Murdock. El nombre Debian proviene de la combinación del nombre
+de su entonces novia Deborah y el suyo, por lo tanto, Deb(orah) e
+Ian. Debian 0.01 fue lanzado el 15 de septiembre de 1993, y la
+primera versión estable fue hecha en 1996.
+	    </p>
+
+	    <p class="card-text">
+Nació como una apuesta por separar en sus versiones el software
+libre del software no libre. El modelo de desarrollo del proyecto
+es ajeno a motivos empresariales o comerciales, siendo llevado
+adelante por los propios usuarios, aunque cuenta con el apoyo de
+varias empresas en forma de infraestructuras. Debian no vende
+directamente su software, lo pone a disposición de cualquiera en
+Internet, aunque sí permite a personas o empresas distribuirlo
+comercialmente mientras se respete su licencia.
+	    </p>
+
+	    <p class="card-text">
+La comunidad de desarrolladores del proyecto cuenta con la
+representación de Software in the Public Interest (del
+inglés, "software de interés público"), una organización sin
+ánimo de lucro que da cobertura legal a varios proyectos de
+software libre, con el objetivo inicial de dar cobertura legal al
+proyecto Debian, tras el fin del patrocinio de la FSF (Free
+Software Foundation).
+	    </p>
+
+	    <p class="card-text">
+La primera adaptación del sistema Debian, siendo también la más
+desarrollada, es Debian GNU/Linux, basada en el núcleo Linux, y
+como siempre utilizando herramientas de GNU. Existen también
+otras adaptaciones con diversos núcleos: Hurd (Debian GNU/Hurd),
+NetBSD (Debian GNU/NetBSD) y FreeBSD (Debian GNU/kFreeBSD).
+	    </p>
+
+	    <p class="card-text">
+Debian está comprometido con reducir la desigualdad de género a
+través de <a href="https://www.debian.org/women/about">Debian Women</a>
+	    </p>
+
+
+	    <ul>
+	      <li>ISBN: 978-84-09-02742-2</li>
+	      <li>Número de Páginas: 286</li>
+	      <li><span property="price">15</span>€</li>
+	    </ul>
+
+	    <p class="card-text">Ya puedes comprarlo en
+	      <ul>
+	    <!-- 	<li><a href="http://fal.cnt.es/tienda/node/720">Fundaci&oacute;n Anselmo Lorenzo</a></li> -->
+		<!-- <li><a href="https://www.traficantes.net/libros/el-tutorial-de-python">Traficantes de Sueños</a></li> -->
+	    <!-- 	<li><a href="https://www.libros.so/libro/el-tutorial-de-python_1160684">URJC</a></li> -->
+	    <!-- 	<li><a href="https://www.libros.so/libro/el-tutorial-de-python_1160684">UAM</a></li> -->
+		<!-- <li><a href="http://larosanegraediciones.com/ciencia-y-tecnologia/1039-el-tutorial-de-python.html">Rosa Negra</a></li> -->
+	      </ul>
+
+	    <!-- <p class="card-text">Puede usted preguntar dudas acerca de Python en la <a href="https://lists.es.python.org/listinfo">comunidad hispana</a></p> -->
+	  </div>
+	</div>
+      </div>
+    <!-- /.container -->
+
+{% endblock %}
