@@ -38,6 +38,11 @@ def python(python=None):
 def bash(bash=None):
     return render_template('bash.html', bash=bash)
 
+@app.route('/debian.html')
+@app.route('/debian')
+def debian(debian=None):
+    return render_template('debian.html', debian=debian)
+
 @app.route('/acerca.html')
 @app.route('/acerca')
 def acerca(acerca=None):
