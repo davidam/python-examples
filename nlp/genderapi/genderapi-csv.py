@@ -27,6 +27,7 @@ import json
 
 with open('all.csv') as csvfile:
     genderapireader = csv.reader(csvfile, delimiter=',', quotechar='|')
+    next(genderapireader, None)
     for row in genderapireader:
         name = row[0]
         name = name.replace('"', '')
