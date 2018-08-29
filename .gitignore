@@ -6,3 +6,11 @@
 *pyc
 
 nlp/secret
+
+# Regex
+
+regex/noblank
+
+# Genderapi
+
+nlp/genderapi/genderapipass.txt
