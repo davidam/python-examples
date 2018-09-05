@@ -36,7 +36,7 @@ with open('partial.csv') as csvfile:
     for row in genderapireader:
         name = row[0]
         name = name.replace('"', '')
-        r = requests.get('https://gender-api.com/get?name='+name+'&key=mNZozZuZsfHSksQmra')
+        r = requests.get('https://gender-api.com/get?name='+name+'&key='+contenido)
         j = json.loads(r.text)
         genderapilist.append((j['name'], j['gender']))
 
