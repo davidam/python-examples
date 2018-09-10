@@ -33,3 +33,5 @@ $ python3 manage.py migrate
 $ python3 manage.py runserver
 # Podemos crear un superusuario para nuestro site
 $ python3 manage.py createsuperuser
+# Traer ficheros estáticos para mejor el look&feel django
+$ python3 manage.py collectstatic
