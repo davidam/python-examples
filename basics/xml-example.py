@@ -27,3 +27,8 @@ for country in root.findall('country'):
 
 for elem in root.findall(".//*[@name='Singapore']/year"):
     pprint(elem)
+
+import xml.etree.ElementTree as ET
+tree = ET.parse('country_data.xml')
+for elem in tree.iter():
+    print(elem)
