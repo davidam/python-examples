@@ -37,5 +37,21 @@ python manage.py runserver 80
 $ python3 manage.py createsuperuser
 # Traer ficheros estáticos para mejor el look&feel django
 $ python3 manage.py collectstatic
-# Lanza una shell django
+# Lanza una shell django #############################################
 $ python3 manage.py shell
+# Ver todos los objetos
+>>> from blog.models import Post
+>>> Post.objects.all()
+# Crear objetos
+>>> Post.objects.create(author=me, title='Sample title', text='Test')
+# Búsqueda filtrada
+>>> Post.objects.filter(author=me)
+>>> Post.objects.filter(title__contains='title')
+>>> Post.objects.filter(published_date__lte=timezone.now())
+# Consigue objeto instanciado
+>>> post = Post.objects.get(id=1)
+# Asigna el objeto como publicado
+>>> post.publish()
+# Ordenar posts
+>>> Post.objects.order_by('created_date')
+>>> Post.objects.order_by('-created_date')
