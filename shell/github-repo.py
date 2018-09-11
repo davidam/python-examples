@@ -1,6 +1,9 @@
 from pygithub3 import Github
 
-gh = Github(login='davidam', password='d4m3fsf.o')
+fichero = open("github.txt", "r+")
+contenido = fichero.readline()
+
+gh = Github(login='davidam', password=contenido)
 
 davidam = gh.users.get() # Auth required
 davazp = gh.users.get('davazp')
