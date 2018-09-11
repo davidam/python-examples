@@ -165,5 +165,4 @@ def poemProcessing(poem):
 def printPoem(poem):
     for line in poem:
         for word in line:
-            print word,
-        print
+            print(word + "\n")
