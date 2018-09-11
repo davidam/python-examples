@@ -31,7 +31,11 @@ $ python3 manage.py makemigrations blog
 $ python3 manage.py migrate
 # Podemos levantar django desde http://127.0.0.1:8000/
 $ python3 manage.py runserver
+# O poemos levantar django en el puerto 80 y verlo en http://127.0.0.1
+python manage.py runserver 80
 # Podemos crear un superusuario para nuestro site
 $ python3 manage.py createsuperuser
 # Traer ficheros estáticos para mejor el look&feel django
 $ python3 manage.py collectstatic
+# Lanza una shell django
+$ python3 manage.py shell
