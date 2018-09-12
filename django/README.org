@@ -18,7 +18,7 @@
 # the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 # Boston, MA 02110-1301 USA,
 
-# Este es un fichero resumen introductorio de comandos django
+# RESUMEN INTRODUCTORIO DE COMANDOS DJANGO
 
 $ django-admin startproject mysite .
 # En mysite encontramos:
@@ -37,7 +37,7 @@ python manage.py runserver 80
 $ python3 manage.py createsuperuser
 # Traer ficheros estáticos para mejor el look&feel django
 $ python3 manage.py collectstatic
-# Lanza una shell django #############################################
+# ##################### SHELL DJANGO #############################################
 $ python3 manage.py shell
 # Ver todos los objetos
 >>> from blog.models import Post
@@ -55,3 +55,15 @@ $ python3 manage.py shell
 # Ordenar posts
 >>> Post.objects.order_by('created_date')
 >>> Post.objects.order_by('-created_date')
+# Cambiar contraseña
+>>> from django.contrib.auth.models import User
+>>> user = User.objects.get(username="admin")
+>>> user.set_password("tunuevapassword")
+>>> user.save()
+
+# TEST PARA CHEQUEAR LOGROS EN EL TUTORIAL DE DJANGO
+
+# En el PASO 1 deberías ver en la url http://127.0.0.1:8000/polls/
+# http://127.0.0.1:8000/polls/
+
+#
