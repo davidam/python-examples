@@ -18,6 +18,11 @@
 # the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 # Boston, MA 02110-1301 USA,
 
+# REQUISITOS
+En estas notas y código del directorio se asume que tiene instalado
++ Python3
++ Django2
+
 # RESUMEN INTRODUCTORIO DE COMANDOS DJANGO
 $ django-admin --help
 $ django-admin startproject mysite .
