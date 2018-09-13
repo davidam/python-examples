@@ -19,7 +19,7 @@
 # Boston, MA 02110-1301 USA,
 
 # RESUMEN INTRODUCTORIO DE COMANDOS DJANGO
-
+$ django-admin --help
 $ django-admin startproject mysite .
 # En mysite encontramos:
 # + El conector con la base de datos
@@ -29,6 +29,8 @@ $ python3 manage.py startapp blog
 # Una vez que creas un modelo, por ej, post
 $ python3 manage.py makemigrations blog
 $ python3 manage.py migrate
+# Chequear si hay problemas sin crear migraciones o tocar la base de datos
+$ python manage.py check
 # Podemos levantar django desde http://127.0.0.1:8000/
 $ python3 manage.py runserver
 # O poemos levantar django en el puerto 80 y verlo en http://127.0.0.1
@@ -38,6 +40,10 @@ $ python3 manage.py createsuperuser
 # Traer ficheros estáticos para mejor el look&feel django
 $ python3 manage.py collectstatic
 # ##################### SHELL DJANGO #############################################
+# Se puede arrancar una shell django desde la consola python con
+>>> import django
+>>> django.setup()
+# O directamente con manage.py
 $ python3 manage.py shell
 # Ver todos los objetos
 >>> from blog.models import Post
