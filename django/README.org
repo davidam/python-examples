@@ -31,6 +31,10 @@ $ python3 manage.py makemigrations blog
 $ python3 manage.py migrate
 # Chequear si hay problemas sin crear migraciones o tocar la base de datos
 $ python manage.py check
+# Resetear migraciones (Método 1)
+$ rm -rf polls/migrations
+# Resetear migraciones (Método 2)
+$ python3 manage.py migrate --fake core zero
 # Podemos levantar django desde http://127.0.0.1:8000/
 $ python3 manage.py runserver
 # O poemos levantar django en el puerto 80 y verlo en http://127.0.0.1
@@ -39,6 +43,7 @@ python manage.py runserver 80
 $ python3 manage.py createsuperuser
 # Traer ficheros estáticos para mejor el look&feel django
 $ python3 manage.py collectstatic
+
 # ##################### SHELL DJANGO #############################################
 # Se puede arrancar una shell django desde la consola python con
 >>> import django
@@ -72,4 +77,5 @@ $ python3 manage.py shell
 # En el PASO 1 deberías ver en la url http://127.0.0.1:8000/polls/
 # http://127.0.0.1:8000/polls/
 
-#
+# En el PASO 2 deberías poder modificar la aplicación desde
+# http://127.0.0.1:8000/admin
