@@ -55,6 +55,8 @@ $ python3 manage.py collectstatic
 >>> django.setup()
 # O directamente con manage.py
 $ python3 manage.py shell
+# Podemos ejecutar un script en django shell con:
+$ python3 manage.py shell < hello.py
 # Ver todos los objetos
 >>> from blog.models import Post
 >>> Post.objects.all()
@@ -84,3 +86,8 @@ $ python3 manage.py shell
 
 # En el PASO 2 deberías poder modificar la aplicación desde
 # http://127.0.0.1:8000/admin
+
+# En el PASO 3 habrás logrado:
+# + [ ] Hacer ejercicios de lógica y presentación (views y templates)
+# + [ ] Lanzar errores 404
+# + [ ] Eliminar urls hardcodeadas en templates por nombres de URLS con namespaces
