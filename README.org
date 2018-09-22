@@ -1,4 +1,5 @@
 
 This source are simple exercises about popular python libraries.  Some
-exercises has been copied from Internet and another exercises has been
-written by me. I've chosen a GPLv3 license to distribute this project.
+exercises has been copied from Internet, many with my own
+modifications and another exercises has been written by me. I've
+chosen a GPLv3 license to distribute this project.
