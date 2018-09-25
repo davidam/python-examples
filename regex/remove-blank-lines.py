@@ -18,7 +18,7 @@
 
 # You should have received a copy of the GNU General Public License
 # along with GNU Emacs; see the file COPYING.  If not, write to
-# the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, 
+# the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 # Boston, MA 02110-1301 USA,
 
 import sys
@@ -31,11 +31,11 @@ if len(sys.argv) == 2:
 else:
     print("You must give an input file")
     exit()
-    
+
 fo = open(arg1, "r")
 print("Name of the input file: %s", fo.name)
 print("Name of the output file: %s", output)
-        
+
 lines_seen = set() # holds lines already seen
 outfile = open(output, "w")
 
