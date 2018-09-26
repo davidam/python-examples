@@ -1,40 +1,49 @@
-from PyQt4.QtGui import * 
-from PyQt4.QtCore import * 
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+#
+# Copyright (C) 2018  David Arroyo Menéndez
+
+# Author: David Arroyo Menéndez <davidam@gnu.org>
+# Maintainer: David Arroyo Menéndez <davidam@gnu.org>
+
+# This file is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 3, or (at your option)
+# any later version.
+
+# This file is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with GNU Emacs; see the file COPYING.  If not, write to
+# the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+# Boston, MA 02110-1301 USA,
+
 import sys
- 
-def main():  
-    app 	= QApplication(sys.argv)
-    table 	= QTableWidget()
-    tableItem 	= QTableWidgetItem()
- 
-    # initiate table
-    table.setWindowTitle("QTableWidget Example @pythonspot.com")
-    table.resize(400, 250)
-    table.setRowCount(4)
-    table.setColumnCount(2)
- 
-    # set label
-    table.setHorizontalHeaderLabels(QString("H1;H2;").split(";"))
-    table.setVerticalHeaderLabels(QString("V1;V2;V3;V4").split(";"))
- 
-    # set data
-    table.setItem(0,0, QTableWidgetItem("Item (1,1)"))
-    table.setItem(0,1, QTableWidgetItem("Item (1,2)"))
-    table.setItem(1,0, QTableWidgetItem("Item (2,1)"))
-    table.setItem(1,1, QTableWidgetItem("Item (2,2)"))
-    table.setItem(2,0, QTableWidgetItem("Item (3,1)"))
-    table.setItem(2,1, QTableWidgetItem("Item (3,2)"))
-    table.setItem(3,0, QTableWidgetItem("Item (4,1)"))
-    table.setItem(3,1, QTableWidgetItem("Item (4,2)"))
- 
-    # tooltip text
-    table.horizontalHeaderItem(0).setToolTip("Column 1 ")
-    table.horizontalHeaderItem(1).setToolTip("Column 2 ")
-    table.verticalHeaderItem(0).setToolTip("Row 1 ")
-    table.verticalHeaderItem(1).setToolTip("Row 2 ")
- 
-    # show table
-    table.show()
-    return app.exec_()
-if __name__ == '__main__':
-    main()
+from PyQt5 import QtCore, QtWidgets
+from PyQt5.QtWidgets import QMainWindow, QWidget, QPushButton
+from PyQt5.QtCore import QSize
+
+class MainWindow(QMainWindow):
+    def __init__(self):
+        QMainWindow.__init__(self)
+
+        self.setMinimumSize(QSize(300, 100))
+        self.setWindowTitle("PyQt tooltip example - pythonprogramminglanguage.com")
+
+        pybutton = QPushButton('Pyqt', self)
+        pybutton.clicked.connect(self.clickMethod)
+        pybutton.resize(100,32)
+        pybutton.move(50, 20)
+        pybutton.setToolTip('This is a tooltip message.')
+
+    def clickMethod(self):
+        print('PyQt')
+
+if __name__ == "__main__":
+    app = QtWidgets.QApplication(sys.argv)
+    mainWin = MainWindow()
+    mainWin.show()
+    sys.exit( app.exec_() )
