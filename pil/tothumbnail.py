@@ -1,5 +1,5 @@
 import os, sys
-import Image
+from PIL import Image
 
 size = 128, 128
 
@@ -11,4 +11,4 @@ for infile in sys.argv[1:]:
             im.thumbnail(size)
             im.save(outfile, "JPEG")
         except IOError:
-            print "cannot create thumbnail for", infile
+            print("cannot create thumbnail for", infile)
