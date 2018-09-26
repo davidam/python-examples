@@ -1,5 +1,5 @@
 import os, sys
-import Image
+from PIL import Image
 
 for infile in sys.argv[1:]:
     f, e = os.path.splitext(infile)
@@ -8,4 +8,4 @@ for infile in sys.argv[1:]:
         try:
             Image.open(infile).save(outfile)
         except IOError:
-            print "cannot convert", infile
+            print("cannot convert", infile)
