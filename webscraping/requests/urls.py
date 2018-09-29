@@ -13,4 +13,15 @@ for link in links:
     if 'href' in link.attrib:
         out.append(link.attrib['href'])
 
-pprint(out)
+for o in out:
+    if 'http' in o:
+        print(o)
+    else:
+        o = start_url + '/' + o
+        print(o)
+    # r = requests.get(o)
+    # print(
+
+
+
+#pprint(out)
