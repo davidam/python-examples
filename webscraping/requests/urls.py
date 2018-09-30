@@ -1,6 +1,8 @@
+
 import requests
 from lxml import html
 from pprint import pprint
+import os,re
 
 start_url = 'http://www.davidam.com'
 response = requests.get(start_url)
@@ -13,15 +15,26 @@ for link in links:
     if 'href' in link.attrib:
         out.append(link.attrib['href'])
 
+absoluteurls = []
 for o in out:
     if 'http' in o:
         print(o)
+        absoluteurls.append(o)
     else:
         o = start_url + '/' + o
         print(o)
-    # r = requests.get(o)
-    # print(
+        absoluteurls.append(o)
 
+buggyurls = []
+for l in absoluteurls:
+    print(l)
+    try:
+        r = requests.get(l)
+        r.raise_for_status()
+        print(r.status_code)
+    except:
+        buggyurls.append(l)
+        print("Error")
 
-
-#pprint(out)
+print("Urls with troubles:")
+print(buggyurls)
