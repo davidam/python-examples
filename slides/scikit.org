@@ -373,3 +373,12 @@ $ python3 plot_calibration_curve.py
 Otra cuestión son los clasificadores bien calibrados (probabilísticos).
 
 Para aprender y avanzar: http://benalexkeen.com/scoring-classifier-models-using-scikit-learn/
+** Building Machine Learning from scratch
+
+Uno puede construir sus propios algoritmos de machine learning,
+leyendo desde tutoriales, o artículos científicos
+
+#+BEGIN_SRC bash
+$ python3 text-classification.py
+$ python3 layerneuralnetwork.py
+#+END_SRC
