@@ -350,6 +350,13 @@ $ python3 numpy/reject-outliers.py
 $ python3 scikit/plot_outlier_detection_housing.py
 #+END_SRC
 
+** Pipelines
+Es posible hacer pipes dese un algoritmo a otro usando esta librería
+
+#+BEGIN_SRC bash
+$ python3 sckikit/pipeline.py
+#+END_SRC
+
 ** Comparing Classifiers
 
 #+BEGIN_SRC bash
@@ -369,6 +376,14 @@ tridimensional de bolas aplanarla a una imagen bidimensional.
 $ python3 plot_compare_calibration.py
 $ python3 plot_calibration_curve.py
 #+END_SRC
+
+Otra manera interesante de comparar reducción de dimensiones es con
+grid search y pipeline
+
+#+BEGIN_SRC bash
+$ python3 plot_compare_reduction.py
+#+END_SRC
+
 
 Otra cuestión son los clasificadores bien calibrados (probabilísticos).
 
