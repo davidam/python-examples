@@ -26,6 +26,25 @@ $ git clone https://github.com/davidam/python-examples.git
 
 file:img/scikit-graph.png
 
+** Datasets
+
+Any machine learning exercise requires datasets. You can load datasets
+with scikit. If you are creating a new dataset you can use get_data_home:
+
+#+BEGIN_SRC python
+from sklearn.datasets import get_data_home
+        data_path = os.path.join(get_data_home(), "reuters")
+#+END_SRC
+
+You can create automated datasets, or use sklearn datasets.
+
+#+BEGIN_SRC bash
+$ python3 plot_random_dataset.py
+$ python3 rcv1.py
+$ python3 lfw.py
+#+END_SRC
+
+
 ** Classification
 
 file:img/classification.png
