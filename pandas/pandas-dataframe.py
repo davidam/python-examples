@@ -29,5 +29,5 @@ data = {
 
 df = pd.DataFrame(data,columns=['Country',  'Capital',  'Population'])
 
-print df
-        
+print(df)
+print(list(df.columns.values))
