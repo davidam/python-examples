@@ -44,7 +44,6 @@ $ python3 rcv1.py
 $ python3 lfw.py
 #+END_SRC
 
-
 ** Classification
 
 file:img/classification.png
@@ -130,6 +129,7 @@ $ python3 plot_iris1.py
 $ python3 plot_unveil_tree_structure.py
 $ python3 plot_classifier_comparison.py
 $ python3 plot_ensemble_oob.py
+$ python3 datasets/decisiontree.py
 #+END_SRC
 
 ** Regression
@@ -261,6 +261,7 @@ centering
 
 #+BEGIN_SRC bash
 $ python3 pca-example.py
+$ python3 pca.py
 $ python3 scikit-plot-pca.py
 $ python3 plot_pca_iris.py
 $ python3 incremental-pca.py
