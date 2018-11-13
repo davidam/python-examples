@@ -18,16 +18,16 @@
 
 # You should have received a copy of the GNU General Public License
 # along with GNU Emacs; see the file COPYING.  If not, write to
-# the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, 
+# the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 # Boston, MA 02110-1301 USA,
 
 # Print messages
 # You can execute this script following this tutorial:
-# https://grimoirelab.gitbooks.io/tutorial/content/before-you-start/installing-grimoirelab.html
-# https://grimoirelab.gitbooks.io/tutorial/content/perceval/mail.html
+# https://chaoss.github.io/grimoirelab-tutorial/
 # source ~/venvs/mordred/bin/activate
 
 # from pprint import pprint
+from perceval.backends.core.git import Git
 from perceval.backends.core.mbox import MBox
 from pprint import pprint
 import nltk
@@ -51,18 +51,29 @@ classifier = nltk.NaiveBayesClassifier.train(train_set)
 
 
 # uri (label) for the mailing list to analyze
-mbox_uri = 'http://mail-archives.apache.org/mod_mbox/httpd-announce/'
+mbox_uri = 'ftp://lists.gnu.org/emacs-devel/'
+
 # directory for letting Perceval where mbox archives are
 # you need to have the archives to analyzed there before running the script
 mbox_dir = 'archives'
 
 # create a mbox object, using mbox_uri as label, mbox_dir as directory to scan
 repo = MBox(uri=mbox_uri, dirpath=mbox_dir)
-# fetch all messages as an iteratoir, and print first 60 chars for each subject
+# fetch all messages as an iterator, and print first 60 chars for each subject
+males = 0
+females = 0
 for message in repo.fetch():
     print('Subject')
     print(message['data']['Subject'][0:59])
     print('unixfrom')
     print(message['data']['From'])
-    print(classifier.classify(gender_features(message['data']['From'])))
+    gender = classifier.classify(gender_features(message['data']['From']))
+    print(gender)
+    if (gender == 'male'):
+        males = males + 1
+    if (gender == 'female'):
+        females = females + 1
+
+print("The number of messages of females is " + str(females))
+print("The number of messages of males is " + str(males))
 #    pprint(message['data'])
