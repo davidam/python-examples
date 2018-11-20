@@ -32,4 +32,10 @@ elif x == 0:
 elif x == 1:
     print('Single')
 else:
-    print('More')
+    print('More than one')
+
+y = int(input("Please enter another number: "))
+if ((x > 0) and (y > 0)):
+    print("Both numbers are positive")
+elif ((x > 0) or (y > 0)):
+    print("Some number is positive")
