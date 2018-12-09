@@ -38,3 +38,9 @@ def elimina_tildes2(s):
     return aux
 
 print(elimina_tildes2("córcholis"))
+
+accented_string = u'Málaga'
+# accented_string is of type 'unicode'
+import unidecode
+unaccented_string = unidecode.unidecode(accented_string)
+print(unaccented_string)
