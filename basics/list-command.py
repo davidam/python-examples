@@ -22,16 +22,23 @@
 # Boston, MA 02110-1301 USA,
 
 # empty list
+print("empty list")
 print(list())
 
 # vowel string
+print("vowel string")
 vowelString = 'aeiou'
 print(list(vowelString))
+print(vowelString)
 
 # vowel tuple
+print("vowel tuple")
 vowelTuple = ('a', 'e', 'i', 'o', 'u')
 print(list(vowelTuple))
+print(vowelTuple)
 
 # vowel list
+print("vowel list")
 vowelList = ['a', 'e', 'i', 'o', 'u']
 print(list(vowelList))
+print(vowelList)
