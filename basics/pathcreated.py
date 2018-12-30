@@ -25,7 +25,14 @@ import os, sys
 # Path to be created
 path = "hourly"
 
-if (os.path.isdir("path")):
+if os.path.isdir("path"):
     os.makedirs(path)
-    
-print("Path is created")
+    print("Path is created")
+else:
+    print("Path exists")
+
+
+if (os.path.isfile("lala")):
+    print("File exists")
+else:
+    print("File doesn't exist")
