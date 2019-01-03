@@ -39,3 +39,9 @@ if ((x > 0) and (y > 0)):
     print("Both numbers are positive")
 elif ((x > 0) or (y > 0)):
     print("Some number is positive")
+
+if not False:
+    print("not")
+
+if not False & True:
+    print("not and")
