@@ -21,7 +21,7 @@
 # the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 # Boston, MA 02110-1301 USA,
 
-print("Soy Enrich-e, de la hoz y no el martillo")
+print("Soy Enrich-e, del Gregorio, hijo puta contra los matrimonios")
 cifra = input("Cuéntame tu conflicto laboral, cuanto dinero hay en juego: ")
 print("Enriche gana:", cifra)
 print("Este es mi programa enriqueceré España, los españoles, el e-learning, la e-cultura, ...")
