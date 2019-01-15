@@ -36,7 +36,7 @@ for i in range(0, len(v1)):
 print("success: " + str(success))
 print("fails: " + str(fails))
 
-accuracy = fails / len(v1)
+accuracy = success / len(v1)
 print(accuracy)
 # print(len(v1))
 # print(len(v2))
