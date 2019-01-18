@@ -18,14 +18,13 @@
 
 # You should have received a copy of the GNU General Public License
 # along with GNU Emacs; see the file COPYING.  If not, write to
-# the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, 
+# the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 # Boston, MA 02110-1301 USA,
 
 from sklearn import svm
 X = [[0, 0], [1, 1]]
 y = [0, 1]
 clf = svm.SVC()
-clf.fit(X, y) 
+clf.fit(X, y)
 
 print(clf.predict([[2., 2.]]))
-
