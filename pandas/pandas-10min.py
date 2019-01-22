@@ -26,14 +26,14 @@ import numpy as np
 
 # Series
 s = pd.Series([1,3,5,np.nan,6,8])
-print s
+print(s)
 
 # Data Frames
 dates = pd.date_range('20130101', periods=6)
-print dates
+print(dates)
 
 df = pd.DataFrame(np.random.randn(6,4), index=dates, columns=list('ABCD'))
-print df
+print(df)
 
 # Creating a DataFrame by passing a dict of objects that can be converted to series-like.
 
@@ -44,92 +44,92 @@ df2 = pd.DataFrame({ 'A' : 1.,
                      'E' : pd.Categorical(["test","train","test","train"]),
                      'F' : 'foo' })
 
-print df2
+print(df2)
 
-print df2.dtypes
+print(df2.dtypes)
 
 # Viewing Data
 
-print "VIEWING DATA"
+print("VIEWING DATA")
 
-print "df.head()"
+print("df.head()")
 
-print df.head()
+print(df.head())
 
-print "df.tail(3)"
+print("df.tail(3)")
 
-print df.tail(3)
+print(df.tail(3))
 
-print "df.index"
+print("df.index")
 
-print df.index
+print(df.index)
 
-print "df.columns"
+print("df.columns")
 
-print df.columns
+print(df.columns)
 
-print "df.values"
+print("df.values")
 
-print df.values
+print(df.values)
 
-print "df.describe"
+print("df.describe")
 
-print df.describe
+print(df.describe)
 
-print "Transposing your data: df.T"
+print("Transposing your data: df.T")
 
-print df.T
+print(df.T)
 
-print "Sorting by an axis"
+print("Sorting by an axis")
 
-print df.sort_index(axis=1, ascending=False)
+print(df.sort_index(axis=1, ascending=False))
 
 
 # GETTING
 
-print df['A']
+print(df['A'])
 
-print df[0:3]
+print(df[0:3])
 
-print df['20130102':'20130104']
+print(df['20130102':'20130104'])
 
-print df.loc[dates[0]]
+print(df.loc[dates[0]])
 
-print df.loc[:,['A','B']]
+print(df.loc[:,['A','B']])
 
-print df.loc['20130102':'20130104',['A','B']]
+print(df.loc['20130102':'20130104',['A','B']])
 
-print df.loc['20130102',['A','B']]
+print(df.loc['20130102',['A','B']])
 
-print df.loc[dates[0],'A']
+print(df.loc[dates[0],'A'])
 
-print df.at[dates[0],'A']
+print(df.at[dates[0],'A'])
 
-print df.iloc[3]
+print(df.iloc[3])
 
-print df.iloc[3:5,0:2]
+print(df.iloc[3:5,0:2])
 
-print df.iloc[[1,2,4],[0,2]]
+print(df.iloc[[1,2,4],[0,2]])
 
-print df.iloc[1:3,:]
+print(df.iloc[1:3,:])
 
-print df.iloc[:,1:3]
+print(df.iloc[:,1:3])
 
-print df.iloc[1,1]
+print(df.iloc[1,1])
 
-print df.iat[1,1]
+print(df.iat[1,1])
 
 # BOOLEAN INDEXING
 
-print df[df.A > 0]
+print(df[df.A > 0])
 
-print df[df > 0]
+print(df[df > 0])
 
 df2 = df.copy()
 
 df2[df2 > 0] = -df2
 
-print df2
+print(df2)
 
 # Missing Data
 
@@ -137,79 +137,79 @@ df1 = df.reindex(index=dates[0:4], columns=list(df.columns) + ['E'])
 
 df1.loc[dates[0]:dates[1],'E'] = 1
 
-print df1
+print(df1)
 
 df1.dropna(how='any')
 
-print df1.fillna(value=5)
+print(df1.fillna(value=5))
 
 # pd.isna(df1)
 
 # OPERATIONS
 
-print df.mean()
+print(df.mean())
 
-print df.mean(1)
+print(df.mean(1))
 
 s = pd.Series([1,3,5,np.nan,6,8], index=dates).shift(2)
 
-print s
+print(s)
 
-print df.sub(s, axis='index')
+print(df.sub(s, axis='index'))
 
-print df.apply(np.cumsum)
+print(df.apply(np.cumsum))
 
-print df.apply(lambda x: x.max() - x.min())
+print(df.apply(lambda x: x.max() - x.min()))
 
 s = pd.Series(np.random.randint(0, 7, size=10))
 
-print s
+print(s)
 
-print s.value_counts()
+print(s.value_counts())
 
 s = pd.Series(['A', 'B', 'C', 'Aaba', 'Baca', np.nan, 'CABA', 'dog', 'cat'])
 
-print s.str.lower()
+print(s.str.lower())
 
 # MERGE
 
 df = pd.DataFrame(np.random.randn(10, 4))
 
-print df
+print(df)
 
 pieces = [df[:3], df[3:7], df[7:]]
 
-print pd.concat(pieces)
+print(pd.concat(pieces))
 
 left = pd.DataFrame({'key': ['foo', 'foo'], 'lval': [1, 2]})
 
 right = pd.DataFrame({'key': ['foo', 'foo'], 'rval': [4, 5]})
 
-print left
+print(left)
 
-print right
+print(right)
 
-print pd.merge(left, right, on='key')
+print(pd.merge(left, right, on='key'))
 
 left = pd.DataFrame({'key': ['foo', 'bar'], 'lval': [1, 2]})
 
 right = pd.DataFrame({'key': ['foo', 'bar'], 'rval': [4, 5]})
 
-print left
+print(left)
 
-print right
+print(right)
 
-print pd.merge(left, right, on='key')
+print(pd.merge(left, right, on='key'))
 
 df = pd.DataFrame(np.random.randn(8, 4), columns=['A','B','C','D'])
 
-print df
+print(df)
 
 s = df.iloc[3]
 
-print s
+print(s)
 
-print df.append(s, ignore_index=True)
+print(df.append(s, ignore_index=True))
 
 
 df = pd.DataFrame({'A' : ['bar', 'foo', 'bar', 'foo', 'bar', 'foo', 'foo'],
@@ -217,11 +217,11 @@ df = pd.DataFrame({'A' : ['bar', 'foo', 'bar', 'foo', 'bar', 'foo', 'foo'],
                    'C' : np.random.randn(7),
                    'D' : np.random.randn(7)})
 
-print df
+print(df)
 
-print df.groupby('A').sum()
+print(df.groupby('A').sum())
 
-print df.groupby(['A','B']).sum()
+print(df.groupby(['A','B']).sum())
 
 tuples = list(zip(*[['bar', 'bar', 'baz', 'baz',
                      'foo', 'foo', 'qux', 'qux'],
@@ -234,17 +234,17 @@ df = pd.DataFrame(np.random.randn(8, 2), index=index, columns=['A', 'B'])
 
 df2 = df[:4]
 
-print df2
+print(df2)
 
 stacked = df2.stack()
 
-print stacked
+print(stacked)
 
-print stacked.unstack()
+print(stacked.unstack())
 
-print stacked.unstack(1)
+print(stacked.unstack(1))
 
-print stacked.unstack(0)
+print(stacked.unstack(0))
 
 
 # PIVOT TABLES
@@ -255,31 +255,31 @@ df = pd.DataFrame({'A' : ['one', 'one', 'two', 'three'] * 3,
                    'D' : np.random.randn(12),
                    'E' : np.random.randn(12)})
 
-print df
+print(df)
 
-print pd.pivot_table(df, values='D', index=['A', 'B'], columns=['C'])
+print(pd.pivot_table(df, values='D', index=['A', 'B'], columns=['C']))
 
 rng = pd.date_range('1/1/2012', periods=100, freq='S')
 
-print rng
+print(rng)
 
 ts = pd.Series(np.random.randint(0, 500, len(rng)), index=rng)
 
-print ts
+print(ts)
 
-print ts.resample('5Min').sum()
+print(ts.resample('5Min').sum())
 
 rng = pd.date_range('3/6/2012 00:00', periods=5, freq='D')
 
 ts = pd.Series(np.random.randn(len(rng)), rng)
 
-print ts
+print(ts)
 
 ts_utc = ts.tz_localize('UTC')
 
-print ts_utc
+print(ts_utc)
 
-print ts_utc.tz_convert('US/Eastern')
+print(ts_utc.tz_convert('US/Eastern'))
 
 # TIME SERIES
 
@@ -287,13 +287,13 @@ rng = pd.date_range('1/1/2012', periods=5, freq='M')
 
 ts = pd.Series(np.random.randn(len(rng)), index=rng)
 
-print ts
+print(ts)
 
 ps = ts.to_period()
 
-print ps
+print(ps)
 
-print ps.to_timestamp()
+print(ps.to_timestamp())
 
 prng = pd.period_range('1990Q1', '2000Q4', freq='Q-NOV')
 
@@ -301,7 +301,7 @@ ts = pd.Series(np.random.randn(len(prng)), prng)
 
 ts.index = (prng.asfreq('M', 'e') + 1).asfreq('H', 's') + 9
 
-print ts.head()
+print(ts.head())
 
 # CATEGORICALS
 
@@ -341,7 +341,7 @@ print ts.head()
 
 df.to_csv('foo.csv')
 
-print pd.read_csv('foo.csv')
+print(pd.read_csv('foo.csv'))
 
 # hdf5
 
