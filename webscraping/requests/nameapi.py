@@ -48,7 +48,7 @@ try:
     resp.raise_for_status()
     # Decode JSON response into a Python dict:
     resp_dict = resp.json()
-    print(resp_dict)
+    print(resp_dict['matches'][0]['parsedPerson']['gender']['gender'])
 except requests.exceptions.HTTPError as e:
     print("Bad HTTP status code:", e)
 except requests.exceptions.RequestException as e:
