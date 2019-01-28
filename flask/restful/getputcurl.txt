@@ -1,0 +1,4 @@
+curl http://localhost:5000/todo1 -d "data=Remember the milk" -X PUT
+curl http://localhost:5000/todo1
+curl http://localhost:5000/todo2 -d "data=Change my brakepads" -X PUT
+curl http://localhost:5000/todo2 -d "data=Change my brakepads" -X PUT
