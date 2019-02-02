@@ -35,3 +35,13 @@ topsecret['ForwardX11'] = 'no'  # same here
 config['DEFAULT']['ForwardX11'] = 'yes'
 with open('example.ini', 'w') as configfile:
    config.write(configfile)
+
+import configparser
+
+config = configparser.RawConfigParser()
+config.read('example.ini')
+
+for key in config['bitbucket.org']:
+   print(key)
+
+print(config['bitbucket.org']['ForwardX11'])
