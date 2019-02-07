@@ -7,10 +7,11 @@
 #+COLUMNS: %45ITEM %10BEAMER_ENV(Env) %10BEAMER_ACT(Act) %4BEAMER_COL(Col) %8BEAMER_OPT(Opt)
 
 * Summary
-** Statistics: Summary                                         
+** Statistics: Summary
 + Descriptives
 + Manipulating Data
 + Matplotlib
++ Distributions
 + Statistics Tests
 + Logistic Regression
 + Principal Component Analysis
@@ -76,6 +77,8 @@ $ python3 poisson.py
 $ python3 binomial.py
 $ python3 exponential-distribution.py
 #+END_SRC
+** Distributions in Statistics (II)
+file:img/distribution.png
 
 ** Bernoulli Distribution
 
@@ -110,6 +113,7 @@ $ python pearson.py # for testing non-correlation
 $ python fisher.py
 #+END_SRC
 
+
 ** Logistic Regression
 *** Scikit is your friend 					    :B_block:
     :PROPERTIES:
@@ -131,7 +135,6 @@ $ python fisher.py
     $ python3 scikit/logistic-regression/logistic-function.py
     $ python3 scikit/logistic-regression/data-using-pandas.py
 #+END_SRC
-
 
 ** Montecarlo Statistics Methods
 
