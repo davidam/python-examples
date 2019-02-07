@@ -1,6 +1,7 @@
 #+TITLE: Statistics in Python
 #+AUTHOR: David Arroyo Menéndez
 #+OPTIONS: H:2 toc:nil num:t
+#+OPTIONS: tex:t
 #+LATEX_CLASS: beamer
 #+LATEX_CLASS_OPTIONS: [presentation]
 #+BEAMER_THEME: Madrid
@@ -113,6 +114,13 @@ $ python pearson.py # for testing non-correlation
 $ python fisher.py
 #+END_SRC
 
+** Multivariate Analisis. Choosing a model (I)
+
+file:img/variables.png
+
+** Multivariate Analisis. Choosing a model (II)
+
+file:img/variables2.png
 
 ** Logistic Regression
 *** Scikit is your friend 					    :B_block:
