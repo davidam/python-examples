@@ -79,7 +79,12 @@ $ python3 binomial.py
 $ python3 exponential-distribution.py
 #+END_SRC
 ** Distributions in Statistics (II)
+
 file:img/distribution.png
+
+** Distributions in Statistics (III)
+
+file:img/distributions_choice.png
 
 ** Bernoulli Distribution
 
@@ -121,6 +126,8 @@ file:img/variables.png
 ** Multivariate Analisis. Choosing a model (II)
 
 file:img/variables2.png
+
+** Multivariate Analisis. Choosing a model (II)
 
 ** Logistic Regression
 *** Scikit is your friend 					    :B_block:
