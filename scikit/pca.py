@@ -27,8 +27,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 url = "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
+iris = "iris.data"
 # load dataset into Pandas DataFrame
-df = pd.read_csv(url, names=['sepal length','sepal width','petal length','petal width','target'])
+df = pd.read_csv(iris, names=['sepal length','sepal width','petal length','petal width','target'])
 print("STEP1: 4 COMPONENTS + 1 TARGET")
 pprint(df)
 from sklearn.preprocessing import StandardScaler
