@@ -36,8 +36,10 @@ def main():
   # Build a service object for interacting with the API. Visit
   # the Google APIs Console <http://code.google.com/apis/console>
   # to get an API key for your own application.
+  filekey = open("apikey.txt", "r+")
+  content = filekey.readline().rstrip()
   service = build("customsearch", "v1",
-            developerKey="AIzaSyCdpNnUwGTcu3woLJdEham1Y_RLGY_g2rk")
+                  developerKey=content)
 
   res = service.cse().list(
       q=args.query,
