@@ -18,8 +18,8 @@ https://newonlinecourses.science.psu.edu/stat505/node/54/
 
 Hemos obtenido 3 componentes principales con respecto a los atributos del precio de la casa.
 
-1. Hay correlación entre variables (*housing, health, arts, recreation*)
+1. Hay correlación entre variables (*housing, arts, health, transportation, recreation*)
    para determinar el precio de la casa. Si se incrementan estas
    variables se incrementa el precio de la casa.
-2. El precio de la casa se decrementa, si se decrementa *health*
-3. El precio de la casa se incrementa, si se incrementa (*crime, recreation*)
+2. El precio de la casa se mantiene, si se decrementa *health, education*
+3. El precio de la casa se incrementa, si se incrementa *arts, crime, recreation*
