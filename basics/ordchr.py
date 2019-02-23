@@ -23,3 +23,7 @@
 
 print(ord('a'))
 print(chr(97))
+
+u = 'abcdé'
+print(ord(u[-1]))
+print(ord(u[0]))
