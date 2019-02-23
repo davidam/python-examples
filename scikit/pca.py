@@ -28,6 +28,7 @@ import matplotlib.pyplot as plt
 
 url = "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
 iris = "iris.data"
+#features = "features_list.csv"
 # load dataset into Pandas DataFrame
 df = pd.read_csv(iris, names=['sepal length','sepal width','petal length','petal width','target'])
 print("STEP1: 4 COMPONENTS + 1 TARGET")
@@ -85,4 +86,4 @@ for target, color in zip(targets,colors):
 ax.legend(targets)
 ax.grid()
 
-#plt.show()
+plt.show()
