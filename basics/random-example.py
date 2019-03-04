@@ -29,3 +29,9 @@ random.shuffle(number_list) #shuffle method
 print ("List after first shuffle  : ",  number_list)
 random.shuffle(number_list)
 print ("List after second shuffle : ",  number_list)
+
+#creating the list with range
+x = [i for i in range(10)]
+print(x)
+random.shuffle(x)
+print(x)
