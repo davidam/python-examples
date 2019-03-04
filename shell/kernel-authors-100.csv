@@ -1,0 +1,100 @@
+David Howells; dhowells@redhat.com
+Darrick J. Wong; darrick.wong@oracle.com
+Linus Torvalds; torvalds@linux-foundation.org
+Linus Walleij; linus.walleij@linaro.org
+Eric Dumazet; edumazet@google.com
+Hauke Mehrtens; hauke@hauke-m.de
+Hangbin Liu; liuhangbin@gmail.com
+Thadeu Lima de Souza Cascardo; cascardo@canonical.com
+Mao Wenan; maowenan@huawei.com
+Maxime Chevallier; maxime.chevallier@bootlin.com
+David S. Miller; davem@davemloft.net
+Daniel Borkmann; daniel@iogearbox.net
+Paolo Abeni; pabeni@redhat.com
+YueHaibing; yuehaibing@huawei.com
+Kalash Nainwal; kalash@arista.com
+Michael Chan; michael.chan@broadcom.com
+Jiong Wang; jiong.wang@netronome.com
+Florian Fainelli; f.fainelli@gmail.com
+Jann Horn; jannh@google.com
+Vadim Lomovtsev; vlomovtsev@marvell.com
+Lorenzo Bianconi; lorenzo.bianconi@redhat.com
+George Wilkie; gwilkie@vyatta.att-mail.com
+David Chen; david.chen7@dell.com
+Maciej Kwiecien; maciej.kwiecien@nokia.com
+Yu Zhang; yu.c.zhang@linux.intel.com
+Vitaly Kuznetsov; vkuznets@redhat.com
+Eric Biggers; ebiggers@google.com
+Alban Crequy; alban@kinvolk.io
+Arnd Bergmann; arnd@arndb.de
+Felix Fietkau; nbd@nbd.name
+Toke Høiland-Jørgensen; toke@redhat.com
+Li RongQing; lirongqing@baidu.com
+Rafael J. Wysocki; rafael.j.wysocki@intel.com
+Dave Airlie; airlied@redhat.com
+Vineet Gupta; vgupta@synopsys.com
+Willem de Bruijn; willemb@google.com
+Tung Nguyen; tung.q.nguyen@dektech.com.au
+Michal Soltys; soltys@ziu.info
+Helge Deller; deller@gmx.de
+Jan Sokolowski; jan.sokolowski@intel.com
+Dmitry V. Levin; ldv@altlinux.org
+Björn Töpel; bjorn.topel@intel.com
+Alexey Brodkin; abrodkin@synopsys.com
+Eugeniy Paltsev; Eugeniy.Paltsev@synopsys.com
+Eugeniy Paltsev; eugeniy.paltsev@synopsys.com
+Magnus Karlsson; magnus.karlsson@intel.com
+Jeff Kirsher; jeffrey.t.kirsher@intel.com
+Ursula Braun; ubraun@linux.ibm.com
+Michal Hocko; mhocko@suse.com
+Daniel Vetter; daniel.vetter@ffwll.ch
+Qian Cai; cai@lca.pw
+Andrey Konovalov; andreyknvl@google.com
+Johannes Weiner; hannes@cmpxchg.org
+Mel Gorman; mgorman@techsingularity.net
+Robin Murphy; robin.murphy@arm.com
+Ralph Campbell; rcampbell@nvidia.com
+Andrew Morton; akpm@linux-foundation.org
+Vincent Guittot; vincent.guittot@linaro.org
+Al Viro; viro@zeniv.linux.org.uk
+Russell King; rmk+kernel@armlinux.org.uk
+Paolo Bonzini; pbonzini@redhat.com
+Christian König; ckoenig.leichtzumerken@gmail.com
+Bhawanpreet Lakha; Bhawanpreet.Lakha@amd.com
+Nicholas Kazlauskas; nicholas.kazlauskas@amd.com
+Alexandre Belloni; alexandre.belloni@bootlin.com
+Thierry Reding; treding@nvidia.com
+Vladimir Murzin; vladimir.murzin@arm.com
+Chris Wilson; chris@chris-wilson.co.uk
+Kai-Heng Feng; kai.heng.feng@canonical.com
+Jason Wang; jasowang@redhat.com
+Roman Li; Roman.Li@amd.com
+Leo (Hanghong) Ma; hanghong.ma@amd.com
+shaoyunl; shaoyun.liu@amd.com
+Alex Deucher; alexander.deucher@amd.com
+Tony Lindgren; tony@atomide.com
+Peter Ujfalusi; peter.ujfalusi@ti.com
+Baruch Siach; baruch@tkos.co.il
+Thomas Petazzoni; thomas.petazzoni@bootlin.com
+Takashi Iwai; tiwai@suse.de
+Yangtao Li; tiny.windzz@gmail.com
+Murali Karicheri; m-karicheri2@ti.com
+Salil Mehta; salil.mehta@huawei.com
+Jose Abreu; jose.abreu@synopsys.com
+Michal Kalderon; michal.kalderon@marvell.com
+Alexey Kardashevskiy; aik@ozlabs.ru
+Kees Cook; keescook@chromium.org
+Wei Yongjun; weiyongjun1@huawei.com
+Stanislav Fomichev; sdf@google.com
+Colin Ian King; colin.king@canonical.com
+Kuninori Morimoto; kuninori.morimoto.gx@renesas.com
+Bard liao; yung-chuan.liao@linux.intel.com
+Yan, Zheng; zyan@redhat.com
+Ilya Dryomov; idryomov@gmail.com
+Rayagonda Kokatanur; rayagonda.kokatanur@broadcom.com
+Nathan Chancellor; natechancellor@gmail.com
+Mark Rutland; mark.rutland@arm.com
+Tobias Brunner; tobias@strongswan.org
+Alexander Duyck; alexander.h.duyck@linux.intel.com
+Alexey Khoroshilov; khoroshilov@ispras.ru
+Beniamino Galvani; bgalvani@redhat.com
