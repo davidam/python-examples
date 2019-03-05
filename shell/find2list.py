@@ -23,11 +23,13 @@
 
 import os
 
-f = os.popen('find . | ls -l | grep "^d"')
+
+f = os.popen('find . | ls -l')
 
 l = []
 for line in f:
     fields = line.strip().split()
-    l.append(fields[8])
+    if (len(fields) > 7):
+        l.append(fields[8])
 
 print(l)    
