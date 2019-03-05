@@ -21,15 +21,17 @@
 # the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, 
 # Boston, MA 02110-1301 USA,
 
+import re
 import os
 
+def files_one_level(directory):
+    f = os.popen('find '+ directory +' | ls -l')
+    l = []
+    for line in f:
+        fields = line.strip().split()
+        if (len(fields) > 7):
+            l.append(fields[8])
+    return l
 
-f = os.popen('find . | ls -l')
+print(files_one_level("."))
 
-l = []
-for line in f:
-    fields = line.strip().split()
-    if (len(fields) > 7):
-        l.append(fields[8])
-
-print(l)    
