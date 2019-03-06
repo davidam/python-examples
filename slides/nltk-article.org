@@ -72,9 +72,9 @@ We need good tools written from scratch by the teachers.
 + Parsing Modules
 + Tagging Modules
 + Finite State Automata
-+ Type Checking 
++ Type Checking
 + Visualization
-+ Text Clasification 
++ Text Clasification
 
 ** Documentation
 
@@ -100,3 +100,14 @@ We need good tools written from scratch by the teachers.
 + Other Researchers and Developers
 
 ** Conclusions and Future Work
+The NLTK original idea was its combination of three factors:
+
+1. It was deliberately designed as courseware and gives pedagogical
+   goals primary status.
+
+2. Its target audience consists of both linguists and computer
+   scientists, and it is accessible and challenging at many levels of
+   prior computational skill.
+
+3. Finally, it is based on an object-oriented scripting language
+   supporting rapid prototyping and literate programming.
