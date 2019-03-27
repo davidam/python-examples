@@ -77,3 +77,26 @@ print(quantify('carrot', amount=1000))
 
 from pattern.en import ngrams
 print(ngrams("I am eating pizza.", n=2)) # bigrams
+
+
+from pattern.en import parse
+print(parse('I ate pizza.').split())
+
+
+from pattern.en import parsetree
+
+s = parsetree('The cat sat on the mat.', relations=True, lemmata=True)
+print(repr(s))
+
+for sentence in s:
+    for chunk in sentence.chunks:
+        print(chunk.type), [(w.string, w.type) for w in chunk.words]
+
+
+from pattern.en import sentiment
+
+print(sentiment(
+    "The movie attempts to be surreal by incorporating various time paradoxes,"
+    "but it's presented in such a ridiculous way it's seriously boring."))
+
+print(sentiment('Wonderfully awful! :-)').assessments)
