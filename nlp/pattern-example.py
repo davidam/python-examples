@@ -52,3 +52,28 @@ print(conjugate('purred', '3sg')) # he / she / it
 from pattern.de import gender, MALE, FEMALE, NEUTRAL
 print(gender('Katze'))
 print(gender('Mesa'))
+
+
+from pattern.en import verbs, conjugate, PARTICIPLE
+
+print('google')  in verbs.infinitives
+print('googled') in verbs.inflections
+
+print(conjugate('googled', tense=PARTICIPLE, parse=False))
+print(conjugate('googled', tense=PARTICIPLE, parse=True))
+
+from pattern.en import quantify
+
+print(quantify(['goose', 'goose', 'duck', 'chicken', 'chicken', 'chicken']))
+print(quantify({'carrot': 100, 'parrot': 20}))
+print(quantify('carrot', amount=1000))
+
+
+from pattern.en import quantify
+
+print(quantify(['goose', 'goose', 'duck', 'chicken', 'chicken', 'chicken']))
+print(quantify({'carrot': 100, 'parrot': 20}))
+print(quantify('carrot', amount=1000))
+
+from pattern.en import ngrams
+print(ngrams("I am eating pizza.", n=2)) # bigrams
