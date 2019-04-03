@@ -22,10 +22,15 @@
 # Boston, MA 02110-1301 USA,
 #!/usr/bin/python# -*- coding: utf-8 -*-
 
+def v(a, b):
+    print("My params are: %s %s" % (a, b))
+
 def x(a,b):
     print("param 1 %s param 2 %s" % (a,b))
 
 def y(z,t):
     z(*t)   # z is the function and t are the args
-    
+
+
+y(v, ("hello","jose"))
 y(x,("hello","manuel"))
