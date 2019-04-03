@@ -1,0 +1,206 @@
+#+TITLE: Best Practiques in Python
+#+AUTHOR: David Arroyo Menéndez
+#+OPTIONS: H:2 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS: TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:notintoc
+#+STARTUP: beamer
+#+LATEX_CLASS_OPTIONS: [unicode,presentation,c,squeeze,shrink,10pt]
+#+BEAMER_FRAME_LEVEL: 2
+
+* Tests
+** Tests Philosophy
+
++ You must write your own test/s for your method before you write the
+method.
++ You must not copy and paste code. You must write your own code
++ If you need learn a library, you can write tests.
+
+** Executing Tests
+
+#+BEGIN_SRC
+$ pip3 install damenumpy
+$ cd /usr/local/lib/python3.5/dist-packages/damenumpy
+$ nosetests3 tests
+$ nosetests3 tests/test_basics.py
+$ nosetests3 tests/test_basics.py:TestBasics.test_indexing
+#+END_SRC
+
+* Publising Code
+** Publishing Code philosophy
+
+If you publish code:
++ You can save your code in multiple computers in a comfortable
+  way. Save money! No desgracias!
++ Another people can see your code. To be recognized!
++ You can obtain improvements to your code. Peer revision.
++ Public code for public people. To be popular
+
+** Executing publising code
+
++ Github/Gitlab is your social network. To be clever.
++ Savannah is your social network. You are a GNU.
++ Pipy is your social network. To be a popular Python programmer.
+
+** Create a repository in github
+
+You can create a repository from the web interface and:
+
+#+BEGIN_SRC
+echo "# deleteme" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/davidam/deleteme.git
+git push -u origin master
+#+END_SRC
+
+You can learn to create a repository in your server and learn to configure it in:
++ http://www.davidam.com/docu/crear-repositorio-git-servidor.html
+
+** Packaging (I). Get a simple setup.py
+
+#+BEGIN_SRC
+$ git clone https://github.com/davidam/damenumpy.git
+$ cd damenumpy
+$ cat setup.py
+#+END_SRC
+
+** Packaging (II). Write a simple setup.py
+
+#+BEGIN_SRC python
+from setuptools import setup
+
+setup(name='damenumpy',
+      version='0.0.3',
+      description='Learning Numpy from Tests by David Arroyo Menéndez',
+      classifiers=[
+        'Development Status :: 3 - Alpha',
+        'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
+        'Programming Language :: Python :: 3.6',
+        'Topic :: Scientific/Engineering',
+      ],
+      keywords='numpy tests',
+      url='http://github.com/davidam/damenumpy',
+      author='David Arroyo Menéndez',
+      author_email='davidam@gnu.org',
+      license='GPLv3',
+      packages=['damenumpy', 'damenumpy.tests'],
+      package_dir={'damenumpy': 'damenumpy', 'damegender.tests': 'damenumpy/tests'},
+      install_requires=[
+          'markdown',
+          'numpy',
+      ],
+      test_suite='nose.collector',
+      tests_require=['nose', 'nose-cover3'],
+      include_package_data=True,
+      zip_safe=False)
+#+END_SRC
+
+** Packaging (III). Commands
+
+#+BEGIN_SRC bash
+# damefunniest
+# https://python-packaging.readthedocs.io/en/latest/minimal.html
+
+To install from local:
+$ pip install -e .
+
+To install create tar.gz in dist directory:
+$ python3 setup.py register sdist
+
+To upload to pypi:
+$ twine upload dist/damefunniest-0.1.tar.gz
+
+To install from Internet:
+$ pip3 install damefunniest
+#+END_SRC
+
+** Packaging (IV). You can download the new package.
+
+#+BEGIN_SRC
+$ pip3 install damenumpy
+#+END_SRC
+* POO (Programming Oriented to Objects)
+** Heritage
+#+BEGIN_SRC
+class Persona(object):
+    def __init__(self, miNIF, minombre, misapellidos):
+        self.NIF = miNIF
+        self.nombre = minombre
+        self.apellidos = misapellidos
+
+    def __str__(self):
+        return self.NIF + ": " + self.apellidos + ", " + self.nombre
+
+class Alumno(Persona):
+    def __init__(self, miNIF, minombre, misapellidos, micurso):
+        super(Alumno, self).__init__(miNIF, minombre, misapellidos)
+        self.curso = micurso
+
+    def __str__(self):
+        return self.NIF + ": " + self.apellidos + ", " + self.nombre + " (curso :" + self.curso + ")"
+
+per1 = Persona("34799461R", "Susana", "Raval")
+print(per1)
+alum1 = Alumno("46589499T", "Francisco", "Ceballos", "Python")
+print(alum1)
+#+END_SRC
+** Overload
+#+BEGIN_SRC
+class Point:
+    def __init__(self, x = 0, y = 0):
+        self.x = x
+        self.y = y
+
+    def __str__(self):
+        return "({0},{1})".format(self.x,self.y)
+
+    def __lt__(self,other):
+        self_mag = (self.x ** 2) + (self.y ** 2)
+        other_mag = (other.x ** 2) + (other.y ** 2)
+        return self_mag < other_mag
+
+print(Point(1,1) < Point(-2,-3))
+print(Point(1,1) < Point(0.5,-0.2))
+print(Point(1,1) < Point(1,1))
+#+END_SRC
+** Iterator Method
+#+BEGIN_SRC
+class InfIter:
+    """Infinite iterator to return all
+        odd numbers"""
+
+    def __iter__(self):
+        self.num = 1
+        return self
+
+    def __next__(self):
+        num = self.num
+        self.num += 2
+        return num
+
+a = iter(InfIter())
+print(next(a))
+print(next(a))
+print(next(a))
+print(next(a))
+#+END_SRC
+** Multiple Heritage
+#+BEGIN_SRC
+class First(object):
+    def __init__(self):
+        super(First, self).__init__()
+        print("first")
+
+class Second(object):
+    def __init__(self):
+        super(Second, self).__init__()
+        print("second")
+
+class Third(First, Second):
+    def __init__(self):
+        super(Third, self).__init__()
+        print("third")
+
+t = Third()
+#+END_SRC
+* Functional
