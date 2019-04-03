@@ -204,3 +204,136 @@ class Third(First, Second):
 t = Third()
 #+END_SRC
 * Functional
+** Decorator
+
+#+BEGIN_SRC
+$ python3 decorator.py
+<p>lorem ipsum, John dolor sit amet</p>
+#+END_SRC
+
+#+BEGIN_SRC
+def get_text(name):
+   return "lorem ipsum, {0} dolor sit amet".format(name)
+
+def p_decorate(func):
+   def func_wrapper(name):
+       return "<p>{0}</p>".format(func(name))
+   return func_wrapper
+
+my_get_text = p_decorate(get_text)
+
+print(my_get_text("John"))
+#+END_SRC
+** Pythonic decorator
+#+BEGIN_SRC
+def p_decorate(func):
+   def func_wrapper(name):
+       return "<p>{0}</p>".format(func(name))
+   return func_wrapper
+
+@p_decorate
+def get_text(name):
+   return "lorem ipsum, {0} dolor sit amet".format(name)
+
+print(get_text("John"))
+#+END_SRC
+
+** Template with decorator
+#+BEGIN_SRC
+class CGImethod(object):
+    def __init__(self, title):
+        self.title = title
+    def __call__(self, fn):
+        def wrapped_fn(*args):
+            print("Content-Type: text/html\n\n")
+            print("<HTML>")
+            print("<HEAD><TITLE>{}</TITLE></HEAD>".format(self.title))
+            print("<BODY>")
+            try:
+                fn(*args)
+            except Exception as e:
+                print(e)
+            print("</BODY></HTML>")
+        return wrapped_fn
+
+@CGImethod("Hello with Decorator")
+def say_hello():
+    print('<h1>Hello from CGI-Land</h1>')
+
+say_hello()
+
+@CGImethod("Hello with Decorator")
+def say_hello2():
+    print('<h1>Hello from CGI-Land</h1>\n' '<p>and paragraph</p>')
+
+say_hello2()
+#+END_SRC
+** Functions with functions as arguments
+#+BEGIN_SRC
+def x(a,b):
+    print("param 1 %s param 2 %s" % (a,b))
+
+def y(z,t):
+    z(*t)   # z is the function and t are the args
+
+y(x,("hello","manuel"))
+#+END_SRC
+** Functions with functions as arguments (II)
+#+BEGIN_SRC
+def inc(x):
+    return x + 1
+
+def dec(x):
+    return x - 1
+
+def operate(func, x):
+    result = func(x)
+    return result
+
+print(operate(inc,3))
+print(operate(dec,3))
+#+END_SRC
+** Functions with functions as arguments (III). Map function
+
+With map you can apply one function to a list.
+#+BEGIN_SRC
+# Change this value for a different result
+terms = 10
+
+# Uncomment to take number of terms from user
+#terms = int(input("How many terms? "))
+
+# use anonymous function
+result = list(map(lambda x: 2 ** x, range(terms)))
+
+# display the result
+
+print("The total terms is:",terms)
+for i in range(terms):
+   print("2 raised to power",i,"is",result[i])
+#+END_SRC
+
+** Functions with functions as arguments (III). Reduce function
+
+Reduce is another way to apply one function to a list.
+
+#+BEGIN_SRC
+from functools import reduce
+from functools import partial
+
+f = lambda a,b: a if (a > b) else b
+print("REDUCE EXAMPLES")
+print("a if (a > b) else b")
+print(reduce(f, [47,11,42,102,13]))
+print("x+y, range(1,101)")
+print(reduce(lambda x, y: x+y, range(1,101)))
+print("x*y, range(1,49)")
+print(reduce(lambda x, y: x*y, range(1,49)))
+print(reduce(lambda x, y: x*y, range(44,50))/reduce(lambda x, y: x*y, range(1,7)))
+
+def foo(a, b, c):
+     return a + b if c else a * b
+
+print(reduce(partial(foo, c=True), [1,2,3,4,5], 2))
+print(reduce(partial(foo, c=False), [1,2,3,4,5], 2))
+#+END_SRC
