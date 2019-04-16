@@ -1,0 +1,186 @@
+#+TITLE: Python Packaging
+#+AUTHOR: David Arroyo Menéndez
+#+OPTIONS: H:2 toc:nil num:t
+#+LATEX_CLASS: beamer
+#+LATEX_CLASS_OPTIONS: [presentation]
+#+BEAMER_THEME: Madrid
+#+COLUMNS: %45ITEM %10BEAMER_ENV(Env) %10BEAMER_ACT(Act) %4BEAMER_COL(Col) %8BEAMER_OPT(Opt)
+
+* Summary
+** Philosophy. Why?
+Packaging is for extend you audience.
+Making easy the installation.
+
+** Downloading examples of packages
+#+BEGIN_SRC bash
+$ git clone https://github.com/davidam/damegender.git
+$ git clone https://github.com/davidam/damepandas.git
+$ git clone https://github.com/davidam/damenumpy.git
+$ git clone https://github.com/davidam/damefunniest.git
+$ git clone https://github.com/davidam/dametowel.git
+#+END_SRC
+
+** setup.py is the file for packaging
+
+#+BEGIN_SRC lisp
+from setuptools import setup
+
+def readme():
+    with open('README.org') as f:
+        return f.read()
+
+setup(name='damefunniest',
+      version='0.4',
+      description='The funniest joke in the world',
+      long_description=readme(),
+      classifiers=[
+        'Development Status :: 3 - Alpha',
+        'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
+        'Programming Language :: Python :: 3.6',
+        'Topic :: Text Processing :: Linguistic',
+      ],
+      keywords='funniest joke comedy flying circus',
+      scripts=['bin/funniest-joke'],
+      url='http://github.com/davidam/damefunniest',
+      author='David Arroyo Menéndez',
+      author_email='davidam@gnu.org',
+      license='GPLv3',
+      packages=['damefunniest'],
+      install_requires=[
+          'markdown',
+      ],
+      test_suite='nose.collector',
+      tests_require=['nose', 'nose-cover3'],
+      entry_points={
+          'console_scripts': ['funniest-joke=funniest.command_line:main'],
+    },
+      include_package_data=True,
+      zip_safe=False)
+#+END_SRC
+
+** Commands for create a package from setup.py
+
+#+BEGIN_SRC
+To install from local:
+$ pip install -e .
+
+To install create tar.gz in dist directory:
+$ python3 setup.py register sdist
+
+To upload to pypi:
+$ twine upload dist/damefunniest-0.1.tar.gz
+
+To install from Internet:
+$ pip3 install damefunniest
+#+END_SRC
+
+** Tree structure for a package
+
+#+BEGIN_SRC
+./tests
+./tests/test_joke.py
+./tests/test_command_line.py
+./app
+./bin
+./bin/funniest-joke
+./__init__.py
+./command_line.py
+#+END_SRC
+
+** Damegender is a real package (I): Methods
+
+#+BEGIN_SRC
+import os
+import re
+from setuptools import setup
+
+
+cwd = os.getcwd()
+
+def files_one_level(directory):
+    f = os.popen('find '+ directory )
+    l = []
+    for line in f:
+        fields = line.strip().split()
+        l.append(fields[0])
+    return l
+
+def files_one_level_drop_pwd(directory):
+    f = os.popen('find '+ directory)
+    l = []
+    for line in f:
+        fields = line.strip().split()
+        if not(os.path.isdir(fields[0])) and ("__init__.py" not in fields[0]):
+            l.append(drop_pwd(fields[0]))
+    return l
+
+def drop_pwd(s):
+    cwd = os.getcwd()
+    result = ""
+    if re.search(cwd, s):
+        result = re.sub(cwd+'/', '', s)
+    return result
+#+END_SRC
+
+
+** Damegender is a real package (I): setup.py
+#+BEGIN_SRC
+setup(name='damegender',
+      version='0.0.37',
+      description='Gender Detection Tool by David Arroyo MEnéndez',
+      long_description='Gender Detection Tool by David Arroyo MEnéndez',
+      classifiers=[
+          "Programming Language :: Python :: 3",
+          "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+          "Operating System :: OS Independent",
+      ],
+      keywords='gender repositories',
+      url='http://github.com/davidam/damegender',
+      author='David Arroyo Menéndez',
+      author_email='davidam@gnu.org',
+      license='GPLv3',
+      packages=['damegender', 'damegender.app', 'damegender.files'],
+      package_dir={'damegender': 'src/damegender', 'damegender.app': 'src/damegender/app', 'damegender.files': 'src/damegender/files'},
+#      data_files=[('damegender', ['src/damegender/files/features_list.csv', 'src/damegender/files/features_list_cat.csv', 'src/damegender/files/features_list_no_cat.csv', 'src/damegender/files/names/all.csv', 'src/damegender/files/names/partial.csv', 'src/damegender/files/names/names_es/femeninos_original.csv', 'src/damegender/files/names/names_es/masculinos_original.csv', 'src/damegender/files/names/names_es/masculinos.txt', 'src/damegender/files/names/names_es/femeninos.txt'])],
+      data_files=[('damegender', ['src/damegender/files/features_list.csv', 'src/damegender/files/features_list_cat.csv', 'src/damegender/files/features_list_no_cat.csv'] + files_one_level_drop_pwd(cwd+"/src/damegender/files/images") + files_one_level_drop_pwd(cwd+"/src/damegender/files/datamodels") + files_one_level_drop_pwd(cwd+"/src/damegender/files/mbox") + files_one_level_drop_pwd(cwd+"/src/damegender/files/names"))],
+      scripts=files_one_level(cwd+"/src/damegender/bin"),
+      install_requires=[
+          'markdown',
+          'nltk',
+          'perceval',
+          'requests',
+          'gender_guesser',
+          'genderize',
+          'numpy',
+          'scikit-learn',
+          'pyhyphen',
+          'unidecode',
+          'pandas',
+          'matplotlib',
+          'google-api-python-client',
+      ],
+      test_suite='nose.collector',
+      tests_require=['nose', 'nose-cover3'],
+      entry_points={
+          'console_scripts': ['damegender=damegender'],
+      },
+      include_package_data=True,
+      zip_safe=False)
+#+END_SRC
+
+** Explaining attributes
+
++ version
++ classifiers
++ license
++ packages
++ package_dir
++ data_files
++ scripts and entry_points
++ install_requires
+
+** References
+
+
+** License
+This document is under a [[http://creativecommons.org/licenses/by/4.0/deed][Creative Commons Attribution 4.0 International]]
