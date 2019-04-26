@@ -1,0 +1,63 @@
+#+TITLE: Scikit from the article
+#+AUTHOR: David Arroyo Menéndez
+#+OPTIONS: H:2 toc:nil num:t
+#+LATEX_CLASS: beamer
+#+LATEX_CLASS_OPTIONS: [presentation]
+#+BEAMER_THEME: Madrid
+#+COLUMNS: %45ITEM %10BEAMER_ENV(Env) %10BEAMER_ACT(Act) %4BEAMER_COL(Col) %8BEAMER_OPT(Opt)
+
+* Summary
+** Presentation
+
+Scikit-learn: Machine Learning in Python
++ Fabian Pedregosa
++ Gaël Varoquaux
++ Alexandre Gramfort
++ Vincent Michel
++ Bertrand Thirion
+
+URL: http://www.jmlr.org/papers/v12/pedregosa11a.html
+Citations: 15926
+
+** Abstract
+
+Scikit-learn is a Python module integrating a wide range of
+state-of-the-art machine learning algorithms for medium-scale
+supervised and unsupervised problems. This package focuses on bringing
+machine learning to non-specialists using a general-purpose high-level
+language. Emphasis is put on ease of use, performance, documentation,
+and API consistency. It has minimal dependencies and is distributed
+under the simplified BSD license, encouraging its use in both academic
+and commercial settings. Source code, binaries, and documentation can
+be downloaded from http://scikit-learn.sourceforge.net.
+
+** Introducción 
++ Lenguaje de programación Python
++ Qué hace. Necesidad de hacerlo
+** Project Vision
++ Code Qualitiy
++ BSD Licensing
++ Bare-bone design and API
++ Community-driven development
++ Documentation
+** Underlying Technologies
++ Numpy
++ Scipy
++ Cython
+** Code Design
++ Objects specified by interface, not by inheritance
++ Benchmarking between another machine learning tools
++ Model Selection: cross-validation (GridSearch and Lasso). 
+Pipeline can combine several transformers
+** High-level yet Efficient: Some Trade Offs
++ SVM
++ LARS
++ Elastic Net
++ kNN
++ PCA
+** Conclusion
++ Resumen de secciones
++ Qué hace el software
++ Future work
+
+
