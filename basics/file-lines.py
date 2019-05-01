@@ -24,4 +24,5 @@ filepath="README.org"
 with open(filepath) as fp:
     for cnt, line in enumerate(fp):
         print("Line {}: {}".format(cnt, line)) # Imprime línea y número de línea
-        print(line[0])         # Imprime caracter primero
+        print(line[0])         # Imprime el primer caracter
+        print(line[(len(line) -2)]) # Imprime el último carácter
