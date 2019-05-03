@@ -6,7 +6,7 @@ import scipy as sp                  # Importamos scipy como el alias sp
 from scipy import stats
 
 x = stats.t.rvs(10, size=1000)
-
+print(x)
 print('normal skewtest teststat = %6.3f pvalue = %6.4f' % stats.skewtest(x))
 
 print('normal kurtosistest teststat = %6.3f pvalue = %6.4f' % stats.kurtosistest(x))
