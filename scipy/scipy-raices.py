@@ -27,16 +27,21 @@ import matplotlib.pyplot as plt     # Importamos matplotlib.pyplot como el alias
 
 # Creamos un polinomio
 polinomio = [1.3,4,.6,-1]   # polinomio = 1.3 x^3 + 4 x^2 + 0.6 x - 1
+print("Creamos un polinomio")
+print(polinomio)
 
 # Creamos un array dimensional
 x = sp.arange(-4,1,.05)
-
+print("Creamos un array dimensional")
+print(x)
 #  Evaluamos el polinomio en x mediante polyval.
 y = sp.polyval(polinomio,x)
-
+print("Evaluamos el polinomio en x mediante polyval.")
+print(y)
 # Calculamos las raices del polinomio
 raices = sp.roots(polinomio)
-
+print("Calculamos las raices del polinomio")
+print(raices)
 # Evaluamos el polinomio en las raices
 s = sp.polyval(polinomio,raices)
 
