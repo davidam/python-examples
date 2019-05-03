@@ -18,7 +18,7 @@ from __future__ import division
 
 
 """
-DescripciÃ³n: CÃ¡lculo de los coeficientes de orden cero y uno de la funciÃ³n de Bessel 
+DescripciÃ³n: CÃ¡lculo de los coeficientes de orden cero y uno de la funciÃ³n de Bessel
 contenida en el paquete special.
 """
 from scipy import special                   # Importamos scipy.special
@@ -27,10 +27,13 @@ import matplotlib.pyplot as plt             # Importamos matplotlib.pyplot como 
 
 # Creamos el array dimensional
 x = sp.arange(0,50,.1)
-print x
+print(x)
+x1 = sp.arange(0,1,.1)
+print(x1)
 # Calculamos los coeficientes de orden cero.
-j0 = special.j0(x)
-print j0
-# Calculamos los coeficientes de orden uno.
+# j0 = special.j0(x)
+j0 = special.j0(x1)
+print(j0)
+# # Calculamos los coeficientes de orden uno.
 j1 = special.j1(x)
-print j1
+print(j1)
