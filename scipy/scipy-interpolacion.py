@@ -31,7 +31,7 @@ y = sp.exp(-x/3.0)
 
 # Interpolamos
 interpolacion = interpolate.interp1d(x, y)
-
+print("interpolacion: %s" % interpolacion)
 # Creamos un nuevo array dimensional con mÃ¡s puntos en el mismo intervalo
 x2 = sp.linspace(0,3,100)
 
