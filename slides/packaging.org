@@ -21,7 +21,6 @@ $ git clone https://github.com/davidam/dametowel.git
 #+END_SRC
 
 ** setup.py is the file for packaging
-
 #+BEGIN_SRC lisp
 from setuptools import setup
 
@@ -87,7 +86,7 @@ $ pip3 install damefunniest
 ./command_line.py
 #+END_SRC
 
-** Damegender is a real package (I): Methods
+** Damegender is a real package: Methods (I)
 
 #+BEGIN_SRC
 import os
@@ -104,7 +103,9 @@ def files_one_level(directory):
         fields = line.strip().split()
         l.append(fields[0])
     return l
-
+#+END_SRC
+** Damegender is a real package: Methods (II)
+#+BEGIN_SRC
 def files_one_level_drop_pwd(directory):
     f = os.popen('find '+ directory)
     l = []
@@ -113,7 +114,9 @@ def files_one_level_drop_pwd(directory):
         if not(os.path.isdir(fields[0])) and ("__init__.py" not in fields[0]):
             l.append(drop_pwd(fields[0]))
     return l
-
+#+END_SRC
+** Damegender is a real package: Methods (III)
+#+BEGIN_SRC
 def drop_pwd(s):
     cwd = os.getcwd()
     result = ""
@@ -121,7 +124,6 @@ def drop_pwd(s):
         result = re.sub(cwd+'/', '', s)
     return result
 #+END_SRC
-
 
 ** Damegender is a real package (I): setup.py
 #+BEGIN_SRC
@@ -141,7 +143,6 @@ setup(name='damegender',
       license='GPLv3',
       packages=['damegender', 'damegender.app', 'damegender.files'],
       package_dir={'damegender': 'src/damegender', 'damegender.app': 'src/damegender/app', 'damegender.files': 'src/damegender/files'},
-#      data_files=[('damegender', ['src/damegender/files/features_list.csv', 'src/damegender/files/features_list_cat.csv', 'src/damegender/files/features_list_no_cat.csv', 'src/damegender/files/names/all.csv', 'src/damegender/files/names/partial.csv', 'src/damegender/files/names/names_es/femeninos_original.csv', 'src/damegender/files/names/names_es/masculinos_original.csv', 'src/damegender/files/names/names_es/masculinos.txt', 'src/damegender/files/names/names_es/femeninos.txt'])],
       data_files=[('damegender', ['src/damegender/files/features_list.csv', 'src/damegender/files/features_list_cat.csv', 'src/damegender/files/features_list_no_cat.csv'] + files_one_level_drop_pwd(cwd+"/src/damegender/files/images") + files_one_level_drop_pwd(cwd+"/src/damegender/files/datamodels") + files_one_level_drop_pwd(cwd+"/src/damegender/files/mbox") + files_one_level_drop_pwd(cwd+"/src/damegender/files/names"))],
       scripts=files_one_level(cwd+"/src/damegender/bin"),
       install_requires=[
@@ -179,8 +180,16 @@ setup(name='damegender',
 + scripts and entry_points
 + install_requires
 
+** Philosophy matters
+
++ On a release, you must execute test from your package.
++ More dependencies, less control over your source and your quality of source
++ Less dependencies, more work for you.
+
 ** References
 
++ https://packaging.python.org/
++ https://pypi.org/
 
 ** License
 This document is under a [[http://creativecommons.org/licenses/by/4.0/deed][Creative Commons Attribution 4.0 International]]
