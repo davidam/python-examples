@@ -408,6 +408,25 @@ $ python3 plot_compare_reduction.py
 Otra cuestión son los clasificadores bien calibrados (probabilísticos).
 
 Para aprender y avanzar: http://benalexkeen.com/scoring-classifier-models-using-scikit-learn/
+
+** Model selection and evaluation (I)
+*** Cross-validation: evaluating estimator performance
++ Computing cross-validated metrics: scores (Ej: ['fit_time', 'score_time', 'test_precision_macro', 'test_recall_macro'])
++ Cross validation iterators (K-fold, Repeated K-Fold, Leave One Out (LOO), Leave P Out (LPO), ...)
+*** Tuning the hyper-parameters of an estimator
++ Exhaustive Grid Search
++ Randomized Parameter Optimization
++ Tips for parameter search
+** Model selection and evaluation (II)
+*** Model evaluation: quantifying the quality of predictions
++ The scoring parameter: defining model evaluation rules
++ Classification metrics
++ Multilabel ranking metrics
++ Regression metrics
+*** Model persistence
+Example: pickle, joblib, ...
+
+
 ** Building Machine Learning from scratch
 
 Uno puede construir sus propios algoritmos de machine learning,
