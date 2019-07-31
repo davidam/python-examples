@@ -41,5 +41,8 @@ fo.seek(1)
 line = fo.readline()
 print("Read Line: %s" % (line))
 
+lines = fo.readlines()
+print(lines)
+
 # Close opend file
 fo.close()
