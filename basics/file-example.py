@@ -44,5 +44,7 @@ print("Read Line: %s" % (line))
 lines = fo.readlines()
 print(lines)
 
+print(''.join(lines))
+
 # Close opend file
 fo.close()
