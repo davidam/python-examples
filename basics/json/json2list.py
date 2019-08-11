@@ -23,13 +23,14 @@
 import json
 from pprint import pprint
 
-jsontext = '{"fruits": ["apple", "banana", "orange"]}'
-j = json.loads(jsontext);
-print(j['fruits'])
+# jsontext = '{"fruits": ["apple", "banana", "orange"]}'
+# j = json.loads(jsontext);
+# print(j)
+# print(j['fruits'])
 
-# Open a file
-fo = open("db.json", "r+")
-print("Name of the file: ", fo.name)
+# # Open a file
+# fo = open("db.json", "r+")
+# print("Name of the file: ", fo.name)
 
 # Assuming file has following 5 lines
 # This is 1st line
@@ -39,7 +40,10 @@ print("Name of the file: ", fo.name)
 # This is 5th line
 
 jsondata = open('db.json').read()
+print("JSONDATA")
+print(jsondata)
 json_object = json.loads(jsondata)
+print("JSON_OBJECT")
 print(json_object)
 
 with open('db.json') as json_data:
@@ -49,9 +53,28 @@ with open('db.json') as json_data:
     print("################################## list1: ", list1)
     print("################################## element 1: ", list1[0])
     print("################################## element 1 keys: ", list(list1[0].keys()))
-    print("################################## element 1 values: ", list(list1[0].values()))    
+    print("################################## element 1 values: ", list(list1[0].values()))
     # list2 = d['clients'].values()
     # print("list2: ", list2)
-    
+
+
+jsondata2 = open('genderapifiles_names_min.csv.json').read()
+print("JSONDATA")
+print(jsondata2)
+json_object2 = json.loads(jsondata2)
+print("JSON_OBJECT")
+print(json_object2)
+
+print(json_object2["names"][0])
+genderlist = [] 
+for i in json_object2["names"][0]:
+    print(i)
+    print(i['name'])
+    print(i['gender'])
+    genderlist.append(i['gender'])
+    # if (i['gender'] == 'female'):
+    #     genderlistbin.append
 # Close opend file
-fo.close()
+#fo.close()
+print(genderlist)
+
