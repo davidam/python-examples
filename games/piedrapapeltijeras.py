@@ -2,8 +2,8 @@
 
 print("Escoja piedra, papel o tijeras para cada jugador")
 
-jugador1 = raw_input("jugador 1: ")
-jugador2 = raw_input("jugador 2: ")
+jugador1 = input("jugador 1: ")
+jugador2 = input("jugador 2: ")
 
 if (jugador1 == jugador2):
     print("Empate")
