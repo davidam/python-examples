@@ -21,11 +21,12 @@
 # the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 # Boston, MA 02110-1301 USA,
 
-from SPARQLWrapper import SPARQLWrapper, JSON
+#from SPARQLWrapper import SPARQLWrapper, JSON
+import requests
 
-endpoint_url = "https://query.wikidata.org/sparql"
+url = "https://query.wikidata.org/sparql"
 
-query = """#added before 2016-10
+query = """
 SELECT ?name ?nombre ?sexo_o_g_nero ?sexo_o_g_neroLabel WHERE {
   ?human wdt:P31 wd:Q5.
   OPTIONAL { ?human wdt:P21 ?nombre. }
@@ -33,6 +34,11 @@ SELECT ?name ?nombre ?sexo_o_g_nero ?sexo_o_g_neroLabel WHERE {
 }
 LIMIT 10"""
 
+r = requests.get(url, params = {'format': 'json', 'query': query})
+data = r.json()
+print(data)
+
+print(data['results']['bindings'])
 # query2 = """
 # SELECT ?human ?humanLabel
 # WHERE
@@ -60,15 +66,3 @@ LIMIT 10"""
 #   OPTIONAL { ?David wdt:P21 ?sexo_o_g_nero. }
 # }
 # """
-
-def get_results(endpoint_url, query):
-    sparql = SPARQLWrapper(endpoint_url)
-    sparql.setQuery(query)
-    sparql.setReturnFormat(JSON)
-    return sparql.query().convert()
-
-
-results = get_results(endpoint_url, query)
-
-for result in results["results"]["bindings"]:
-    print(result)
