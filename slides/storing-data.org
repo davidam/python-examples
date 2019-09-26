@@ -1,0 +1,77 @@
+#+TITLE: Storing Data
+#+AUTHOR: David Arroyo Menéndez
+#+OPTIONS: H:2 toc:nil num:t
+#+LATEX_CLASS: beamer
+#+LATEX_CLASS_OPTIONS: [presentation]
+#+BEAMER_THEME: Madrid
+#+COLUMNS: %45ITEM %10BEAMER_ENV(Env) %10BEAMER_ACT(Act) %4BEAMER_COL(Col) %8BEAMER_OPT(Opt)
+
+
+* Summary
+** Basics
+#+BEGIN_SRC bash
+$ python3 for.py # arrays
+$ python3 lists.py
+$ python3 diccionarios.py
+$ python3 conjuntos.py
+#+END_SRC
+
+** Ficheros
+#+BEGIN_SRC bash
+$ python3 write.py
+$ python3 list2file.py
+$ python3 json-example.py
+$ python3 items.py
+$ python3 csv-example.py
+$ python3 rss-example.py
+#+END_SRC
+
+** Pandas
+#+BEGIN_SRC bash
+$ python pandas-example.py
+$ python pandas-10min.py
+$ python pandas-creating-dataframe-from-arrays.py
+$ python pandas-creating-dataframe.py
+$ python3 pandas-plot.py
+#+END_SRC
+
+** NetCDF
+#+BEGIN_SRC bash
+$ python3 netcdf-example.py
+$ python3 netcdf-example2.py
+$ python3 netcdf-example3.py
+$ python3 netcdf-example4.py
+#+END_SRC
+
+** Pytables
+#+BEGIN_SRC bash
+$ python3 objecttre.py
+#+END_SRC
+
+** Databases
+#+BEGIN_SRC bash
+$ python3 sqlite.py
+$ python3 sqlite2.py
+$ python3 mongo-tutorial.py
+$ python3 mysql-example.py
+#+END_SRC
+
+** HDF5
+#+BEGIN_SRC bash
+$ python3 h5_cmprss.py
+$ python3 h5_crtgrpar.py
+$ python3 h5_crtgrpd.py
+$ python3 h5_crtgrp.py
+$ python3 h5_rdwt.py
+#+END_SRC
+
+
+** License
+Copyright (C) 2019 David Arroyo Menendez
+    Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in [[https://www.gnu.org/copyleft/fdl.html][GNU Free Documentation License]].
+
+[[https://www.gnu.org/copyleft/fdl.html][file:https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/GFDL_Logo.svg/200px-GFDL_Logo.svg.png]]
