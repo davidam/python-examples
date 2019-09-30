@@ -33,6 +33,7 @@ $ python pandas-10min.py
 $ python pandas-creating-dataframe-from-arrays.py
 $ python pandas-creating-dataframe.py
 $ python3 pandas-plot.py
+$ python3 jsonpandas.py
 #+END_SRC
 
 ** NetCDF
@@ -65,6 +66,80 @@ $ python3 h5_crtgrp.py
 $ python3 h5_rdwt.py
 #+END_SRC
 
+** Elasticsearch: Introduction
+
+This document is only my personal notes about this software.
+
+Elasticsearch is a highly scalable open-source full-text search and
+analytics engine. It allows you to store, search, and analyze big
+volumes of data quickly and in near real time. It is generally used as
+the underlying engine/technology that powers applications that have
+complex search features and requirements.
+
+** Elasticsearch: Installation
+
+https://www.elastic.co/guide/en/elasticsearch/reference/current/_installation.html
+
+** Elasticsearch: Checking
+#+BEGIN_SRC bash
+http://localhost:9200/
+#+END_SRC
+
+** Elasticsearch: List indexes
+#+BEGIN_SRC bash
+http://localhost:9200/_cat/indices
+#+END_SRC
+
+** Elasticsearch: List indexes in json
+#+BEGIN_SRC bash
+$ curl 'http://localhost:9200/_cat/indices?pretty' -H "Accept: application/json"
+#+END_SRC
+** Elasticsearch: Delete index
+#+BEGIN_SRC bash
+$ curl -XDELETE localhost:9200/commits
+#+END_SRC
+** Elasticsearch: Show an index
+#+BEGIN_SRC bash
+$ wget http://localhost:9200/dam-index/
+#+END_SRC
+
+** Elasticsearch: Searching in an index
+#+BEGIN_SRC bash
+$ wget -c http://localhost:9200/dam-index/_search
+#+END_SRC
+
+** Elasticsearch: The cluster state API allows to get a comprehensive state information of the whole cluster.
+#+BEGIN_SRC bash
+$ wget http://localhost:9200/_cluster/state
+#+END_SRC
+
+** Elasticsearch: Master
+#+BEGIN_SRC bash
+http://localhost:9200/_cat/master?v
+#+END_SRC
+
+** Elasticsearch: Show nodes
+#+BEGIN_SRC bash
+$ wget -c http://localhost:9200/_cat/nodes?h=ip,port,heapPercent,name
+$ curl http://localhost:9200/_cat/nodes?v
+#+END_SRC
+
+** Elasticsearch: Show cluster health
+#+BEGIN_SRC bash
+http://localhost:9200/_cluster/health
+#+END_SRC
+
+** Elasticsearch: Elasticdump
+*** json to the index
+#+BEGIN_SRC bash
+$ elasticdump --input=git_openstack_data.json --output=http://localhost:9200 --output-index=dam-index --type=data
+$ elasticdump --input=git_openstack_mapping.json --output=http://localhost:9200 --output-index=dam-index --type=mapping
+#+END_SRC
+*** index data to json
+#+BEGIN_SRC bash
+$ elasticdump  --input=http://production.es.com:9200/my_index --output=/data/my_index_mapping.json --type=mapping
+$ elasticdump  --input=http://production.es.com:9200/my_index --output=/data/my_index.json --type=data
+#+END_SRC
 
 ** License
 Copyright (C) 2019 David Arroyo Menendez
