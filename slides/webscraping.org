@@ -1,0 +1,113 @@
+#+TITLE: Webscraping
+#+AUTHOR: David Arroyo Menéndez
+#+OPTIONS: H:2 toc:nil num:t
+#+LATEX_CLASS: beamer
+#+LATEX_CLASS_OPTIONS: [presentation]
+#+BEAMER_THEME: Madrid
+#+COLUMNS: %45ITEM %10BEAMER_ENV(Env) %10BEAMER_ACT(Act) %4BEAMER_COL(Col) %8BEAMER_OPT(Opt)
+
+* Summary
+** Conceptos Básicos
+
+El webscraping se trata de extraer el contenido que aparece en una
+página web escrito en HTML generalmente y mostrarlo procesado.
+
+** Requests (I)
+
+La librería estándar de Python para acceder a contenido a través de
+http es requests. En caso de duda se recomienda esta opción
+
+** Requests (II)
+
+Descarga un fichero html
+
+#+BEGIN_SRC bash
+$ python3 requests-example.py http://www.gnu.org > gnu.html
+#+END_SRC
+
+Descarga un fichero json
+
+#+BEGIN_SRC bash
+$ python3 requests-example2.py > myrepos.json
+#+END_SRC
+
+** Requests (III)
+
+Ejercicio de sacar compradores y precios en una web
+
+#+BEGIN_SRC bash
+$ python3 requests-example3.py
+Buyers: ['Carson Busses', 'Earl E. Byrd', 'Patty Cakes', 'Derri Anne Connecticut', 'Moe Dess', 'Leda Doggslife', 'Dan Druff', 'Al Fresco', 'Ido Hoe', 'Howie Kisses', 'Len Lease', 'Phil Meup', 'Ira Pent', 'Ben D. Rules', 'Ave Sectomy', 'Gary Shattire', 'Bobbi Soks', 'Sheila Takya', 'Rose Tattoo', 'Moe Tell']
+Prices: ['$29.95', '$8.37', '$15.26', '$19.25', '$19.25', '$13.99', '$31.57', '$8.49', '$14.47', '$15.86', '$11.11', '$15.98', '$16.27', '$7.50', '$50.85', '$14.26', '$5.68', '$15.00', '$114.07', '$10.09']
+#+END_SRC
+
+Ejercicio de post, put, delete
+
+#+BEGIN_SRC bash
+$ python3 requests-example4.py # post, put, delete
+#+END_SRC
+
+** Requests (IV)
+
+Saca información de diferentes maneras desde el título
+
+#+BEGIN_SRC bash
+$ python3 titles.py
+title tag: title
+title text: David Arroyo Menéndez
+title html: b'<title>David Arroyo Men&#233;ndez</title>\n    '
+title tag: title
+title's parent's tag: head
+#+END_SRC
+
+** Request (V)
+
+Detecta enlaces rotos en una web.
+
+#+BEGIN_SRC bash
+$ python3 urls.py
+[...]
+http://www.davidam.com/docu/aplic-ia/aplic-ia.sgml
+200
+http://www.davidam.com/docu/bibdigwebsem.html
+200
+http://www.davidam.com/docu/aumenta-tu-productividad-con-gnu-emacs.html
+200
+http://www.davidam.com/docu/lisp/lisp1.pdf
+200
+http://www.davidam.com/docu/un-lenguaje-en-diez-minutos.html
+200
+http://www.davidam.com/docu/lisp/lisp2.pdf
+200
+Urls with troubles:
+[]
+#+END_SRC
+
+** Beatiful Soup
+
+Esta librería tiene una sintaxis algo más sencilla para el acceso a
+etiquetas html
+
+#+BEGIN_SRC bash
+$ python3 beatifulsoup-quickstart.py
+#+END_SRC
+
+** Ejercicio de Webscraping con soporte multihilo
+
+#+BEGIN_SRC bash
+./app/urlthread.py
+./app/crawler.pyc
+./app/__init__.py
+./app/formatter.py
+./app/crawler.py
+./app/damcrawler.py
+./app/elmundo.py
+./app/timeout.py
+./test/test_crawler.py
+./test/test_timeout.py
+./test/test_urlthread.py
+#+END_SRC
+
+#+BEGIN_SRC bash
+nosetest3 test
+#+END_SRC
