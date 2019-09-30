@@ -25,7 +25,26 @@ Language) is an RDF query language—that is, a semantic query language
 for databases—able to retrieve and manipulate data stored in Resource
 Description Framework.
 
-** SPARQL as Language
+
+** SPARQL in Python, dbpedia as example
+
+#+BEGIN_SRC python
+from SPARQLWrapper import SPARQLWrapper, JSON
+
+sparql = SPARQLWrapper("http://dbpedia.org/sparql")
+sparql.setQuery("""
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    SELECT ?label
+    WHERE { <http://dbpedia.org/resource/Asturias> rdfs:label ?label }
+""")
+sparql.setReturnFormat(JSON)
+results = sparql.query().convert()
+
+for result in results["results"]["bindings"]:
+    print(result["label"]["value"])
+#+END_SRC
+
+** Wikidata as Language
 
 If you take a look at Germany (Q183), then you can see a whole host of
 properties like population (P1082), median income (P3529) or even
@@ -44,7 +63,7 @@ WHERE {
 }
 #+END_SRC
 
-** SPARQL in Python
+** Wikidata in Python (I)
 
 #+BEGIN_SRC python
 import requests
@@ -63,4 +82,50 @@ WHERE {
 r = requests.get(url, params = {'format': 'json', 'query': query})
 data = r.json()
 print(data)
+#+END_SRC
+
+** Wikidata in Python (II)
+
+Print ten females in json.
+
+#+BEGIN_SRC python
+import requests
+
+url = "https://query.wikidata.org/sparql"
+
+query = """
+SELECT ?name ?nombre ?sexo_o_g_nero ?sexo_o_g_neroLabel WHERE {
+  ?human wdt:P31 wd:Q5.
+  OPTIONAL { ?human wdt:P21 ?nombre. }
+  OPTIONAL { ?human wdt:P21 ?sexo_o_g_nero. }
+}
+LIMIT 10"""
+
+r = requests.get(url, params = {'format': 'json', 'query': query})
+data = r.json()
+print(data)
+
+print(data['results']['bindings'])
+#+END_SRC
+
+** Wikidata in Python (III)
+
+Print ten cats in json:
+
+#+BEGIN_SRC python
+import requests
+url = "https://query.wikidata.org/sparql"
+query = """#added before 2016-10
+#Cats
+SELECT ?item ?itemLabel
+WHERE
+{
+  ?item wdt:P31 wd:Q146.
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+}
+LIMIT 10
+"""
+r = requests.get(url, params = {'format': 'json', 'query': query})
+data = r.json()
+print(data['results']['bindings'])
 #+END_SRC
