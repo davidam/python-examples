@@ -25,7 +25,6 @@ Language) is an RDF query language—that is, a semantic query language
 for databases—able to retrieve and manipulate data stored in Resource
 Description Framework.
 
-
 ** SPARQL in Python, dbpedia as example
 
 #+BEGIN_SRC python
@@ -43,6 +42,22 @@ results = sparql.query().convert()
 for result in results["results"]["bindings"]:
     print(result["label"]["value"])
 #+END_SRC
+
+** Wikidata: semantic model in a wikipedia page (I)
+
+#+attr_html: :width 200px
+#+attr_latex: :width 200px
+file:img/semanticweb.png
+
+** Wikidata: semantic model in a wikipedia page (II)
+
+#+attr_html: :width 150px
+#+attr_latex: :width 150px
+file:img/semanticweb2.png
+
+** Wikidata: semantic model in a wikipedia page (III)
+
+file:img/semanticweb3.png
 
 ** Wikidata as Language
 
