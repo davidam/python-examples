@@ -25,6 +25,19 @@ Language) is an RDF query language—that is, a semantic query language
 for databases—able to retrieve and manipulate data stored in Resource
 Description Framework.
 
+** Linked Open Data. History
+
+#+attr_html: :width 200px
+#+attr_latex: :width 200px
+file:img/linkedopendata.jpg
+
+** Linked Open Data. History
+
+#+attr_html: :width 200px
+#+attr_latex: :width 200px
+file:img/linkedopendata2.jpg
+
+
 ** SPARQL in Python, dbpedia as example
 
 #+BEGIN_SRC python
