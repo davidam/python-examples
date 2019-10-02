@@ -160,3 +160,9 @@ r = requests.get(url, params = {'format': 'json', 'query': query})
 data = r.json()
 print(data['results']['bindings'])
 #+END_SRC
+
+** References
+
++ Wikidata: a free collaborative knowledge base
++ https://www.wikidata.org
++ https://tools.wmflabs.org/reasonator/
