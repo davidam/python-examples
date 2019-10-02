@@ -37,7 +37,6 @@ file:img/linkedopendata.jpg
 #+attr_latex: :width 200px
 file:img/linkedopendata2.jpg
 
-
 ** SPARQL in Python, dbpedia as example
 
 #+BEGIN_SRC python
@@ -71,6 +70,10 @@ file:img/semanticweb2.png
 ** Wikidata: semantic model in a wikipedia page (III)
 
 file:img/semanticweb3.png
+
+** Wikidata and Reasonator
+
+file:img/bach.png
 
 ** Wikidata as Language
 
