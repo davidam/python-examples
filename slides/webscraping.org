@@ -83,6 +83,13 @@ Urls with troubles:
 []
 #+END_SRC
 
+** Using nameapi with requests
+
+#+BEGIN_SRC bash
+$ python3 nameapi.py
+FEMALE
+#+END_SRC
+
 ** Beatiful Soup
 
 Esta librería tiene una sintaxis algo más sencilla para el acceso a
