@@ -1,0 +1,47 @@
+#+TITLE: Regex
+#+AUTHOR: David Arroyo Menéndez
+#+OPTIONS: H:2 toc:nil num:t
+#+LATEX_CLASS: beamer
+#+LATEX_CLASS_OPTIONS: [presentation]
+#+BEAMER_THEME: Madrid
+#+COLUMNS: %45ITEM %10BEAMER_ENV(Env) %10BEAMER_ACT(Act) %4BEAMER_COL(Col) %8BEAMER_OPT(Opt)
+
+* Summary
+** Basics
+#+BEGIN_SRC bash
+$ python3 regex-basics.py
+$ python3 alfanum.py
+$ python3 ascii-encode.py
+$ python3 clean-string.py
+$ python3 date.py
+#+END_SRC
+
+** Capturing matches
+#+BEGIN_SRC bash
+$ python3 group.py
+$ python3 sub.py
+$ python3 urls.py
+$ python3 unicode.py
+$ python3 hexadecimal.py
+$ python3 split.py
+$ python3 startend.py
+#+END_SRC
+
+** Capturing matches (II)
+#+BEGIN_SRC bash
+$ python3 findall.py
+$ python3 findall2.py
+$ python3 findall3.py
+$ python3 finditer.py
+$ python3 names.py
+$ python3 number.py
+$ python3 php.py
+#+END_SRC
+
+** Advanced
+
+#+BEGIN_SRC bash
+$ python3 infinitivos-participios.py
+$ python3 duplicate-lines.py
+$ python3 remove-blank-lines.py
+#+END_SRC
