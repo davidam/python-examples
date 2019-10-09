@@ -21,6 +21,8 @@
 # the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 # Boston, MA 02110-1301 USA,
 
+# Literals are the attribute values in RDF, for instance, a person’s name, the date of birth, height, etc. Literals can have a data-type (i.e. this is a double) or a language tag (this label is in English).
+
 import datetime
 from rdflib import Literal, XSD
 lit2006 = Literal('2006-01-01',datatype=XSD.date)

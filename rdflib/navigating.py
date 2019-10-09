@@ -21,6 +21,9 @@
 # the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 # Boston, MA 02110-1301 USA,
 
+# An RDF Graph is a set of RDF triples
+# We can add triples, sort triples in the graph, print by language, ...
+
 from rdflib import ConjunctiveGraph, URIRef, RDFS, Literal
 from rdflib.namespace import SKOS
 from pprint import pprint
