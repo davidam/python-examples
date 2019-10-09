@@ -26,7 +26,58 @@ $ python3 csv-example.py
 $ python3 rss-example.py
 #+END_SRC
 
+** Databases
+#+BEGIN_SRC bash
+$ python3 sqlite.py
+$ python3 sqlite2.py
+$ python3 mongo-tutorial.py
+$ python3 mysql-example.py
+#+END_SRC
+
+** JSON
+
+JSON is a format file based in pairs key value, very used in the
+Javascript world.
+
+** JSON source (I)
+
+#+BEGIN_SRC bash
+python3 json2dict.py
+python3 json2file.py
+python3 json2html-example.py
+python3 json2list.py
+python3 json2pandas.py
+python3 json-example.py
+python3 jsonuk2.py
+python3 jsonuk.py
+python3 list2json.py
+python3 mergejson.py
+python3 object2json.py
+python3 pandas2json.py
+python3 tuple2json.py
+#+END_SRC
+
+** JSON source (II)
+
+#+BEGIN_SRC bash
+python3 data3.py
+python3 dict2json.py
+python3 exer1-intf-table.py
+python3 file2json.py
+python3 genderapi.py
+python3 lulu.py
+python3 perceval2pandas.py
+python3 printfield.py
+python3 todos.py
+python3 user2photo.py
+#+END_SRC
+
 ** Pandas
+
+Pandas is a Python library for manage dataframes such as statistical
+software as GNU R.
+
+** Pandas (Source)
 #+BEGIN_SRC bash
 $ python pandas-example.py
 $ python pandas-10min.py
@@ -36,6 +87,22 @@ $ python3 pandas-plot.py
 $ python3 jsonpandas.py
 #+END_SRC
 
+** Pytables
+
+PyTables is a package for managing hierarchical datasets and designed
+to efficiently and easily cope with extremely large amounts of data.
+
+#+BEGIN_SRC bash
+$ python3 objecttre.py
+#+END_SRC
+
+
+** NetCDF
+
+NetCDF is a binary format commonly used in climatology, meteorology
+and oceanography applications (e.g., weather forecasting, climate
+change) and GIS applications.
+
 ** NetCDF
 #+BEGIN_SRC bash
 $ python3 netcdf-example.py
@@ -44,18 +111,10 @@ $ python3 netcdf-example3.py
 $ python3 netcdf-example4.py
 #+END_SRC
 
-** Pytables
-#+BEGIN_SRC bash
-$ python3 objecttre.py
-#+END_SRC
+** HDF5
 
-** Databases
-#+BEGIN_SRC bash
-$ python3 sqlite.py
-$ python3 sqlite2.py
-$ python3 mongo-tutorial.py
-$ python3 mysql-example.py
-#+END_SRC
+HDF5 lets you store huge amounts of numerical data, and easily
+manipulate that data from NumPy.
 
 ** HDF5
 #+BEGIN_SRC bash
@@ -65,6 +124,26 @@ $ python3 h5_crtgrpd.py
 $ python3 h5_crtgrp.py
 $ python3 h5_rdwt.py
 #+END_SRC
+
+** RDF
+
+** RDFLib
+
+#+BEGIN_SRC bash
+python3 literal.py
+python3 merging.py
+python3 n3.py
+python3 namespace.py
+python3 navigating.py
+python3 persistence.py
+python3 rdflib-example2.py
+python3 rdflib-example.py
+python3 rdflib-statements.py
+python3 serialize-to-n3.py
+python3 sparql_query_example.py
+python3 urirefs.py
+#+END_SRC
+
 
 ** Elasticsearch: Introduction
 
@@ -140,6 +219,8 @@ $ elasticdump --input=git_openstack_mapping.json --output=http://localhost:9200 
 $ elasticdump  --input=http://production.es.com:9200/my_index --output=/data/my_index_mapping.json --type=mapping
 $ elasticdump  --input=http://production.es.com:9200/my_index --output=/data/my_index.json --type=data
 #+END_SRC
+
+
 
 ** License
 Copyright (C) 2019 David Arroyo Menendez
