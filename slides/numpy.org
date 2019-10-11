@@ -53,3 +53,17 @@ import numpy as np
 v = np.array([3, 2, 7])
 print(np.linalg.norm(v))
 #+END_SRC
+
+** Trace (I)
+
+file:img/trace.png
+
+** Trace (II)
+
+#+BEGIN_SRC python3
+import numpy as np
+
+np.trace(np.eye(3))
+a = np.arange(8).reshape((2,2,2))
+np.trace(a)
+#+END_SRC
