@@ -15,9 +15,9 @@
 
 #+BEGIN_SRC python
 x = 1 # scalar
-x = [1 2] # vector
-x = [[1 2] [3 4]] # matrix
-x = [[[1 2] [3 2]] [[1 7] [5 4]]] # tensor
+x = [1, 2] # vector
+x = [[1, 2], [3, 4]] # matrix
+x = [[[1, 2], [3, 2]], [[1, 7], [5, 4]]] # tensor
 #+END_SRC
 
 ** Multiplying Matrices and Vectors (I)
@@ -42,16 +42,114 @@ file:img/identity.png
 np.identity(3)
 #+END_SRC
 
-** Linear Dependence and Span (I)
+** Linear Dependence
 
 file:img/linear-dependence.png
 
-** Linear Dependence and Span (II)
+
+** Linear Algebra
+
++ Rank, determinant, trace, etc. of an array.
++ Eigen values of matrices
++ Matrix and vector products (dot, inner, outer,etc. product), matrix exponentiation
++ Solve linear or tensor equations
+
+** Linear Algebra (II)
+
+#+BEGIN_SRC python
+# Importing numpy as np
+import numpy as np
+
+A = np.array([[6, 1, 1],
+              [4, -2, 5],
+              [2, 8, 7]])
+
+# Rank of a matrix
+print("Rank of A:", np.linalg.matrix_rank(A))
+
+# Trace of matrix A
+print("\nTrace of A:", np.trace(A))
+
+# Determinant of a matrix
+print("\nDeterminant of A:", np.linalg.det(A))
+
+# Inverse of matrix A
+print("\nInverse of A:\n", np.linalg.inv(A))
+
+print("\nMatrix A raised to power 3:\n",
+           np.linalg.matrix_power(A, 3))
+#+END_SRC
+
+** Linear Algebra (III). Matrix eigenvalues functions
+
+#+BEGIN_SRC python
+from numpy import linalg as geek
+
+# Creating an array using array
+# function
+a = np.array([[1, -2j], [2j, 5]])
+
+print("Array is :",a)
+
+# calculating an eigen value
+# using eigh() function
+c, d = geek.eigh(a)
+
+print("Eigen value is :", c)
+print("Eigen value is :", d)
+#+END_SRC
+
+** Linear Algebra (IV). Eigen value
+
+#+BEGIN_SRC python
+from numpy import linalg as geek
+
+# Creating an array using diag
+# function
+a = np.diag((1, 2, 3))
+
+print("Array is :",a)
+
+# calculating an eigen value
+# using eig() function
+c, d = geek.eig(a)
+
+print("Eigen value is :",c)
+print("Eigen value is :",d)
+#+END_SRC
+
+** Linear Algebra (V)
+
+#+BEGIN_SRC python
+import numpy as geek
+
+# Scalars
+product = geek.dot(5, 4)
+print("Dot Product of scalar values  : ", product)
+
+# 1D array
+vector_a = 2 + 3j
+vector_b = 4 + 5j
+
+product = geek.dot(vector_a, vector_b)
+print("Dot Product  : ", product)
+#+END_SRC
+
+** Linear Algebra (VI). Solve
 
 #+BEGIN_SRC python
 import numpy as np
-v = np.array([3, 2, 7])
-print(np.linalg.norm(v))
+
+# Creating an array using array
+# function
+a = np.array([[1, 2], [3, 4]])
+
+# Creating an array using array
+# function
+b = np.array([8, 18])
+
+print(("Solution of linear equations:",
+      np.linalg.solve(a, b)))
 #+END_SRC
 
 ** Trace (I)
