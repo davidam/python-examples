@@ -1,0 +1,55 @@
+#+TITLE: Linear Algebra with Numpy
+#+AUTHOR: David Arroyo Menéndez
+#+OPTIONS: H:2 toc:nil num:t
+#+LATEX_CLASS: beamer
+#+LATEX_CLASS_OPTIONS: [presentation]
+#+BEAMER_THEME: Madrid
+#+COLUMNS: %45ITEM %10BEAMER_ENV(Env) %10BEAMER_ACT(Act) %4BEAMER_COL(Col) %8BEAMER_OPT(Opt)
+
+* Summary
+** Scalars, Vectors, Matrices and Tensors (I)
+
+[[file:img/scalars-vectors-matrices-tensors.png]]
+
+** Scalars, Vectors, Matrices and Tensors (II)
+
+#+BEGIN_SRC python
+x = 1 # scalar
+x = [1 2] # vector
+x = [[1 2] [3 4]] # matrix
+x = [[[1 2] [3 2]] [[1 7] [5 4]]] # tensor
+#+END_SRC
+
+** Multiplying Matrices and Vectors (I)
+
+file:img/multiplying-matrices-vectors.png
+
+** Multiplying Matrices and Vectors (II)
+
+#+BEGIN_SRC python
+x = np.array([[3, 6, 7], [5, -3, 0]])
+y = np.array([[1, 1], [2, 1], [3, -3]])
+z = x.dot(y)
+#+END_SRC
+
+** Identity and Inverse Matrices (I)
+
+file:img/identity.png
+
+** Identity and Inverse Matrices (II)
+
+#+BEGIN_SRC python
+np.identity(3)
+#+END_SRC
+
+** Linear Dependence and Span (I)
+
+file:img/linear-dependence.png
+
+** Linear Dependence and Span (II)
+
+#+BEGIN_SRC python
+import numpy as np
+v = np.array([3, 2, 7])
+print(np.linalg.norm(v))
+#+END_SRC
