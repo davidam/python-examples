@@ -125,7 +125,16 @@ $ python3 h5_crtgrp.py
 $ python3 h5_rdwt.py
 #+END_SRC
 
+
 ** RDF
+
+The Resource Description Framework (RDF) is a family of World Wide Web
+Consortium (W3C) designed as format for the Web Semantic with classes
+and properties.
+
+** RDF (II)
+
+[[file:img/rdfdiagram.png]]
 
 ** RDFLib
 
@@ -143,7 +152,6 @@ python3 serialize-to-n3.py
 python3 sparql_query_example.py
 python3 urirefs.py
 #+END_SRC
-
 
 ** Elasticsearch: Introduction
 
