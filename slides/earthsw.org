@@ -1,0 +1,52 @@
+#+TITLE: Free Software for a good climate
+#+AUTHOR: David Arroyo Menéndez
+#+OPTIONS: H:2 toc:nil num:t
+#+LATEX_CLASS: beamer
+#+LATEX_CLASS_OPTIONS: [presentation]
+#+BEAMER_THEME: Madrid
+#+COLUMNS: %45ITEM %10BEAMER_ENV(Env) %10BEAMER_ACT(Act) %4BEAMER_COL(Col) %8BEAMER_OPT(Opt)
+
+* Summary
+** BSC software in a picture
+
+[file:img/bsc.png]
+
+** Defining strings to software (I)
+
+Retrieve Remote Data Directly (*R2D2*) is a tool to download data
+using different protocols and sources like http, ftp, opendap, mars
+(ECMWF), etc.
+
+Correctness Checker for Climate Predictions and Observations (*C3PO*)
+is a tool that modifies the original files downloaded from external
+sources (with R2D2) to the common ES format.
+
+** Defining strings to software (II)
+
+*startR*: Retrieval and processing of multidimensional datasets
+
+*s2dverification* (seasonal to decadal verification) is an R framework
+that aids in the analysis of forecasts from the data retrieval stage,
+through computation of statistics and skill scores against
+observations, to visualisation of data and results
+
+** Defining strings to software (III)
+
+*Autosubmit*: a versatile tool to manage Weather and Climate Experiments
+in diverse Supercomputing Environments.
+
+The performance tools developed at BSC are an open-source project
+targeting not only to detect performance problems but to understand
+the applications' behavior.
+
+*ecFlow* is a C++ application and features a client-server
+model. Installation for server and clients is the same.
+
+ecFlow can submit tasks directly to the relevant queuing system on the
+target machine.
+
+ecFlow submits jobs and receives acknowledgements from jobs when they
+change status and when they send events. It does this using child
+commands embedded in the ecFlow scripts
+
+
