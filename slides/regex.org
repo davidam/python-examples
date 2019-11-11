@@ -6,8 +6,96 @@
 #+BEAMER_THEME: Madrid
 #+COLUMNS: %45ITEM %10BEAMER_ENV(Env) %10BEAMER_ACT(Act) %4BEAMER_COL(Col) %8BEAMER_OPT(Opt)
 
-* Summary
-** Basics
+
+* Metacharacters
+** Metacharacters (I): the full list
+
+Some characters are special metacharacters, and don't match
+themselves. Instead, they signal that some out-of-the-ordinary thing
+should be matched. A full list of metacharacters:
+
+#+BEGIN_SRC python
+. ^ $ * + ? { } [ ] \ | ( )
+#+END_SRC
+
+** Metacharacters (II): Skiping
+
+So, you can precede them with a backslash to remove their special
+meaning: \^
+
+#+BEGIN_SRC bash
+$ echo "^Lorem ipsum" > txt.txt 
+$ echo "Dolor" >> txt.txt 
+$ grep "\^" txt.txt
+$ echo "" > txt.txt 
+$ echo "Dolor" >> txt.txt 
+$ grep "\^" txt.txt
+$ grep "o|e" txt.txt
+#+END_SRC
+
+** Metacharacters (III): Begin and End
+
+#+BEGIN_SRC bash
+$ grep "^Lorem" txt.txt 
+$ grep "^ipsum" txt.txt 
+$ grep "^Dolor" txt.txt 
+$ grep "Lorem$" txt.txt 
+$ grep "ipsum$" txt.txt 
+$ grep "Dolor$" txt.txt
+#+END_SRC
+
+** Metacharacters (IV): Repeating
+
+#+BEGIN_SRC bash
+$ echo "oooo" > txt.txt
+$ egrep -i "o+" txt.txt
+$ egrep -i "a+" txt.txt
+$ egrep -i "a?" txt.txt
+$ egrep -i "o{2,6}" txt.txt
+#+END_SRC
+
+** Metacharacters (V): Grouping explicting
+
+#+BEGIN_SRC bash
+$ grep "[abc]" txt.txt 
+$ grep "[rem]" txt.txt 
+$ echo "niñas" >> txt.txt 
+$ grep "niñ[oa]" txt.txt
+#+END_SRC
+
+** Metacharacters (VI): Grouping with Ranges
+
+#+BEGIN_SRC bash
+$ grep "[a-c]" txt.txt 
+$ echo "13579" > numbers.txt 
+$ echo "2468" >> numbers.txt 
+$ echo "1456789" >> numbers.txt
+$ grep "[0-1]" numbers.txt
+#+END_SRC
+
+** Metacharacters (VII): Grouping all
+
+#+BEGIN_SRC bash
+$ echo "davidam@gnu.org" | egrep -i ".*@.*"
+$ echo "davidam@gnu.org" | egrep -i "asdf@.*"
+#+END_SRC
+
+** Metacharacters (VIII): Alternatives
+
+#+BEGIN_SRC bash
+$ uname -a | egrep -i "linux|unix"
+#+END_SRC
+
+
+** Metacharacters (IX): Explaining Python metacharacters
+
+That's an email
+
+[[file:img/regex-domain.png]]
+
+* Python
+
+** Python (I): Basics of regex with Python
 #+BEGIN_SRC bash
 $ python3 regex-basics.py
 $ python3 alfanum.py
@@ -16,7 +104,7 @@ $ python3 clean-string.py
 $ python3 date.py
 #+END_SRC
 
-** Capturing matches
+** Python (II): Capturing matches
 #+BEGIN_SRC bash
 $ python3 group.py
 $ python3 sub.py
@@ -27,7 +115,7 @@ $ python3 split.py
 $ python3 startend.py
 #+END_SRC
 
-** Capturing matches (II)
+** Python (III): Capturing matches
 #+BEGIN_SRC bash
 $ python3 findall.py
 $ python3 findall2.py
@@ -38,10 +126,20 @@ $ python3 number.py
 $ python3 php.py
 #+END_SRC
 
-** Advanced
-
+** Python (IV). Advanced Exercises
 #+BEGIN_SRC bash
 $ python3 infinitivos-participios.py
 $ python3 duplicate-lines.py
 $ python3 remove-blank-lines.py
 #+END_SRC
+
+** License
+Copyright (C) 2019 David Arroyo Menendez
+    Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in [[https://www.gnu.org/copyleft/fdl.html][GNU Free Documentation License]].
+
+
+
