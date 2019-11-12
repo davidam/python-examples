@@ -8,7 +8,20 @@
 
 
 * Summary
-** Definition
+** My processors!
+
+How many maximum parallel processes can you run?
+
+#+BEGIN_SRC python
+import multiprocessing as mp
+print("Number of processors: ", mp.cpu_count())
+#+END_SRC
+
+#+BEGIN_SRC bash
+$ cat /proc/cpuinfo
+#+END_SRC
+
+** Thread Definition
 
 A thread of execution is the smallest sequence of programmed
 instructions that can be managed independently by a scheduler, which
