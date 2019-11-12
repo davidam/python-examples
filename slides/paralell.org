@@ -1,0 +1,114 @@
+#+TITLE: Parallel processing in Python
+#+AUTHOR: David Arroyo Menéndez
+#+OPTIONS: H:2 toc:nil num:t
+#+LATEX_CLASS: beamer
+#+LATEX_CLASS_OPTIONS: [presentation]
+#+BEAMER_THEME: Madrid
+#+COLUMNS: %45ITEM %10BEAMER_ENV(Env) %10BEAMER_ACT(Act) %4BEAMER_COL(Col) %8BEAMER_OPT(Opt)
+
+
+* Summary
+** Definition
+
+A thread of execution is the smallest sequence of programmed
+instructions that can be managed independently by a scheduler, which
+is typically a part of the operating system.
+
+The threads of a process share its executable code and the values of
+its dynamically allocated variables and non-thread-local global
+variables at any given time.
+
+** Threads: same source code executable, some variables located in different memory space
+
+#+attr_html: :width 200px
+#+attr_latex: :width 200px
+[[file:img/Multithreaded_process.png]]
+
+** Threads versus Processes
+
++ Processes are typically independent, while threads exist as subsets
+  of a process
+
++ Processes carry considerably more state information than threads,
+  whereas multiple threads within a process share process state as
+  well as memory and other resources
+
++ Processes have separate address spaces, whereas threads share their
+  address space
+
++ Processes interact only through system-provided inter-process
+  communication mechanisms
+
++ Context switching between threads in the same process typically
+  occurs faster than context switching between processes
+
+** Multithreading
+
++ Responsiveness
++ Faster execution
++ Lower resource consumption
++ Better system utilization+
++ Simplified sharing and communication
++ Parallelization
+
+** A semaphore with threads
+
+#+BEGIN_SRC bash
+import threading
+import time
+sem = threading.Semaphore()
+
+def fun1():
+    while True:
+        try:
+            sem.acquire()
+            print(1)
+            sem.release()
+            time.sleep(0.25)
+        except (KeyboardInterrupt, SystemExit):
+            raise
+
+def fun2():
+    while True:
+        try:
+            sem.acquire()
+            print(2)
+            sem.release()
+            time.sleep(0.25)
+        except (KeyboardInterrupt, SystemExit):
+            raise
+
+t = threading.Thread(target = fun1)
+t.start()
+t2 = threading.Thread(target = fun2)
+t2.start()
+
+#+END_SRC
+
+** More examples
+
+#+BEGIN_SRC bash
+$ python3 multithreading.py
+$ python3 thread-example.py
+$ python3 threading-simple.py
+$ python3 threading-timeout5.py
+$ python3 threads.py
+#+END_SRC
+
+** CUDA
+
+[[file:img/cuda.png]]
+
+** NUMBA: CUDA in Python
+
+#+BEGIN_SRC bash
+$ python3 numba/pi.py
+#+END_SRC
+
+** License
+Copyright (C) 2019 David Arroyo Menendez
+    Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in [[https://www.gnu.org/copyleft/fdl.html][GNU Free Documentation License]].
