@@ -21,6 +21,14 @@ print("Number of processors: ", mp.cpu_count())
 $ cat /proc/cpuinfo
 #+END_SRC
 
+** Multiprocesses
+
+#+BEGIN_SRC bash
+$ python3 poolapply.py
+$ python3 poolmap.py
+$ python3 pool.py
+#+END_SRC
+
 ** Thread Definition
 
 A thread of execution is the smallest sequence of programmed
