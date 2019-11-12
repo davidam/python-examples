@@ -133,6 +133,11 @@ $ python3 duplicate-lines.py
 $ python3 remove-blank-lines.py
 #+END_SRC
 
+** Python (V). Summary about this exercises
+
++ RE Library: match, search, sub, findall, finditer, split
++ RE Objects: start, end, group
+
 ** License
 Copyright (C) 2019 David Arroyo Menendez
     Permission is granted to copy, distribute and/or modify this document
