@@ -14,6 +14,7 @@ $ python3 for.py # arrays
 $ python3 lists.py
 $ python3 diccionarios.py
 $ python3 conjuntos.py
+$ python3 tuples.py
 #+END_SRC
 
 ** Ficheros
