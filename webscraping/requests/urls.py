@@ -4,7 +4,14 @@ from lxml import html
 from pprint import pprint
 import os,re
 
-start_url = 'http://www.davidam.com'
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument("url", help="url to analize broken links")
+args = parser.parse_args()
+
+
+start_url = args.url
 response = requests.get(start_url)
 tree = html.fromstring(response.text)
 links = tree.cssselect('a')  # or tree.xpath('//a')
