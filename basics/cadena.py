@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 # Copyright (C) 2018  David Arroyo Menéndez
@@ -22,7 +22,7 @@
 # Boston, MA 02110-1301 USA,
 # -*- coding: utf-8 -*-
 
-cadena = input("Escriba un texto: ")
+cadena = str(input("Escriba un texto: "))
 if cadena.isalnum():
     print("Consta de letras y/o números, sin espacios")
 if cadena.isalpha():
@@ -30,4 +30,6 @@ if cadena.isalpha():
 if cadena.isdigit():
     print("Consta sólo de números, sin espacios")
 
-    
+print("Texto en minúsculas: %s" % str(cadena.lower()))
+
+print("Texto capitalizado: %s" % str(cadena.capitalize()))
