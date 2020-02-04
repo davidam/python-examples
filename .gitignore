@@ -14,3 +14,7 @@ regex/noblank
 # Genderapi
 
 nlp/genderapi/genderapipass.txt
+
+# Slides
+
+slides/*tex
