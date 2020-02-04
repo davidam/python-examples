@@ -51,10 +51,14 @@ from scipy import interp
 # Import some data to play with
 iris = datasets.load_iris()
 X = iris.data
+print(X)
 y = iris.target
-
+print(y)
 # Binarize the output
 y = label_binarize(y, classes=[0, 1, 2])
+print("y.shape[1]")
+print(y.shape)
+print(y.shape[1])
 n_classes = y.shape[1]
 
 # Add noisy features to make the problem harder
