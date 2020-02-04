@@ -51,3 +51,10 @@ if match:
     print("Yes, it's")
 else:
     print("Not, it isn't")
+
+match = re.search(r'ち', japanese)
+if match:
+    print("Yes, it's")
+else:
+    print("Not, it isn't")
+    
