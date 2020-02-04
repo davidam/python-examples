@@ -18,3 +18,9 @@ nlp/genderapi/genderapipass.txt
 # Slides
 
 slides/*tex
+
+# Shell
+
+shell/newfile.txt
+shell/grep.tmp
+shell/2.csv
