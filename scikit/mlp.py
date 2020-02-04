@@ -29,3 +29,17 @@ clf = MLPClassifier(solver='lbfgs', alpha=1e-5,
 
 clf.fit(X, y)
 print(clf.predict([[2., 2.], [-1., -2.]]))
+
+X = [[0., 0.], [1., 1.]]
+y = [0, 1]
+clf = MLPClassifier(hidden_layer_sizes=(15,), random_state=1, max_iter=1, warm_start=True)
+
+clf.fit(X, y)
+print(clf.predict([[2., 2.], [-1., -2.]]))
+
+X = [[0., 0.], [1., 1.]]
+y = [0, 1]
+clf = MLPClassifier(solver='sgd', hidden_layer_sizes=(15,), random_state=1, max_iter=1, warm_start=True)
+
+clf.fit(X, y)
+print(clf.predict([[2., 2.], [-1., -2.]]))
