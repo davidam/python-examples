@@ -4,7 +4,7 @@
 # Natural Language Toolkit: code_gender_features_overfitting
 
 import nltk
-
+import pickle
 def gender_features(name):
     features = {}
     features["first_letter"] = name[0].lower()
@@ -17,7 +17,7 @@ def gender_features(name):
 nombre1 = input("What's your name?: ")
 nombre2 = input("What's my name?: ")
 
-#print gender_features('John') 
+#print gender_features('John')
 
 from nltk.corpus import names
 labeled_names = ([(name, 'male') for name in names.words('male.txt')] +
@@ -48,3 +48,7 @@ if (("female" in string) and ("male" in string)):
 
 print("The classifier has an accuracy: " + str(nltk.classify.accuracy(classifier, test_set)))
 print("The most informative features are: " + str(classifier.show_most_informative_features(5)))
+
+save_classifier = open("sexmachine.pickle","wb")
+pickle.dump(classifier, save_classifier)
+save_classifier.close()
