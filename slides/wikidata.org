@@ -63,11 +63,16 @@ file:img/semanticweb.png
 
 ** Wikidata: semantic model in a wikipedia page (II)
 
++ Properties (P) (https://www.wikidata.org/wiki/Wikidata:List_of_properties/all_in_one_table)
++ Querying for Values (Q) (https://www.wikidata.org/w/index.php?search=)
+
+** Wikidata: semantic model in a wikipedia page (III)
+
 #+attr_html: :width 150px
 #+attr_latex: :width 150px
 file:img/semanticweb2.png
 
-** Wikidata: semantic model in a wikipedia page (III)
+** Wikidata: semantic model in a wikipedia page (IV)
 
 file:img/semanticweb3.png
 
