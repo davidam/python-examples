@@ -25,3 +25,10 @@ a, b, c, d, e, g, h, i, j = (True,)*9
 f = False
 print("a, b, c, d, e, g, h, i, j = (True,)*9")
 print("d: %s" % d)
+
+b = ([1]*10)
+print(b)
+
+a, b = ([0]*5,)*2
+print("a, b = ([0]*5,)*2")
+print("b: %s" % b)
