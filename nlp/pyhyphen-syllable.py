@@ -31,3 +31,12 @@ print(h.syllables(u"Hammond's"))
 h = hyphen.Hyphenator('de_CH')
 print(h.syllables(u"Hammond's"))
 print(h.syllables(u"Bismarck'sche"))
+
+
+h2 = hyphen.Hyphenator('es_ES')
+print(h2.syllables(u"David"))
+print(h2.syllables(u"María"))
+print(h2.syllables(u"Diego"))
+print(h2.syllables(u"Laura"))
+print("Bug found:")
+print(h2.syllables(u"Irene"))
