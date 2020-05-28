@@ -32,25 +32,3 @@ random.shuffle(dice2,random.random)
 print(dice1[0])
 print(dice2[0])
 
-# print(shuffle(dice1))
-# print(shuffle(dice2))
-
-# from random import shuffle
-# x = [[i] for i in range(10)]
-# shuffle(x)
-
-
-# import random
-
-# list = [20, 16, 10, 5];
-# random.shuffle(list)
-# print ("Reshuffled list : ",  list)
-
-# dice1 = ["fuck", "suck", "finger", "feet", "caress", "blow"]
-# #dice2 = ["tit", "pussy", "ass", "mouth", "cock", "pussy"]
-
-# print(random.shuffle(dice1))
-
-
-# random.shuffle(list)
-# print ("Reshuffled list : ",  list)
