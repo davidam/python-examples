@@ -81,3 +81,13 @@ print(sorted(data, key=itemgetter(0)))
 decorated = [(student.grade, i, student) for i, student in enumerate(student_objects)]
 decorated.sort()
 [print(student) for grade, i, student in decorated]
+
+# Sort list of lists
+
+def getKey(item):
+    return item[0]
+
+l = [[2, 3], [6, 7], [3, 34], [24, 64], [1, 43]]
+
+print(sorted(l, key=getKey))
+
