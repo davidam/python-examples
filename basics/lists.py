@@ -59,3 +59,10 @@ for x in li:
 
 milista = ['This', 'used', 'to', 'be', 'a', 'Whopping', 'Great', 'sentence']
 print(sorted(milista, key=str.lower))
+
+
+# prints list except the first element
+l = [[2, 3], [6, 7], [3, 34], [24, 64], [1, 43]]
+
+for i in l[1:len(l)]:
+    print(i)
