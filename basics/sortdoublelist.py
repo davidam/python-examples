@@ -28,8 +28,35 @@ def getKey1(item):
 
 l = [[2, 3], [6, 7], [3, 34], [24, 64], [1, 43]]
 
-#print(mysort(l))
+print("Original list")
+print(l)
+
+print("Sorting from zero to n")
 
 print(sorted(l, key=getKey0))
 print(sorted(l, key=getKey1))
 
+print("Sorting from n to zero")
+
+print(sorted(l, key=getKey0, reverse=True))
+print(sorted(l, key=getKey1, reverse=True))
+
+print("Sorting with strings")
+
+ll = [["hola", 3], ["mundo", 7], ["crue", 34], ["urjc", 64], ["uned", 43]]
+
+print("Original list")
+print(ll)
+
+def getKey0str(item):
+    return item[0]
+
+print("Sorting from zero to n")
+
+print(sorted(ll, key=getKey0str))
+print(sorted(ll, key=getKey1))
+
+print("Sorting from n to zero")
+
+print(sorted(ll, key=getKey0str, reverse=True))
+print(sorted(ll, key=getKey1, reverse=True))
