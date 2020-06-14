@@ -60,3 +60,11 @@ print("Sorting from n to zero")
 
 print(sorted(ll, key=getKey0str, reverse=True))
 print(sorted(ll, key=getKey1, reverse=True))
+
+lll = [['KRAGG', '1'], ['SULIMAN', '1'], ['CHANSOTHEA', '1'], ['TAMARA', '11'], ['ZAYED', '1'], ['MARCEL', '64'], ['SERGEI', '4']]
+
+print("Another list, integers as strings")
+print(lll)
+print("Sorting from zero to n")
+print(sorted(lll, key=getKey0str))
+print(sorted(lll, key=getKey1))
