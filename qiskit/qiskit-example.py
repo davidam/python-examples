@@ -1,15 +1,34 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-from qiskit import QuantumProgram
-qp = QuantumProgram()
-qr = qp.create_quantum_register('qr',2)
-cr = qp.create_classical_register('cr',2)
-qc = qp.create_circuit('Bell',[qr],[cr])
-qc.h(qr[0])
-qc.cx(qr[0], qr[1])
-qc.measure(qr[0], cr[0])
-qc.measure(qr[1], cr[1])
-result = qp.execute('Bell')
-print(result.get_counts('Bell'))
+import numpy as np
+from qiskit import(
+  QuantumCircuit,
+  execute,
+  Aer)
+from qiskit.visualization import plot_histogram
 
+# Use Aer's qasm_simulator
+simulator = Aer.get_backend('qasm_simulator')
+
+# Create a Quantum Circuit acting on the q register
+circuit = QuantumCircuit(2, 2)
+
+# Add a H gate on qubit 0
+circuit.h(0)
+
+# Add a CX (CNOT) gate on control qubit 0 and target qubit 1
+circuit.cx(0, 1)
+
+# Map the quantum measurement to the classical bits
+circuit.measure([0,1], [0,1])
+
+# Execute the circuit on the qasm simulator
+job = execute(circuit, simulator, shots=1000)
+
+# Grab results from the job
+result = job.result()
+
+# Returns counts
+counts = result.get_counts(circuit)
+print("\nTotal count for 00 and 11 are:",counts)
