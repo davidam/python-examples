@@ -40,3 +40,10 @@ if match:
     print("Yes, it's") # match.group() ## 'found word:cat'
 else:
     print("Not, it isn't")
+
+print("Is it an initial letter? ")
+match = re.search(r'([A-Z][\.| ]){1,2}', str)
+if match:
+    print("Yes, it's") # match.group() ## 'found word:cat'
+else:
+    print("Not, it isn't")
