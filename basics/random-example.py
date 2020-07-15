@@ -17,7 +17,7 @@
 # GNU General Public License for more details.
 
 # You should have received a copy of the GNU General Public License
-# along with GNU Emacs; see the file COPYING.  If not, write to
+# along with python-examples; see the file COPYING.  If not, write to
 # the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 # Boston, MA 02110-1301 USA,
 
@@ -30,8 +30,12 @@ print ("List after first shuffle  : ",  number_list)
 random.shuffle(number_list)
 print ("List after second shuffle : ",  number_list)
 
-#creating the list with range
+# creating the list with range
 x = [i for i in range(10)]
 print(x)
 random.shuffle(x)
 print(x)
+
+# printing 10 random numbers between 1 and 100
+for x in range(10):
+    print(random.randint(1,101))
