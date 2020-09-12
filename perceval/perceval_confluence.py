@@ -10,9 +10,11 @@ from_date = datetime.now() - timedelta(days=1)
 
 repo = Confluence(hostname)
 
-
 # fetch all reviews as an iterator, and iterate it printing each review id
 for review in repo.fetch(from_date=from_date):
     print(review)
 
+# fetch all reviewers
+for review in repo.fetch(from_date=from_date):
+    print(review['data']['history']['createdBy']['displayName'])
     
