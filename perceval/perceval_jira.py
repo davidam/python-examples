@@ -4,15 +4,10 @@ from datetime import datetime, timedelta
 from perceval.backends.core.gerrit import Gerrit
 from perceval.backends.core.jira import Jira
 
-# hostname of the Gerrit instance
-hostname = 'gerrit.opnfv.org'
+# hostname 
 hostname = 'https://tickets.puppetlabs.com'
-# user for sshing to the Gerrit instance
-user = 'd.arroyome'
 # retrieve only reviews changed since one day ago
 from_date = datetime.now() - timedelta(days=1)
-# create a Gerrit object, pointing to hostname, using user for ssh access
-repo = Gerrit(hostname=hostname, user=user)
 
 repo = Jira(hostname)
 
