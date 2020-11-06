@@ -53,3 +53,8 @@ print(t.inputSides())
 print(t.dispSides())
 
 print(t.findArea())
+
+p = Polygon(5)
+
+print(p.inputSides())
+print(p.dispSides())
