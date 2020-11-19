@@ -1,0 +1,58 @@
+
+* Aprender manejo básico de sockets
+
+$ python3 socket1.py
+$ python3 socket2.py
+
+* Aprender cliente servidor básico
+
+$ python3 basic_server.py
+$ python3 basic_client.py 
+What do you want to send: Connection established:  ('127.0.0.1', 38004)
+Hello world
+Message received:  Hello world
+Server answer:  Welcome to the server
+
+* Aprender cliente servidor con múltiples mensajes
+
+$ python3 server_multiplemsgs.py &
+Waiting connection ....
+
+$ python3 client_multiplemsgs.py 
+What do you want to send: Connection established:  ('127.0.0.1', 60468)
+Hello world
+Message received:  Hello world
+Server answer:  Welcome to the server
+What do you want to send: World is listening you
+Message received:  World is listening you
+Server answer:  Welcome to the server
+What do you want to send: Pruebas
+Message received:  Pruebas
+Server answer:  Welcome to the server
+What do you want to send: Otra idea
+Message received:  Otra idea
+Server answer:  Welcome to the server
+
+* Practicar con diferentes clientes
+
+$ python3 server_multiplemsgs.py &
+ Waiting connection ....
+
+
+$ python3 client_dicts.py 
+What do you want to send: Connection established:  ('127.0.0.1', 60482)
+Hola
+Message received:  {"Message": "Hola"}
+Server answer:  Welcome to the server
+What do you want to send: Otro mensaje
+Message received:  {"Message": "Otro mensaje"}
+Server answer:  Welcome to the server
+What do you want to send: Otra idea
+Message received:  {"Message": "Otra idea"}
+Server answer:  Welcome to the server
+What do you want to send: correos electrónicos a Laura, pero con respuesta
+Message received:  {"Message": "correos electr\u00f3nicos a Laura, pero con respuesta"}
+Server answer:  Welcome to the server
+What do you want to send: Besos
+Message received:  {"Message": "Besos"}
+Server answer:  Welcome to the server
