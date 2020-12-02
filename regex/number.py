@@ -77,6 +77,14 @@ if match:
     print("Yes, it's") # match.group() ## 'found word:cat'
 else:
     print("Not, it isn't")
+
+print("Is it your number from 0 to 127? ")
+match = re.search(r'^(12[0-7]|1[0-1][0-9]|[0-9][0-9]|[0-9])$', num)
+# If-statement after search() tests if it succeeded
+if match:                      
+    print("Yes, it's") # match.group() ## 'found word:cat'
+else:
+    print("Not, it isn't")
     
 print("Is it your number from 32 to 126? ")
 match = re.search(r'^(12[0-6]|1[0-1][0-9]|[4-9][0-9]|3[2-9])$', num)
