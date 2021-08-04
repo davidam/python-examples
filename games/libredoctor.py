@@ -31,7 +31,7 @@ if (edad < 16):
         print("Muy bien")
 else:
     python = input("¿Escribiste código Python con una licencia libre? ( S | N ) ")
-    if (python == "S" ):
+    if ((python == "S" ) or (python == "s")):
         print("Súbelo al repositorio, así más gente puede ver lo que pasa")
     else:
         print("Si estás viendo al doctor puede ser que te haga falta escribirlo")
