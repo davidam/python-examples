@@ -15,107 +15,107 @@ import os
 import sys
 
 def draw_man(guess_count):
-    if guess_count == 0:
-        print ''
-        print ''
-        print ''
-        print ''
-        print ''
-        print ''
-        print ''
-        print ''
-    elif guess_count == 1:
-        print ''
-        print ''
-        print ''
-        print ''
-        print ''
-        print ''
-        print ''
-        print '-----'
-    elif guess_count == 2:
-        print ''
-        print '  |'
-        print '  |'
-        print '  |'
-        print '  |'
-        print '  |'
-        print '  |'
-        print '-----'
-    elif guess_count == 3:
-        print '  ______'
-        print '  |'
-        print '  |'
-        print '  |'
-        print '  |'
-        print '  |'
-        print '  |'
-        print '-----'
-    elif guess_count == 4:
-        print '  ______'
-        print '  |    |'
-        print '  |'
-        print '  |'
-        print '  |'
-        print '  |'
-        print '  |'
-        print '-----'
-    elif guess_count == 5:
-        print '  ______'
-        print '  |    |'
-        print '  |    O'
-        print '  |'
-        print '  |'
-        print '  |'
-        print '  |'
-        print '-----'
-    elif guess_count == 6:
-        print '  ______'
-        print '  |    |'
-        print '  |    O'
-        print '  |    |'
-        print '  |    |'
-        print '  |'
-        print '  |'
-        print '-----'
-    elif guess_count == 7:
-        print '  ______'
-        print '  |    |'
-        print '  |    O'
-        print '  |   /|'
-        print '  |    |'
-        print '  |'
-        print '  |'
-        print '-----'
-    elif guess_count == 8:
-        print '  ______'
-        print '  |    |'
-        print '  |    O'
-        print '  |   /|\\'
-        print '  |    |'
-        print '  |'
-        print '  |'
-        print '-----'
-    elif guess_count == 9:
-        print '  ______'
-        print '  |    |'
-        print '  |    O'
-        print '  |   /|\\'
-        print '  |    |'
-        print '  |   /'
-        print '  |'
-        print '-----'
-    elif guess_count == 10:
-        print '  ______'
-        print '  |    |'
-        print '  |    O'
-        print '  |   /|\\'
-        print '  |    |'
-        print '  |   / \\'
-        print '  |'
-        print '-----'
+    if (guess_count == 0):
+        print('')
+        print('')
+        print('')
+        print('')
+        print('')
+        print('')
+        print('')
+        print('')
+    elif (guess_count == 1):
+        print('')
+        print('')
+        print('')
+        print('')
+        print('')
+        print('')
+        print('')
+        print('-----')
+    elif (guess_count == 2):
+        print('')
+        print('  |')
+        print('  |')
+        print('  |')
+        print('  |')
+        print('  |')
+        print('  |')
+        print('-----')
+    elif (guess_count == 3):
+        print('  ______')
+        print('  |')
+        print('  |')
+        print('  |')
+        print('  |')
+        print('  |')
+        print('  |')
+        print('-----')
+    elif (guess_count == 4):
+        print('  ______')
+        print('  |    |')
+        print('  |')
+        print('  |')
+        print('  |')
+        print('  |')
+        print('  |')
+        print('-----')
+    elif (guess_count == 5):
+        print('  ______')
+        print('  |    |')
+        print('  |    O')
+        print('  |')
+        print('  |')
+        print('  |')
+        print('  |')
+        print('-----')
+    elif (guess_count == 6):
+        print('  ______')
+        print('  |    |')
+        print('  |    O')
+        print('  |    |')
+        print('  |    |')
+        print('  |')
+        print('  |')
+        print('-----')
+    elif (guess_count == 7):
+        print('  ______')
+        print('  |    |')
+        print('  |    O')
+        print('  |   /|')
+        print('  |    |')
+        print('  |')
+        print('  |')
+        print('-----')
+    elif (guess_count == 8):
+        print('  ______')
+        print('  |    |')
+        print('  |    O')
+        print('  |   /|\\')
+        print('  |    |')
+        print('  |')
+        print('  |')
+        print('-----')
+    elif (guess_count == 9):
+        print('  ______')
+        print('  |    |')
+        print('  |    O')
+        print('  |   /|\\')
+        print('  |    |')
+        print('  |   /')
+        print('  |')
+        print('-----')
+    elif (guess_count == 10):
+        print('  ______')
+        print('  |    |')
+        print('  |    O')
+        print('  |   /|\\')
+        print('  |    |')
+        print('  |   / \\')
+        print('  |')
+        print('-----')
 
-print 'Enter a word or phrase to guess:'
+print('Enter a word or phrase to guess:')
 answer = sys.stdin.readline()[:-1]
 answer = list(answer)
 
@@ -126,28 +126,27 @@ guess = [' ' if char == ' ' else '_' for char in answer]
 guessed_letters = []
 
 draw_man(wrong_guesses)
-print ''.join(guess)
 
 while True:
 
     guessed_letters.sort()
-    print 'Guessed letters:', ' '.join(guessed_letters)
-    print 'Guess a letter:'
+    print('Guessed letters:', ' '.join(guessed_letters))
+    print('Guess a letter:')
     letter = sys.stdin.readline()[:-1]
 
     os.system('cls' if os.name=='nt' else 'clear')
 
-    if len(letter) != 1:
+    if (len(letter) != 1):
 
-        print 'Please enter a single letter.'
+        print('Please enter a single letter.')
 
-    elif letter in guessed_letters:
+    elif (letter in guessed_letters):
 
-        print 'You already guessed that letter, try again.'
+        print('You already guessed that letter, try again.')
 
-    elif letter in answer:
+    elif (letter in answer):
 
-        print 'Good guess!'
+        print('Good guess!')
         for index in range(len(answer)):
             if answer[index] == letter:
                 guess[index] = letter
@@ -155,19 +154,19 @@ while True:
 
     else:
 
-        print 'WRONG guess.'
+        print('WRONG guess.')
         wrong_guesses += 1
         guessed_letters.append(letter)
 
     draw_man(wrong_guesses)
-    print ''.join(guess)
+#    print('').join(guess)
 
-    if wrong_guesses == 10:
+    if (wrong_guesses == 10):
 
-        print "You're DEAD!"
+        print("You're DEAD!")
         break
 
-    if '_' not in guess:
+    if ('_' not in guess):
 
-        print 'Success! You LIVE!'
+        print('Success! You LIVE!')
         break
