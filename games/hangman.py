@@ -124,6 +124,8 @@ os.system('cls' if os.name=='nt' else 'clear')
 wrong_guesses = 0
 guess = [' ' if char == ' ' else '_' for char in answer]
 guessed_letters = []
+guessed_success_letters = []
+guessed_failed_letters = []
 
 draw_man(wrong_guesses)
 
@@ -131,6 +133,8 @@ while True:
 
     guessed_letters.sort()
     print('Guessed letters:', ' '.join(guessed_letters))
+    print('Guessed letters with success:', ' '.join(guessed_success_letters))
+    print('Guessed letters without success:', ' '.join(guessed_failed_letters))        
     print('Guess a letter:')
     letter = sys.stdin.readline()[:-1]
 
@@ -151,12 +155,14 @@ while True:
             if answer[index] == letter:
                 guess[index] = letter
         guessed_letters.append(letter)
+        guessed_success_letters.append(letter)        
 
     else:
 
         print('WRONG guess.')
         wrong_guesses += 1
         guessed_letters.append(letter)
+        guessed_failed_letters.append(letter)                
 
     draw_man(wrong_guesses)
 #    print('').join(guess)
@@ -164,9 +170,12 @@ while True:
     if (wrong_guesses == 10):
 
         print("You're DEAD!")
+        print('The word was: %s' % answer)        
         break
 
     if ('_' not in guess):
 
         print('Success! You LIVE!')
+        print('The letters are: %s' % guessed_success_letters)
+        print('The word is: %s' % answer)
         break
