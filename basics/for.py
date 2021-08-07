@@ -17,31 +17,45 @@
 # GNU General Public License for more details.
 
 # You should have received a copy of the GNU General Public License
-# along with GNU Emacs; see the file COPYING.  If not, write to
+# along with python-examples; see the file COPYING.  If not, write to
 # the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 # Boston, MA 02110-1301 USA,
-#!/usr/bin/python
+
 
 words = ['cat', 'window', 'defenestrate']
 
-print("######################## First for: #######################")
+print("######################## Single for: #######################")
 for w in words:
     print(w, len(w))
 
-print("######################## Second for: #####################")
+print("######################## Two indexes in a for: #####################")
 
-for i,w in enumerate(words):
+for i, w in enumerate(words):
     print(i, w)
 
-print("######################## Third for: #####################")
+print("######################## Using range for: #####################")
 
-for i in range(1,10):
+for i in range(1, 10):
     print(i)
 
-print("######################## Fourth for: #####################")
+print("######################## Pythonic for: #####################")
+
+[print(i) for i in range(1, 10)]
+
+print("######################## Mixing many tricks in a for: #####################")
 
 print(','.join('{}'.format(i) for i in range(1, 100, 4)))
 
-print("######################## Fifth for: #####################")
+print("######################## Mixing many tricks in a for (II): #####################")
 
 print(','.join('{},{}'.format(i, i + 1) for i in range(1, 100, 4)))
+
+print("######################## Upper words: ###################")
+
+print(','.join('{}'.format(w.capitalize()) for w in words))
+
+print("######################## Lower words: ###################")
+
+ll = [w.lower() for w in words]
+print(ll)
+
