@@ -23,7 +23,19 @@
 
 cnt = 10
 
+print("### checking numbers ###")
 print(isinstance(cnt, int))
+print(isinstance(3.5, float))
+print(isinstance(3.5, int))
+
+print("### checking strings ###")
+cnt = "hola mundo"
 print(isinstance(cnt, str))
+
+print("### checking data structures ###")
 print(isinstance(cnt, list))
 print(isinstance(cnt, dict))
+
+tupla = (1, 2, 3)
+print(isinstance(tupla, tuple))
+print(isinstance(set(tupla), set))
