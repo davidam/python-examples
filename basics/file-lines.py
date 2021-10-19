@@ -22,17 +22,10 @@
 # Boston, MA 02110-1301 USA,
 import re
 
-filepath="README.org"
+filepath="gpl-3.0.txt"
 with open(filepath) as fp:
     for cnt, line in enumerate(fp):
-        print("Line {}: {}".format(cnt, line)) # Imprime línea y número de línea
-        print(line[0])         # Imprime el primer caracter
-        print(line[(len(line) -2)]) # Imprime el último carácter
-        match = re.search(r'flask', line)
-        # If-statement after search() tests if it succeeded
-        if match:
-            flaskcnt = cnt
-            flaskline = line
+        if (cnt <= 10):
+            print("Line {}: {}".format(cnt, line)) # Imprime línea y número de línea
 
 print("---------------------------------------------------------------------------")
-print("Flask is in the line {}. The full text is: {}".format(flaskcnt, flaskline)) # match.group() ## 'found word:cat'
