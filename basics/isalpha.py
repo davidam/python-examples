@@ -27,3 +27,7 @@ print(str.isalpha())
 
 str = "this is string example....wow!!!";
 print(str.isalpha())
+
+str = "1234";
+print(str.isalpha())
+
