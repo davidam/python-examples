@@ -20,7 +20,7 @@
 # along with GNU Emacs; see the file COPYING.  If not, write to
 # the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 # Boston, MA 02110-1301 USA,
-
-# print('哈哈'.encode('utf-8'))
-# print('哈哈'.decode('utf-8'))
+chinese_utf8 = '哈哈'.encode('utf-8')
+print(chinese_utf8)
+print(chinese_utf8.decode('utf-8'))
 print('哈哈')
