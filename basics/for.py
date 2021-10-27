@@ -50,12 +50,16 @@ print("######################## Mixing many tricks in a for (II): ##############
 
 print(','.join('{},{}'.format(i, i + 1) for i in range(1, 100, 4)))
 
-print("######################## Upper words: ###################")
+print("######################## Capitalize words: ###################")
 
 print(','.join('{}'.format(w.capitalize()) for w in words))
+
+print("######################## Upper words: ###################")
+
+ll = [w.upper() for w in words]
+print(ll)
 
 print("######################## Lower words: ###################")
 
 ll = [w.lower() for w in words]
 print(ll)
-
