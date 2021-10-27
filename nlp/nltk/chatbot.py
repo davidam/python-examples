@@ -1,81 +1,92 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
 
-# Copyright (C) 2018  David Arroyo Menéndez
+#Meet Robo: your friend
 
-# Author: David Arroyo Menéndez <davidam@gnu.org>
-# Maintainer: David Arroyo Menéndez <davidam@gnu.org>
-
-# This file is free software; you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation; either version 3, or (at your option)
-# any later version.
-
-# This file is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-
-# You should have received a copy of the GNU General Public License
-# along with GNU Emacs; see the file COPYING.  If not, write to
-# the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
-# Boston, MA 02110-1301 USA,
+#import necessary libraries
+import io
+import random
+import string # to process standard python strings
+import warnings
+import numpy as np
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+import warnings
+warnings.filterwarnings('ignore')
 
 import nltk
+from nltk.stem import WordNetLemmatizer
+nltk.download('popular', quiet=True) # for downloading packages
 
-# This instruction imports the nltk library into the current program.
+# uncomment the following only the first time
+#nltk.download('punkt') # first-time use only
+#nltk.download('wordnet') # first-time use only
 
-def builtinEngines(whichOne):
 
-# This instruction defines a new function called builtinEngines that takes a string parameter, whichOne:
+#Reading in the corpus
+with open('chatbot.txt','r', encoding='utf8', errors ='ignore') as fin:
+    raw = fin.read().lower()
 
-    if whichOne == 'eliza': nltk.chat.eliza.demo()
+#TOkenisation
+sent_tokens = nltk.sent_tokenize(raw)# converts to list of sentences 
+word_tokens = nltk.word_tokenize(raw)# converts to list of words
 
-    elif whichOne == 'iesha': nltk.chat.iesha.demo()
+# Preprocessing
+lemmer = WordNetLemmatizer()
+def LemTokens(tokens):
+    return [lemmer.lemmatize(token) for token in tokens]
+remove_punct_dict = dict((ord(punct), None) for punct in string.punctuation)
+def LemNormalize(text):
+    return LemTokens(nltk.word_tokenize(text.lower().translate(remove_punct_dict)))
 
-    elif whichOne == 'rude': nltk.chat.rude.demo()
 
-    elif whichOne == 'suntsu': nltk.chat.suntsu.demo()
+# Keyword Matching
+GREETING_INPUTS = ("hello", "hi", "greetings", "sup", "what's up","hey",)
+GREETING_RESPONSES = ["hi", "hey", "*nods*", "hi there", "hello", "I am glad! You are talking to me"]
 
-    elif whichOne == 'zen': nltk.chat.zen.demo()
+def greeting(sentence):
+    """If user's input is a greeting, return a greeting response"""
+    for word in sentence.split():
+        if word.lower() in GREETING_INPUTS:
+            return random.choice(GREETING_RESPONSES)
 
+
+# Generating response
+def response(user_response):
+    robo_response=''
+    sent_tokens.append(user_response)
+    TfidfVec = TfidfVectorizer(tokenizer=LemNormalize, stop_words='english')
+    tfidf = TfidfVec.fit_transform(sent_tokens)
+    vals = cosine_similarity(tfidf[-1], tfidf)
+    idx=vals.argsort()[0][-2]
+    flat = vals.flatten()
+    flat.sort()
+    req_tfidf = flat[-2]
+    if(req_tfidf==0):
+        robo_response=robo_response+"I am sorry! I don't understand you"
+        return robo_response
     else:
-
-        print("unknown built-in chat engine {}".format(whichOne))
-
-chatpairs = (
-
-(r"(.*?)Stock price(.*)", ("Today stock price is 100",
-
-"I am unable to find out the stock price.")), (r"(.*?)not well(.*)",
-
-("Oh, take care. May be you should visit a doctor", "Did you take some medicine ?")),
-
-(r"(.*?)raining(.*)",
-
-("Its monsoon season, what more do you expect ?", "Yes, its good for farmers")),
-
-(r"How(.*?)health(.*)",
-
-("I am always healthy.",
-
-"I am a program, super healthy!")), (r".*",
-
-("I am good. How are you today ?", "What brings you here ?"))
-
-)
+        robo_response = robo_response+sent_tokens[idx]
+        return robo_response
 
 
-def chat():
+flag=True
+print("ROBO: My name is Robo. I will answer your queries about Chatbots. If you want to exit, type Bye!")
+while(flag==True):
+    user_response = input()
+    user_response=user_response.lower()
+    if(user_response!='bye'):
+        if(user_response=='thanks' or user_response=='thank you' ):
+            flag=False
+            print("ROBO: You are welcome..")
+        else:
+            if(greeting(user_response)!=None):
+                print("ROBO: "+greeting(user_response))
+            else:
+                print("ROBO: ",end="")
+                print(response(user_response))
+                sent_tokens.remove(user_response)
+    else:
+        flag=False
+        print("ROBO: Bye! take care..")    
+        
+        
 
-    print("!"*80)
-
-    print(" >> my Engine ")
-
-
-
-for engine in ['eliza', 'iesha', 'rude', 'suntsu', 'zen']:
-
-    print("=== demo of {} ===".format(engine) % builtinEngines(engine))
-
-#        print() myEngine()
