@@ -18,11 +18,11 @@ $ git clone https://github.com/davidam/python-examples.git
 4. Text Summary
 5. Classify Documents
 6. Manage Words
-singulars/plurals, dictionary entries, stopwords
 7. Gramatical Trees
 8. Extract Keywords
 9. Disambiguation
 10. Bots
+11. Extending ML with Scikit
 
 **** This will be formatted as a beamer note                       :B_note:
      :PROPERTIES:
@@ -84,7 +84,7 @@ singulars/plurals, dictionary entries, stopwords
     $ python3 nltk-sklearn.py
 #+END_SRC
 
-** Synonims and Antonims
+** Manage Words (I)
 *** Synonims and Antonims                                           :B_block:
     :PROPERTIES:
     :BEAMER_COL: 0.98
@@ -94,7 +94,7 @@ singulars/plurals, dictionary entries, stopwords
     $ python3 synonims-antonims.py
 #+END_SRC
 
-** Singulars and Plurals
+** Manage Words (II)
 *** Singulars and Plurals 					    :B_block:
     :PROPERTIES:
     :BEAMER_COL: 0.98
@@ -105,7 +105,7 @@ singulars/plurals, dictionary entries, stopwords
     $ nosetests3 test/test_stem.py
 #+END_SRC
 
-** Sillables
+** Manage Words (III)
 
 *** Sillables                                                       :B_block:
     :PROPERTIES:
@@ -116,12 +116,12 @@ singulars/plurals, dictionary entries, stopwords
     $ python3 silaba.py
 #+END_SRC
 
-** Stopwords
+** Manage Words (IV)
 For some search engines, these are some of the most common, short
 function words, such as the, is, at, which, and on. In this case, stop
 words can cause problems when searching for phrases that include them
 
-*** Singulars and Plurals 					    :B_block:
+*** Stopwords                                                       :B_block:
     :PROPERTIES:
     :BEAMER_COL: 0.98
     :BEAMER_ENV: block
@@ -131,7 +131,7 @@ words can cause problems when searching for phrases that include them
     $ nosetests3 test/test_stopwords.py
 #+END_SRC
 
-** Lemmas: dictionary entries
+** Manage Words (V)
 *** Lemmas: dictionary entries                                      :B_block:
     :PROPERTIES:
     :BEAMER_COL: 0.98
@@ -142,7 +142,37 @@ words can cause problems when searching for phrases that include them
     $ nosetests3 test/test_wordnet.py:TddInPythonExample.test_synonims_lemmas_method_returns_correct_result
 #+END_SRC
 
+** Manage Words (VI)
+
+A bag of words is the available words in a text and keep count of how
+many times they appear
+
+*** Bag of words                                                    :B_block:
+    :PROPERTIES:
+    :BEAMER_COL: 0.98
+    :BEAMER_ENV: block
+    :END:
+#+BEGIN_SRC bash
+    $ python3 bag-of-words.py
+#+END_SRC
+
+** Manage Words (VII)
+
+*** Unusual words                                             :B_block:
+    :PROPERTIES:
+    :BEAMER_COL: 0.98
+    :BEAMER_ENV: block
+    :END:
+#+BEGIN_SRC bash
+    $ python3 code_unusual.py
+#+END_SRC
+
+
+
 ** Trees (I)
+
+A gramatical tree is the gramatical structure about a natural language
+
 *** Trees (I)                                                       :B_block:
     :PROPERTIES:
     :BEAMER_COL: 0.98
@@ -214,6 +244,18 @@ $ python3 wordnet-example.py
 $ nosetests3 test/test_wordnet.py
 #+END_SRC
 
+** Detect languages
+*** Detect languages                                                :B_block:
+    :PROPERTIES:
+    :BEAMER_COL: 0.98
+    :BEAMER_ENV: block
+    :END:
+#+BEGIN_SRC bash
+$ python3 wordnet-example.py
+$ nosetests3 test/test_wordnet.py
+#+END_SRC
+
+
 ** Sharing data models: pickle
 *** Sharing data models: pickle                                     :B_block:
     :PROPERTIES:
@@ -253,7 +295,68 @@ $ nosetest3 test/test_svc.py
 $ nosetest3 test/test_bernoulli.py
 #+END_SRC
 
+** Using Scikit in NLTK (III)
 
-** References
+*** Discovering NLTK and Scikit in Damegender                       :B_block:
+    :PROPERTIES:
+    :BEAMER_COL: 0.98
+    :BEAMER_ENV: block
+    :END:
+#+BEGIN_SRC bash
+$ pip3 install damegender
+$ cd damegender/src/app
+$ grep sklearn *
+$ grep nltk *
+#+END_SRC
+
+** Pagerank Algorithm
+
+A webpage has an higher pagerank if has many links the links that is
+linking has an higher pagerank.
+
+** Book References
++ Python Tutorial (Guido Van Rossum)
 + El Tutorial de Python por Guido Van Rossum
 + Natural Language Processing with Python 
+(Steven Bird, Ewan Klein, and Edward Loper)
+
+** Papers References (I)
+
+*** NLTK: The Natural Language Toolkit                       :B_block:
+    :PROPERTIES:
+    :BEAMER_COL: 0.98
+    :BEAMER_ENV: block
+    :END:
+Edward Loper and Steven Bird
+
+URL: https://arxiv.org/pdf/cs/0205028
+Citations: 1952
+
+** Papers References (II)
+*** Scikit-learn: Machine Learning in Python
+    :PROPERTIES:
+    :BEAMER_COL: 0.98
+    :BEAMER_ENV: block
+    :END:
+Fabian Pedregosa, Gaël Varoquaux, Alexandre Gramfort, Vincent Michel
+and Bertrand Thirion
+
+URL: http://www.jmlr.org/papers/v12/pedregosa11a.html
+Citations: 15926
+
+** Papers References (III)
+*** The PageRank Citation Ranking: Bringing Order to the Web
+    :PROPERTIES:
+    :BEAMER_COL: 0.98
+    :BEAMER_ENV: block
+    :END:
+Lawrence Page, Sergey Brin, Motwani Rajeev and Winograd Terry
+
+URL: http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf
+Citations: 15691
+
+** License
+
+This document is under a [[http://creativecommons.org/licenses/by-sa/4.0/deed][Creative Commons Attribution-ShareAlike 4.0
+International]]
+
