@@ -22,6 +22,7 @@ singulars/plurals, dictionary entries, stopwords
 7. Gramatical Trees
 8. Extract Keywords
 9. Disambiguation
+10. Bots
 
 **** This will be formatted as a beamer note                       :B_note:
      :PROPERTIES:
@@ -36,7 +37,8 @@ singulars/plurals, dictionary entries, stopwords
     :END:
 #+BEGIN_SRC bash
     $ python3 tweet-sentyment.py
-    $ python3 tweepy-example.py
+    $ python3 sentiment-analysis-vader.py
+    $ python3 sentiment.py
 #+END_SRC
 
 ** Detect Gender
@@ -102,6 +104,18 @@ singulars/plurals, dictionary entries, stopwords
     $ python3 stem.py
     $ nosetests3 test/test_stem.py
 #+END_SRC
+
+** Sillables
+
+*** Sillables                                                       :B_block:
+    :PROPERTIES:
+    :BEAMER_COL: 0.98
+    :BEAMER_ENV: block
+    :END:
+#+BEGIN_SRC bash
+    $ python3 silaba.py
+#+END_SRC
+
 ** Stopwords
 For some search engines, these are some of the most common, short
 function words, such as the, is, at, which, and on. In this case, stop
@@ -148,6 +162,7 @@ words can cause problems when searching for phrases that include them
     $ python3 code-chinker.py
     I can build sintactic pairs from a sentence and print a tree
     $ python3 tokenizeandtag.py
+    $ python3 ner.py
 #+END_SRC
 
 ** Corpus
@@ -159,6 +174,7 @@ words can cause problems when searching for phrases that include them
 #+BEGIN_SRC bash
     $ python3 gutenberg.py
     $ nosetests3 test/test_gutenberg.py
+    $ python3 inaugural.py
     $ python3 corpus-howto-new-corpus.py
 #+END_SRC
 
@@ -195,6 +211,12 @@ $ nosetests3 test/test_wordnet.py
     :END:
 #+BEGIN_SRC bash
 $ python3 nltk-pickle.py
+#+END_SRC
+** Bots
+
+#+BEGIN_SRC bash
+$ python3 eliza.py
+$ python3 chatbot.py
 #+END_SRC
 
 ** Support Python and Libremanuals
