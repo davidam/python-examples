@@ -54,7 +54,7 @@ singulars/plurals, dictionary entries, stopwords
 #+END_SRC
 
 ** Sentence Similarity
-*** Your name is your gender                                        :B_block:
+*** Sentence Similarity
     :PROPERTIES:
     :BEAMER_COL: 0.98
     :BEAMER_ENV: block
@@ -142,8 +142,8 @@ words can cause problems when searching for phrases that include them
     $ nosetests3 test/test_wordnet.py:TddInPythonExample.test_synonims_lemmas_method_returns_correct_result
 #+END_SRC
 
-** Trees
-*** Trees                                                           :B_block:
+** Trees (I)
+*** Trees (I)                                                       :B_block:
     :PROPERTIES:
     :BEAMER_COL: 0.98
     :BEAMER_ENV: block
@@ -158,11 +158,22 @@ words can cause problems when searching for phrases that include them
     I can obtain bigrams, trigrams or ngrams
     $ python3 bigrams-trigrams.py
     $ nosetests3 test/test_bigrams_trigrams.py
+#+END_SRC
+
+** Trees (II)
+*** Trees (II)                                                      :B_block:
+    :PROPERTIES:
+    :BEAMER_COL: 0.98
+    :BEAMER_ENV: block
+    :END:
+#+BEGIN_SRC bash
     I can print a tree from sintactic pairs
     $ python3 code-chinker.py
     I can build sintactic pairs from a sentence and print a tree
     $ python3 tokenizeandtag.py
     $ python3 ner.py
+    I can find sentences verb to verb with trigrams
+    $ python3 code_three_word_phrase.py
 #+END_SRC
 
 ** Corpus
@@ -214,11 +225,35 @@ $ python3 nltk-pickle.py
 #+END_SRC
 ** Bots
 
+*** Bots                                                            :B_block:
+    :PROPERTIES:
+    :BEAMER_COL: 0.98
+    :BEAMER_ENV: block
+    :END:
 #+BEGIN_SRC bash
 $ python3 eliza.py
 $ python3 chatbot.py
 #+END_SRC
 
-** Support Python and Libremanuals
-El Tutorial de Python
-por Guido Van Rossum
+** Using Scikit in NLTK (I)
+
+file:img/scikit-graph.png
+
+** Using Scikit in NLTK (II)
+
+*** Using Scikit in NLTK (II)                                       :B_block:
+    :PROPERTIES:
+    :BEAMER_COL: 0.98
+    :BEAMER_ENV: block
+    :END:
+#+BEGIN_SRC bash
+$ pip3 install damenltk
+$ cd damenltk/damenltk
+$ nosetest3 test/test_svc.py
+$ nosetest3 test/test_bernoulli.py
+#+END_SRC
+
+
+** References
++ El Tutorial de Python por Guido Van Rossum
++ Natural Language Processing with Python 
