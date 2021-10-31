@@ -64,10 +64,16 @@ replaced = regex.sub(myreplacement, subject)
 print("\n" + "*** Replacements ***")
 print(replaced)
 
-# Task 6: Split
+# Task 6: Replace bananas by apples
+
+txt = "I like bananas"
+x = txt.replace("bananas", "apples")
+print(x) 
+
+# Task 7: Split
 # Start by replacing by something distinctive,
 # as in Step 5. Then split.
 splits = replaced.split('Superman')
 print("\n" + "*** Splits ***")
 for split in splits:
-	    print (split)
+    print (split)
