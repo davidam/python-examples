@@ -17,7 +17,7 @@
 # GNU General Public License for more details.
 
 # You should have received a copy of the GNU General Public License
-# along with GNU Emacs; see the file COPYING.  If not, write to
+# along with python-examples; see the file COPYING.  If not, write to
 # the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 # Boston, MA 02110-1301 USA,
 
@@ -46,9 +46,16 @@ def get_results(endpoint_url, query):
 results = get_results(endpoint_url, query)
 
 print("showing some results")
+
+fo = open("male-artists.csv", "w")
 for result in results["results"]["bindings"]:
     print(result)
+    fo.write(result['menLabel']['value'] + "," + result['men']['value'] +  "\n");
 
+# Cerramos el archivo fichero.txt
+fo.close()
+
+    
 # l1 = []
 # with open('results.csv') as csvfile:
 #     spamreader = csv.reader(csvfile, delimiter=';', quotechar='|')
