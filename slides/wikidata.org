@@ -166,6 +166,16 @@ data = r.json()
 print(data['results']['bindings'])
 #+END_SRC
 
+** Wikidata in Python (IV)
+Full examples!
+
+#+BEGIN_SRC bash
+$ python3 wikidata-female-artists.py
+$ python3 wikidata-female-scientists.py
+$ python3 female-streets-fr.py
+$ python3 wikispecies.py
+#+END_SRC
+
 ** References
 
 + Wikidata: a free collaborative knowledge base
