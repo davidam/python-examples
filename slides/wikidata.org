@@ -25,13 +25,13 @@ Language) is an RDF query language—that is, a semantic query language
 for databases—able to retrieve and manipulate data stored in Resource
 Description Framework.
 
-** Linked Open Data. History
+** Linked Open Data
 
 #+attr_html: :width 200px
 #+attr_latex: :width 200px
 file:img/linkedopendata.jpg
 
-** Linked Open Data. History
+** Linked Open Data (II)
 
 #+attr_html: :width 200px
 #+attr_latex: :width 200px
@@ -53,6 +53,10 @@ results = sparql.query().convert()
 
 for result in results["results"]["bindings"]:
     print(result["label"]["value"])
+#+END_SRC
+
+#+BEGIN_SRC bash
+$ python3 dbpedia-asturias.py
 #+END_SRC
 
 ** Wikidata: semantic model in a wikipedia page (I)
@@ -80,7 +84,7 @@ file:img/semanticweb3.png
 
 file:img/bach.png
 
-** Wikidata as Language
+** Wikidata as Language (I)
 
 If you take a look at Germany (Q183), then you can see a whole host of
 properties like population (P1082), median income (P3529) or even
@@ -99,6 +103,12 @@ WHERE {
 }
 #+END_SRC
 
+** Wikidata as Language (II)
+
+#+BEGIN_SRC bash
+$ firefox https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples &
+#+END_SRC
+   
 ** Wikidata in Python (I)
 
 #+BEGIN_SRC python
