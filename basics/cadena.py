@@ -33,3 +33,5 @@ if cadena.isdigit():
 print("Texto en minúsculas: %s" % str(cadena.lower()))
 
 print("Texto capitalizado: %s" % str(cadena.capitalize()))
+
+print("Texto en mayúsculas: %s" % str(cadena.upper()))
