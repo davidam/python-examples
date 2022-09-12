@@ -20,15 +20,14 @@
 # along with python-examples; see the file COPYING.  If not, write to
 # the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 # Boston, MA 02110-1301 USA,
-#from random import shuffle
 
-import random
+from random import shuffle
 
 dice1 = ["fuck", "suck", "finger", "feet", "caress", "blow"]
 dice2 = ["tit", "pussy", "ass", "mouth", "cock", "pussy"]
 
-random.shuffle(dice1,random.random)
-random.shuffle(dice2,random.random)
+shuffle(dice1)
+shuffle(dice2)
 print(dice1[0])
 print(dice2[0])
 
