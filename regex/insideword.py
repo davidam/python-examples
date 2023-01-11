@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-# Copyright (C) 2018  David Arroyo Menéndez
+# Copyright (C) 2019  David Arroyo Menéndez
 
 # Author: David Arroyo Menéndez <davidam@gnu.org>
 # Maintainer: David Arroyo Menéndez <davidam@gnu.org>
@@ -20,7 +20,16 @@
 # along with GNU Emacs; see the file COPYING.  If not, write to
 # the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 # Boston, MA 02110-1301 USA,
-#!/usr/bin/env python
+import re
 
-import os
-os.system('ls')
+string0 = input('You must write here: ')
+m = re.match(r"(.*)([a-z]|[A-Z])+(.*)", string0)
+if m:
+    print("There are characters of the alphabet in the input")
+else:
+    print("There are not characters of the alphabet in the input")
+# m = re.match(r"(\w+) (\w+) (\w+)", "Isaac Newton physicist")
+# print(m.group(0))
+# print(m.group(1))
+# print(m.group(2))
+# print(m.group(1, 2, 3))

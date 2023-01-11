@@ -1,7 +1,7 @@
-#!/usr/bin/python3
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-# Copyright (C) 2018  David Arroyo Menéndez
+# Copyright (C) 2022  David Arroyo Menéndez
 
 # Author: David Arroyo Menéndez <davidam@gnu.org>
 # Maintainer: David Arroyo Menéndez <davidam@gnu.org>
@@ -20,18 +20,8 @@
 # along with GNU Emacs; see the file COPYING.  If not, write to
 # the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 # Boston, MA 02110-1301 USA,
-# -*- coding: utf-8 -*-
 
-cadena = str(input("Escriba un texto: "))
-if cadena.isalnum():
-    print("Consta de letras y/o números, sin espacios")
-if cadena.isalpha():
-    print("Consta de letras, sin números y sin espacios")
-if cadena.isdigit():
-    print("Consta sólo de números, sin espacios")
+print("Esto es la UCM, la Universidad Computense de Madrid")
+print("El sexo debe ser barato, para obreras y obreros, cada cual en su papel")
+print("Si te preguntan, se responde siempre con perspectiva de género")
 
-print("Texto en minúsculas: %s" % str(cadena.lower()))
-
-print("Texto capitalizado: %s" % str(cadena.capitalize()))
-
-print("Texto en mayúsculas: %s" % str(cadena.upper()))

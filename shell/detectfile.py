@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
 # Copyright (C) 2018  David Arroyo Menéndez
@@ -17,21 +17,20 @@
 # GNU General Public License for more details.
 
 # You should have received a copy of the GNU General Public License
-# along with GNU Emacs; see the file COPYING.  If not, write to
+# along with python-examples; see the file COPYING.  If not, write to
 # the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 # Boston, MA 02110-1301 USA,
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python
 
-cadena = str(input("Escriba un texto: "))
-if cadena.isalnum():
-    print("Consta de letras y/o números, sin espacios")
-if cadena.isalpha():
-    print("Consta de letras, sin números y sin espacios")
-if cadena.isdigit():
-    print("Consta sólo de números, sin espacios")
+import os
+import argparse
 
-print("Texto en minúsculas: %s" % str(cadena.lower()))
 
-print("Texto capitalizado: %s" % str(cadena.capitalize()))
+parser = argparse.ArgumentParser()
+parser.add_argument("filename", help="display the gender")
+args = parser.parse_args()
 
-print("Texto en mayúsculas: %s" % str(cadena.upper()))
+cmd = os.system('file --mime-type {0}'.format(args.filename))
+
+#result = subprocess.check_output(cmd)
+#pprint(result)
