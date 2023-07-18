@@ -35,6 +35,14 @@ print("Full name: %s" % fullname)
 email = r0.group(2)
 print("Email: %s" % email)
 
+r1 = re.match(r"([\w\.\+\-]+)\@([\w]+\.[a-z]{2,3})", "davidam@gnu.org")
+print("Email: %s:" % r1.group(0))
+username = r1.group(1)
+print("Username: %s" % username)
+hostname = r1.group(2)
+print("Hostname: %s" % hostname)
+
+
 # r1 = re.match(r"(\w )+(<[\w\.\+\-]+\@[\w]+\.[a-z]{2,3}>)", "David Arroyo Menéndez <davidam@gnu.org>")
 # print(r1.group(0))
 # print(r1.group(1))
