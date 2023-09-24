@@ -28,6 +28,14 @@ print(type(japanese))
 
 string = 'öäå'
 
+capitalize = 'Äránzazu'
+
+match = re.search(r'\w', capitalize)
+if match:
+    print("Yes, it's")
+else:
+    print("Not, it isn't")
+
 match = re.search(r'[a-z]', string)
 if match:
     print("Yes, it's")
