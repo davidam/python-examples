@@ -25,11 +25,23 @@ import json
 
 dicc = {}
 print("Diccionario original:")
-print(dicc)
+
 dicc["david"] = {}
 dicc["david"]["count"] = 10
 dicc["brezo"] = {}
 dicc["brezo"]["count"] = 10
 
+print(dicc)
+
+#print(sorted(dicc.keys(), reverse=True))
+l = sorted(dicc.items(), reverse=False)
+
+dicc2 = {}
+for name, count in l:
+    dicc2[name] = count
+
+print(dicc2)
+
+# print(dicc2["brezo"]["count"])
 app_json = json.dumps(dicc)
 print(app_json)
