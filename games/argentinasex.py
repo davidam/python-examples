@@ -25,7 +25,8 @@ print("Está llegando a Argentina")
 love = input("¿Pasa la frontera? (S | N) ")
 if love:
     print("Hemos abolido la prostitución desde la raíz del anuncio")
-    print("")
+    print("Los prostibulos se han cerrado.")
     print("Le otorgamos un número de teléfono para que usted también ")
     print("denuncie cualquier gesto a favor de la trata de personas")
-
+else:
+    print("resuena la bocina con la nena de Argentina")
