@@ -8,7 +8,7 @@ from flask import Flask, render_template, request
 # instancia del objeto Flask
 app = Flask(__name__)
 # Carpeta de subida
-app.config['UPLOAD_FOLDER'] = './pdffiles'
+app.config['UPLOAD_FOLDER'] = './upload'
 
 @app.route("/")
 def upload_file():
