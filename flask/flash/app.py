@@ -6,9 +6,9 @@ app.secret_key = "GeeksForGeeks"
  
  
 # home function for index.html
-@app.route("/")
 @app.route("/index")
 def home():
+    flash("You are into the Flask Application")
     return render_template("index.html")
  
  
