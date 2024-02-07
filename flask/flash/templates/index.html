@@ -9,9 +9,9 @@
 <body>
      
 {% with messages = get_flashed_messages()%}
-{% if massages%}
-    {% for massage in massages%}
-    <p>{{massage}}</p>
+{% if messages%}
+    {% for message in messages%}
+    <p>{{message}}</p>
     {%endfor%}
     {%endif%}
     {%endwith%}
