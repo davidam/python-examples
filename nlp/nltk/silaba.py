@@ -46,4 +46,14 @@ def countSyllables(word):
         numVowels-=1
     return numVowels
 
-print(countSyllables("David"))
+str1 = "David"
+res_str1 = countSyllables(str1)
+print("%s contains %s syllables " % (str1, res_str1))
+
+str2 = "María"
+res_str2 = countSyllables(str2)
+print("%s contains %s syllables " % (str2, res_str2))
+
+str3 = "Jerónimo"
+res_str3 = countSyllables(str3)
+print("%s contains %s syllables " % (str3, res_str3))
