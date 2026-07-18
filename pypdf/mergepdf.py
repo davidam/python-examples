@@ -1,10 +1,10 @@
-import PyPDF2
+from pypdf import PdfWriter
 
-path = open('one.pdf', 'rb')
-path2 = open('two.pdf', 'rb')
+merger = PdfWriter()
 
-merger = PyPDF2.PdfFileMerger()
+l1 = ['one.pdf', 'two.pdf']
 
-merger.merge(position=0, fileobj=path2)
-merger.merge(position=2, fileobj=path)
-merger.write(open("res.pdf", 'wb'))
+for pdf in l1:
+    merger.append(pdf)
+
+merger.write("res.pdf")
