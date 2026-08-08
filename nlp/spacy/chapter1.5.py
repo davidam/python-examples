@@ -21,6 +21,9 @@
 
 #  Solved exercises from https://course.spacy.io/en/chapter1
 
+# 1.2 Getting Started: Languages
+#     English, German and Spanish
+
 # Import spaCy
 import spacy
 
@@ -29,6 +32,24 @@ nlp = spacy.blank("en")
 
 # Process a text
 doc = nlp("This is a sentence.")
+
+# Print the document text
+print(doc.text)
+
+# Create the German nlp object
+nlp = spacy.blank("de")
+
+# Process a text (this is German for: "Kind regards!")
+doc = nlp("Liebe Grüße!")
+
+# Print the document text
+print(doc.text)
+
+# Create the Spanish nlp object
+nlp = spacy.blank("es")
+
+# Process a text (this is Spanish for: "How are you?")
+doc = nlp("¿Cómo estás?")
 
 # Print the document text
 print(doc.text)

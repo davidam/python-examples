@@ -21,6 +21,7 @@
 
 #  Solved exercises from https://course.spacy.io/en/chapter1
 
+# 1 Introduction to spaCy: Lexical Attributes
 
 import spacy
 nlp = spacy.load("en_core_web_sm")
