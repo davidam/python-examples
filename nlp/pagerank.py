@@ -19,7 +19,7 @@ def pageRank(G, s = .85, maxerr = .0001):
     n = G.shape[0]
 
     # transform G into markov matrix A
-    A = csc_matrix(G,dtype=np.float)
+    A = csc_matrix(G,dtype=float)
     rsums = np.array(A.sum(1))[:,0]
     ri, ci = A.nonzero()
     A.data /= rsums[ri]
