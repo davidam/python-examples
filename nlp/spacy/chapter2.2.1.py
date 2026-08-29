@@ -23,7 +23,7 @@
 
 # Chapter 2: Large-scale data analysis with spaCy
 
-# 2.1 Data Structures: Vocab, Lexemes and StringStore
+# 2.2 Data Structures: Strings to hashes
 
 import spacy
 
