@@ -28,7 +28,9 @@
 import spacy
 
 # Load a larger pipeline with vectors
-nlp = spacy.load("en_core_web_sm")
+# python3.14 -m spacy download en_core_web_md
+# python3.14 -m spacy download en_core_web_lg
+nlp = spacy.load("en_core_web_md")
 
 # Compare two documents
 doc1 = nlp("I like fast food")
