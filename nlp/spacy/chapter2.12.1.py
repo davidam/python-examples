@@ -17,7 +17,6 @@
 #  the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 #  Boston, MA 02110-1301 USA,
 
-
 import spacy
 from spacy.matcher import Matcher
 
@@ -30,19 +29,19 @@ doc = nlp(
     "Prime for new members, beginning on September 14. However, members with "
     "existing annual subscriptions will be able to continue to enjoy ad-free "
     "viewing until their subscription comes up for renewal. Those with "
-    "monthly subscriptions will have access to ad-free viewing until October 15.")
+    "monthly subscriptions will have access to ad-free viewing until October 15."
+)
 
 # Create the match patterns
-pattern1 = [{"LOWER": "Amazon"}, {"IS_TITLE": True, "POS": "PROPN"}]
-pattern2 = [{"LOWER": "ad"}, {"TEXT":"-"}, {"LOWER": "free"}, {"POS": "NOUN"}]
+pattern1 = [{"LOWER": "amazon"}, {"IS_TITLE": True, "POS": "PROPN"}]
+pattern2 = [{"LOWER": "ad"}, {"TEXT": "-"}, {"LOWER": "free"}, {"POS": "NOUN"}]
 
 # Initialize the Matcher and add the patterns
 matcher = Matcher(nlp.vocab)
 matcher.add("PATTERN1", [pattern1])
 matcher.add("PATTERN2", [pattern2])
-matches = matcher(doc)
 
 # Iterate over the matches
-for match_id, start, end in matches:
+for match_id, start, end in matcher(doc):
     # Print pattern string name and text of matched span
     print(doc.vocab.strings[match_id], doc[start:end].text)
