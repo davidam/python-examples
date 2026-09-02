@@ -1,28 +1,25 @@
 import newspaper
 
-cbs_paper = newspaper.build('http://cbs.com', memoize_articles=False)
-#print cbs_paper.size()
-cnn_paper = newspaper.build('http://cnn.com')
+article = newspaper.article('https://edition.cnn.com/2023/10/29/sport/nfl-week-8-how-to-watch-spt-intl/index.html')
 
-for category in cnn_paper.category_urls():
-    print(category)
+print(article.authors)
+# ['Hannah Brewitt']
 
-for feed_url in cnn_paper.feed_urls():
-    print(feed_url)
+print(article.publish_date)
+# 2023-10-29 09:00:15.717000+00:00
 
-print(cnn_paper.brand)
+print(article.text)
+# New England Patriots head coach Bill Belichick, right, embraces Buffalo Bills head coach Sean McDermott ...
 
-print(cnn_paper.description)
+print(article.top_image)
+# https://media.cnn.com/api/v1/images/stellar/prod/231015223702-06-nfl-season-gallery-1015.jpg?c=16x9&q=w_800,c_fill
 
-first_article = cnn_paper.articles[0]
-print(len(cnn_paper.articles))
+print(article.movies)
+# []
 
-# from newspaper import Article
-# first_article = Article(url="http://www.lemonde.fr/...", language='fr')
+article.nlp()
+print(article.keywords)
+# ['patrick', 'mahomes', 'history', 'nfl', 'week', 'broncos', 'denver', 'p', 'm', '00', 'pittsburgh',...]
 
-# first_article = cnn_paper.articles[0]
 
-# first_article.download()
-
-# print(first_article.html)
-#print(cnn_paper.articles[7].html)
+print(article.summary)
