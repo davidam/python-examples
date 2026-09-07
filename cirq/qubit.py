@@ -1,13 +1,14 @@
-# try:
-#     import cirq
-# except ImportError:
-#     print("installing cirq...")
-#     !pip3 install cirq
-#     print("installed cirq.")
-#     import cirq
+import os
 
-import cirq
-import cirq_google
+try:
+    import cirq
+    import cirq_google
+except ImportError:
+    print("installing cirq...")
+    os.system("pip install cirq-google")
+    print("installed cirq.")
+    import cirq
+    import cirq_google
 
 # Using named qubits can be useful for abstract algorithms
 # as well as algorithms not yet mapped onto hardware.
