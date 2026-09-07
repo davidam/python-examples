@@ -1,4 +1,14 @@
-import cirq
+import os
+
+try:
+    import cirq
+    import cirq_google
+except ImportError:
+    print("installing cirq...")
+    os.system("pip install cirq-google")
+    print("installed cirq.")
+    import cirq
+    import cirq_google
 
 # Pick a qubit.
 qubit = cirq.GridQubit(0, 0)
