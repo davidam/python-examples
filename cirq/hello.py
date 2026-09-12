@@ -1,3 +1,6 @@
+# Lectures from https://quantumai.google/cirq/start/start
+
+
 import os
 
 try:
