@@ -23,7 +23,21 @@
 
 # 1 Introduction to spaCy: The Doc Object
 
-import spacy
+import os
+
+try:
+    import spacy
+except ImportError:
+    print("installing spacy...")
+    os.system("pip install spacy")
+    print("installed spacy.")
+    import spacy
+
+try:
+    import en_core_web_sm
+except ImportError:
+    os.system("python -m spacy download en")
+
 nlp = spacy.load("en_core_web_sm")
 doc = nlp("Hello world!")
 
