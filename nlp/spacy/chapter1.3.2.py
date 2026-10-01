@@ -23,7 +23,21 @@
 
 # 1.3 Documents, spans and tokens
 
-import spacy
+import os
+
+try:
+    import spacy
+except ImportError:
+    print("installing spacy...")
+    os.system("python3 -m pip install --upgrade pip")
+    os.system("pip install spacy")
+    print("installed spacy.")
+    import spacy
+
+try:
+    import en_core_web_sm
+except ImportError:
+    os.system("python -m spacy download en")
 
 nlp = spacy.blank("en")
 
