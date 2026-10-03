@@ -23,9 +23,24 @@
 
 # 1.3 Documents, spans and tokens
 
-# Import spaCy and create the English nlp object
+# Import spaCy
 import spacy
 
+try:
+    import spacy
+except ImportError:
+    print("installing spacy...")
+    os.system("python3 -m pip install --upgrade pip")
+    os.system("pip install spacy")
+    print("installed spacy.")
+    import spacy
+
+try:
+    import en_core_web_sm
+except ImportError:
+    os.system("python -m spacy download en")
+
+# Create the English nlp object
 nlp = spacy.blank("en")
 
 # Process the text
